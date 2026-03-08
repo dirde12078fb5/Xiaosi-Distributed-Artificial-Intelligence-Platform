@@ -78,7 +78,7 @@ Windows 10 \ 11 版本
 [哔哩哔哩官方](https://www.bilibili.com/video/BV1zV27B8EMH?t=23.8)
 
 ---
-网络管理(WLAN)
+# 网络管理(WLAN)
 
 📦 安装指南（网络模块GUI——> Network GUI）
 
@@ -110,7 +110,7 @@ python 小思分布式人工智能网络模块.py
 ```
 
 ---
-视觉管理 (Visual)
+# 视觉管理 (Visual)
 
 📦 安装指南（视觉模块GUI——>   Visual GUI）
 
