@@ -133,7 +133,7 @@ pip install -r requirements 视觉模块.txt
 ```
 运行
 ```bash
-python 小思分布式人工智能网络模块.py
+python 小思分布式视觉管理模块.py
 ```
 ---
 运行界面
