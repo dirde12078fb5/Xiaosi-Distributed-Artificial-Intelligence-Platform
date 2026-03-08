@@ -135,8 +135,11 @@ pip install -r requirements 视觉模块.txt
 ```bash
 python 小思分布式人工智能网络模块.py
 ```
-![j.png](https://raw.gitcode.com/user-images/assets/9293520/960f10f8-e13d-4c76-92d2-974ededd6c26/j.png 'j.png')
 ---
+运行界面
+![j.png](https://raw.gitcode.com/user-images/assets/9293520/960f10f8-e13d-4c76-92d2-974ededd6c26/j.png 'j.png')
+
+-----
 Made with ❤️ by Xiao Si Ai
 
 Made in Xiaosi Distributed Artificial Intelligence
