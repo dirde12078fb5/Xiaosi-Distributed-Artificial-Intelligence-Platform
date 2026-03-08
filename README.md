@@ -74,11 +74,13 @@ Windows 10 \ 11 版本
 
 微信：szx20050719
 邮箱：dirde12078904@163.com
+
 [哔哩哔哩官方](https://www.bilibili.com/video/BV1zV27B8EMH?t=23.8)
 
 ---
+网络管理(WLAN)
 
-📦 安装指南（网络模块GUI——Network GUI）
+📦 安装指南（网络模块GUI——> Network GUI）
 
 如果您还没有安装 winget 工具，请先安装，然后在命令提示符或 Powershell 中输入此命令。
 
@@ -108,7 +110,33 @@ python 小思分布式人工智能网络模块.py
 ```
 
 ---
+视觉管理 (Visual)
 
+📦 安装指南（视觉模块GUI——>   Visual GUI）
+
+如果您还没有安装 winget 工具，请先安装，然后在命令提示符或 Powershell 中输入此命令。
+
+```bash
+winget install --id Git.Git -e --source winget
+```
+克隆本项目
+
+```bash
+git clone https://gitee.com/dirde12078904/Xiaosi-Distributed-Artificial-Intelligence-Platform.git
+```
+
+安装本项目Python依赖
+
+```bash
+cd Xiaosi-Distributed-Artificial-Intelligence-Platform
+pip install -r requirements 视觉模块.txt
+```
+运行
+```bash
+python 小思分布式人工智能网络模块.py
+```
+![j.png](https://raw.gitcode.com/user-images/assets/9293520/960f10f8-e13d-4c76-92d2-974ededd6c26/j.png 'j.png')
+---
 Made with ❤️ by Xiao Si Ai
 
 Made in Xiaosi Distributed Artificial Intelligence
