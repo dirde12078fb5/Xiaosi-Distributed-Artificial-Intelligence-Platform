@@ -139,7 +139,94 @@ python 小思分布式视觉管理模块.py
 运行界面
 ![j.png](https://raw.gitcode.com/user-images/assets/9293520/960f10f8-e13d-4c76-92d2-974ededd6c26/j.png 'j.png')
 
------
+---
+# 大模型管理(OpenClaw 联合 LM Studio)
+---
+![img_proxy.png](https://raw.gitcode.com/user-images/assets/9293520/55771124-07f0-47dc-95f2-809dbf450658/img_proxy.png 'img_proxy.png')
+# 快速开始(OpenClaw)
+
+1.安装 OpenClaw
+
+```bash
+npm install -g openclaw@latest
+```
+
+新手引导并安装服务
+
+```bash
+openclaw onboard --install-daemon
+```
+配对 WhatsApp 并启动 Gateway 网关
+```bash
+openclaw channels login
+openclaw gateway --port 18789
+```
+# 远程访问：Web 界面
+仪表板
+Gateway 网关启动后，打开浏览器控制界面。
+
+本地默认地址：http://127.0.0.1:18789/
+
+
+# 配置（可选）
+
+配置文件位于 `~/.openclaw/openclaw.json`
+
+如果你不做任何修改，OpenClaw 将使用内置的 Pi 二进制文件以 RPC 模式运行，并按发送者创建独立会话。
+如果你想要限制访问，可以从 和（针对群组的）提及规则开始配置。
+
+channels.whatsapp.allowFrom
+
+克隆到本地
+
+`git clone https://gitcode.com/GitHub_Trending/cl/openclaw.git`
+
+[项目官方](https://gitcode.com/GitHub_Trending/cl/openclaw?source_module=search_project)
+# 解决方案
+系统上禁止运行脚本
+
+原因
+
+首次在计算机上启动 Windows PowerShell 时，现用执行策略很可能是 Restricted（默认设置）。Restricted 策略不允许任何脚本运行。需要收到开启运行脚本
+
+---
+管理员运行
+
+`Set-ExecutionPolicy RemoteSigned`
+键入Y或者A,同意
+
+执行get-executionpolicy查看是否更改成功，为RemoteSigned表示成功
+
+---
+![hero-new.56ec79be.png](https://raw.gitcode.com/user-images/assets/9293520/a2bd4769-0fcc-4ef1-9ff1-e91d548bb499/hero-new.56ec79be.png 'hero-new.56ec79be.png')
+# 快速开始(LM Studio)
+运行AI模型，本地和私密。
+使用本地大型语言模型
+
+如 gpt-oss、Qwen3、Gemma3、DeepSeek
+还有更多，在你自己的硬件上本地运行。
+
+---
+# 下载
+Mac / Linux
+
+`curl -fsSL https://lmstudio.ai/install.sh | bash`
+
+Windows
+
+`irm https://lmstudio.ai/install.ps1 | iex`
+
+---
+# 开发者资源
+JS SDK 
+
+`npm install @lmstudio/sdk`
+
+Python SDK
+
+`pip install lmstudio`
+
+---
 Made with ❤️ by Xiao Si Ai
 
 Made in Xiaosi Distributed Artificial Intelligence
