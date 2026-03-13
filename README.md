@@ -213,15 +213,27 @@ channels.whatsapp.allowFrom
 
 原因
 
-首次在计算机上启动 Windows PowerShell 时，现用执行策略很可能是 Restricted（默认设置）。Restricted 策略不允许任何脚本运行。需要收到开启运行脚本
+首次在计算机上启动 Windows PowerShell 时，现用执行策略很可能是 Restricted（默认设置）。Restricted 策略不允许任何
+脚本运行。需要收到开启运行脚本
 
----
 管理员运行
 
 `Set-ExecutionPolicy RemoteSigned`
 键入Y或者A,同意
 
 执行get-executionpolicy查看是否更改成功，为RemoteSigned表示成功
+
+---
+# 从源代码 OpenClaw（贡献者/开发）
+```
+git clone https://github.com/openclaw/openclaw.git
+cd openclaw
+pnpm install
+pnpm ui:build   # 首次运行时自动安装 UI 依赖
+pnpm build
+openclaw onboard --install-daemon
+```
+提示：如果你还没有全局安装，请通过 pnpm openclaw ... 运行仓库命令。
 
 ---
 ![hero-new.56ec79be.png](https://raw.gitcode.com/user-images/assets/9293520/a2bd4769-0fcc-4ef1-9ff1-e91d548bb499/hero-new.56ec79be.png 'hero-new.56ec79be.png')
