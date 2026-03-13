@@ -226,6 +226,7 @@ channels.whatsapp.allowFrom
 ---
 # 从源代码 OpenClaw（贡献者/开发）
 ```
+# npm install -g pnpm （安装npm）
 git clone https://github.com/openclaw/openclaw.git
 cd openclaw
 pnpm install
@@ -234,6 +235,9 @@ pnpm build
 openclaw onboard --install-daemon
 ```
 提示：如果你还没有全局安装，请通过 pnpm openclaw ... 运行仓库命令。
+
+
+![屏幕截图 2026-03-13 120328.png](https://raw.gitcode.com/user-images/assets/9293520/6e42f945-bace-491a-a289-eb6b471eed0c/屏幕截图_2026-03-13_120328.png '屏幕截图 2026-03-13 120328.png')
 
 ---
 ![hero-new.56ec79be.png](https://raw.gitcode.com/user-images/assets/9293520/a2bd4769-0fcc-4ef1-9ff1-e91d548bb499/hero-new.56ec79be.png 'hero-new.56ec79be.png')
