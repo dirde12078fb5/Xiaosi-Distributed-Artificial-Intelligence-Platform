@@ -140,19 +140,21 @@ python 小思分布式视觉管理模块.py
 ![j.png](https://raw.gitcode.com/user-images/assets/9293520/960f10f8-e13d-4c76-92d2-974ededd6c26/j.png 'j.png')
 
 ---
-# 大模型管理(OpenClaw 联合 LM Studio)
+# 大模型管理(OpenClaw 联合 LM Studio 开发)
 ---
 ![img_proxy.png](https://raw.gitcode.com/user-images/assets/9293520/55771124-07f0-47dc-95f2-809dbf450658/img_proxy.png 'img_proxy.png')
 # 快速开始(OpenClaw)
 
 1.安装 OpenClaw
 
+Linux
 ```bash
 npm install -g openclaw@latest
 ```
 
 新手引导并安装服务
 
+如果你已经有 Node：
 ```bash
 openclaw onboard --install-daemon
 ```
@@ -167,6 +169,30 @@ Gateway 网关启动后，打开浏览器控制界面。
 
 本地默认地址：http://127.0.0.1:18789/
 
+---
+Windows(PowerShell)
+
+工作原理（架构）
+```bash
+WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBubbles / IRC / Microsoft Teams / Matrix / Feishu / LINE / Mattermost / Nextcloud Talk / Nostr / Synology Chat / Tlon / Twitch / Zalo / Zalo Personal / WebChat
+               │
+               ▼
+┌───────────────────────────────┐
+│            Gateway            │
+│       (control plane)         │
+│     ws://127.0.0.1:18789      │
+└──────────────┬────────────────┘
+               │
+               ├─ Pi agent (RPC)
+               ├─ CLI (openclaw …)
+               ├─ WebChat UI
+               ├─ macOS app
+               └─ iOS / Android nodes
+```
+Windows（PowerShell）：
+`iwr -useb https://openclaw.ai/install.ps1 | iex`
+
+下一步（如果你跳过了新手引导）：`openclaw onboard --install-daemon`
 
 # 配置（可选）
 
