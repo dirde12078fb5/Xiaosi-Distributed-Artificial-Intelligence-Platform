@@ -87,7 +87,7 @@ class VPNGui:
         self.engine = engine
         self.root.title("外网通服")
 
-        icon_path = './config/xiaosi.ico'
+        icon_path = './xiaosi.ico'
         if os.path.exists(icon_path):
             try:
                 self.root.iconbitmap(icon_path)

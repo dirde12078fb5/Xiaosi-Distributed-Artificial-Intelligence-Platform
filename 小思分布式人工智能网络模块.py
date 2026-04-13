@@ -18,7 +18,7 @@ class WiFiScannerPro:
         self.root.geometry("800x800")
 
         # 设置窗口图标（如果有的话）
-        self.root.iconbitmap('xiaosi.ico')
+        self.root.iconbitmap('./xiaosi.ico')
 
         # 设置现代化样式
         self.style = ttk.Style()

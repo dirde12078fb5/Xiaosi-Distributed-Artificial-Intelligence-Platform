@@ -20,7 +20,7 @@ class MotionCaptureGUI:
         self.root.geometry("1920x1080")
         self.root.configure(bg="#f0f0f0")
 
-        self.root.iconbitmap('config/xiaosi.ico')
+        self.root.iconbitmap('./xiaosi.ico')
 
         # 设置中文字体
         self.font_config()
