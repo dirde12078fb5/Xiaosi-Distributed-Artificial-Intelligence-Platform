@@ -269,6 +269,23 @@ Python SDK
 `pip install lmstudio`
 
 ---
+# 服务管理
+克隆本项目
+
+```bash
+git clone https://gitee.com/dirde12078904/Xiaosi-Distributed-Artificial-Intelligence-Platform.git
+```
+安装本项目Python依赖
+
+```bash
+cd Xiaosi-Distributed-Artificial-Intelligence-Platform
+pip install -r requirements 服务管理.txt
+```
+运行
+```bash
+python 内网通服.py && python 外网通服.py
+```
+---
 Made with ❤️ by Xiao Si Ai
 
 Made in Xiaosi Distributed Artificial Intelligence
