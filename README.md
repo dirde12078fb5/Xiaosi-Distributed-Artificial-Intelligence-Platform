@@ -1,6 +1,24 @@
 
 
 # 小思分布式人工智能平台
+---
+# 支持平台
+
+
+如果大家感兴趣，想使用，查看右边的发行版本，实在不会弄，下方有联系方式
+
+微信：szx20050719
+
+QQ：3043861402
+
+邮箱：dirde12078904@163.com
+|版本名称  |支持平台  |	核心优点  |
+|--|--|--|
+|基础版  | Windows 10/11(x86/x64)、Windows Server 2019/2022 |界面简洁、启动快、占用低、基础功能稳定、依赖少  |
+|Pro Max X3D 版 |Windows 10/11(x86/x64)、Windows Server 2019/2022、Linux(Ubuntu/CentOS)、macOS |线程池并发、多线程下载、带监控日志缓存、UI 美化 |
+|Ultra X3D|Windows 10/11(x86/x64)、Windows Server 2019/2022、Linux、macOS、iOS|功能最全、硬件检测深度、下载支持断点续传、支持 iOS 远程访问|
+NEXT|Windows 11、Windows 11 专业版|安装包一体性
+---
 
 ![输入图片说明](xiaosi.png)
 
