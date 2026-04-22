@@ -4,14 +4,17 @@
   
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=rounded&logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![Rust](https://img.shields.io/badge/Rust-000000?style=rounded&logo=rust&logoColor=white)](https://www.rust-lang.org/tools/install)
-[![Shell](https://img.shields.io/badge/Shell-2E3440?style=rounded&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
-[![JSON](https://img.shields.io/badge/JSON-000000?style=rounded&logo=json&logoColor=white)](https://www.json.org/json-en.html)
-[![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=rounded&logo=pycharm&logoColor=white)](https://www.jetbrains.com/zh-cn/pycharm/download/)
-[![TRAE](https://img.shields.io/badge/TRAE-42b983?style=rounded)](https://www.trae.cn/)
-[![CodeBuddy IDE](https://img.shields.io/badge/CodeBuddy_IDE-5C5CE0?style=rounded)](https://www.codebuddy.ai/home)
-[![jose](https://img.shields.io/badge/jose-FF7F50?style=rounded)](https://github.com/panva/jose)
+[![Python 3.14.1](https://img.shields.io/badge/Python-3.14.1-3776AB?style=rounded&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Rust 1.95.0](https://img.shields.io/badge/Rust-1.95.0-000000?style=rounded&logo=rust&logoColor=white)](https://www.rust-lang.org/tools/install)
+[![Shell 5.3.0](https://img.shields.io/badge/Shell-5.3.0-2E3440?style=rounded&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![JSON RFC 8259](https://img.shields.io/badge/JSON-RFC_8259-000000?style=rounded&logo=json&logoColor=white)](https://www.json.org/)
+[![PyCharm 2026.1](https://img.shields.io/badge/PyCharm-2026.1-000000?style=rounded&logo=pycharm&logoColor=white)](https://www.jetbrains.com/zh-cn/pycharm/download/)
+[![TRAE Latest](https://img.shields.io/badge/TRAE-Latest-42b983?style=rounded)](https://www.trae.cn/)
+[![CodeBuddy Latest](https://img.shields.io/badge/CodeBuddy-Latest-5C5CE0?style=rounded)](https://www.codebuddy.ai/home)
+[![jose 6.2.1](https://img.shields.io/badge/jose-6.2.1-FF7F50?style=rounded)](https://github.com/panva/jose)
+
+</div>
+
 
 </div>
 
