@@ -14,7 +14,6 @@
 [![jose](https://img.shields.io/badge/jose-FF7F50?style=rounded)](https://github.com/panva/jose)
 
 </div>
----
 
 # 支持平台
 
