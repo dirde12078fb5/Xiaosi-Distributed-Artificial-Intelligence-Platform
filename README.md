@@ -2,6 +2,8 @@
 
 **<span style="font-size:48px;">小思分布式人工智能平台</span>**
   
+[![TRAE Latest](https://img.shields.io/badge/TRAE-Latest-42b983?style=rounded)](https://www.trae.cn/)
+[![CodeBuddy Latest](
 <div align="center">
 
 [![Python 3.14.1](https://img.shields.io/badge/Python-3.14.1-3776AB?style=rounded&logo=python&logoColor=white)](https://www.python.org/downloads/)
@@ -13,6 +15,12 @@
 [![C C23](https://img.shields.io/badge/C-C23-A8B9CC?style=rounded&logo=c&logoColor=white)](https://isocpp.org/std/the-standard)
 [![C++ C++26](https://img.shields.io/badge/C++-C++26-00599C?style=rounded&logo=cplusplus&logoColor=white)](https://isocpp.org/std/the-standard)
 [![Java 23 LTS](https://img.shields.io/badge/Java-23_LTS-007396?style=rounded&logo=openjdk&logoColor=white)](https://adoptium.net/temurin/releases/)
+[![Node.js 22.14.0](https://img.shields.io/badge/Node.js-22.14.0-339933?style=rounded&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Docker 27.5.1](https://img.shields.io/badge/Docker-27.5.1-2496ED?style=rounded&logo=docker&logoColor=white)](https://www.docker.com/get-started/)
+[![Tkinter 8.6](https://img.shields.io/badge/Tkinter-8.6-FFDE57?style=rounded)](https://docs.python.org/3/library/tkinter.html)
+[![Xshell 8.0](https://img.shields.io/badge/Xshell-8.0-0078D4?style=rounded)](https://www.netsarang.com/)
+[![PyCUDA 2025.1](https://img.shields.io/badge/PyCUDA-2025.1-76B900?style=rounded)](https://pypi.org/project/pycuda/)
+[![LM Studio 0.4.12](https://img.shields.io/badge/LM_Studio-0.4.12-8DD6F9?style=rounded)](https://lmstudio.ai/)
 [![PyCharm 2026.1](https://img.shields.io/badge/PyCharm-2026.1-000000?style=rounded&logo=pycharm&logoColor=white)](https://www.jetbrains.com/zh-cn/pycharm/download/)
 [![TRAE Latest](https://img.shields.io/badge/TRAE-Latest-42b983?style=rounded)](https://www.trae.cn/)
 [![CodeBuddy Latest](https://img.shields.io/badge/CodeBuddy-Latest-5C5CE0?style=rounded)](https://www.codebuddy.ai/home)
