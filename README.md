@@ -1,6 +1,19 @@
+![输入图片说明](xiaosi.png)
 
+**<span style="font-size:48px;">小思分布式人工智能平台</span>**
+  
+<div align="center">
 
-# 小思分布式人工智能平台
+[![Python](https://img.shields.io/badge/Python-3776AB?style=rounded&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Rust](https://img.shields.io/badge/Rust-000000?style=rounded&logo=rust&logoColor=white)](https://www.rust-lang.org/tools/install)
+[![Shell](https://img.shields.io/badge/Shell-2E3440?style=rounded&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![JSON](https://img.shields.io/badge/JSON-000000?style=rounded&logo=json&logoColor=white)](https://www.json.org/json-en.html)
+[![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=rounded&logo=pycharm&logoColor=white)](https://www.jetbrains.com/zh-cn/pycharm/download/)
+[![TRAE](https://img.shields.io/badge/TRAE-42b983?style=rounded)](https://www.trae.cn/)
+[![CodeBuddy IDE](https://img.shields.io/badge/CodeBuddy_IDE-5C5CE0?style=rounded)](https://www.codebuddy.ai/home)
+[![jose](https://img.shields.io/badge/jose-FF7F50?style=rounded)](https://github.com/panva/jose)
+
+</div>
 ---
 # 支持平台
 
@@ -20,20 +33,6 @@ QQ：3043861402
 NEXT|Windows 11、Windows 11 专业版|安装包一体性
 ---
 
-![输入图片说明](xiaosi.png)
-
-<div align="center">
-
-| [Python 3.14](https://www.python.org/downloads/release/python-3143/) 
-| [jetbrains\PyCharm联合开发](https://www.jetbrains.com/zh-cn/pycharm/) 
-| [国内IDE联合开发](https://www.trae.cn/) 
-| [国内人工智能大模型IDE\CodeBuddy IDE](https://www.codebuddy.ai/home) |
-
-一款集硬件检测、系统监控、多线程下载与常用工具箱于一体的 Windows 桌面全能平台。
-
-[功能原理](https://gitee.com/dirde12078904/Xiaosi-Artificial-Intelligence-Developer-Conference/blob/main/XIAO%20SI%20AI%E6%A8%A1%E5%9E%8B/Xiao%20Si%20AI%20Kernel.py) · [Gen 4 开源架构](https://gitee.com/dirde12078904/xiao-si/blob/main/OpenGEN.py) · [下载使用](https://gitee.com/dirde12078904/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases) · [发行版本查看](https://gitee.com/dirde12078904/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases)
-
-</div>
 
 ✨ 项目简介
 
