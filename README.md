@@ -6,8 +6,13 @@
 
 [![Python 3.14.1](https://img.shields.io/badge/Python-3.14.1-3776AB?style=rounded&logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![Rust 1.95.0](https://img.shields.io/badge/Rust-1.95.0-000000?style=rounded&logo=rust&logoColor=white)](https://www.rust-lang.org/tools/install)
+[![Go 1.24.1](https://img.shields.io/badge/Go-1.24.1-00ADD8?style=rounded&logo=go&logoColor=white)](https://go.dev/dl/)
 [![Shell 5.3.0](https://img.shields.io/badge/Shell-5.3.0-2E3440?style=rounded&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
 [![JSON RFC 8259](https://img.shields.io/badge/JSON-RFC_8259-000000?style=rounded&logo=json&logoColor=white)](https://www.json.org/)
+[![JavaScript ES2025](https://img.shields.io/badge/JavaScript-ES2025-F7DF1E?style=rounded&logo=javascript&logoColor=black)](https://tc39.es/ecma262/)
+[![C C23](https://img.shields.io/badge/C-C23-A8B9CC?style=rounded&logo=c&logoColor=white)](https://isocpp.org/std/the-standard)
+[![C++ C++26](https://img.shields.io/badge/C++-C++26-00599C?style=rounded&logo=cplusplus&logoColor=white)](https://isocpp.org/std/the-standard)
+[![Java 23 LTS](https://img.shields.io/badge/Java-23_LTS-007396?style=rounded&logo=openjdk&logoColor=white)](https://adoptium.net/temurin/releases/)
 [![PyCharm 2026.1](https://img.shields.io/badge/PyCharm-2026.1-000000?style=rounded&logo=pycharm&logoColor=white)](https://www.jetbrains.com/zh-cn/pycharm/download/)
 [![TRAE Latest](https://img.shields.io/badge/TRAE-Latest-42b983?style=rounded)](https://www.trae.cn/)
 [![CodeBuddy Latest](https://img.shields.io/badge/CodeBuddy-Latest-5C5CE0?style=rounded)](https://www.codebuddy.ai/home)
@@ -15,8 +20,6 @@
 
 </div>
 
-
-</div>
 
 # 支持平台
 
