@@ -2,7 +2,7 @@
 
 **<span style="font-size:48px;">小思分布式人工智能平台</span>**
   
-t]
+
 <div align="center">
 
 [![Python 3.14.1](https://img.shields.io/badge/Python-3.14.1-3776AB?style=rounded&logo=python&logoColor=white)](https://www.python.org/downloads/)
