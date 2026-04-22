@@ -79,7 +79,7 @@ Windows 10 \ 11 版本
 
 ![输入图片说明](def.png)
 
-[软件下载](https://gitee.com/dirde12078904/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases)
+[软件下载](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases)
 
 📝 使用说明
 
