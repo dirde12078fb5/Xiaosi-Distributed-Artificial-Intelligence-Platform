@@ -313,4 +313,11 @@ python 内网通服.py && python 外网通服.py
 ---
 Made with ❤️ by Xiao Si Ai
 
+---
+欢迎加入此项目，让更多开源软件接人进来 : 邀请人: 小思人工智能平台@dirde12078fb5，邀请您成为 AtomGit | GitCode 项目 参与者
+邀请链接: https://gitcode.com/invite/link/cdd051b1807242f69dfc
+过期时间: 2027-02-01
+
+---
+
 Made in Xiaosi Distributed Artificial Intelligence
