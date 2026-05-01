@@ -26,7 +26,7 @@
 [![jose 6.2.1](https://img.shields.io/badge/jose-6.2.1-FF7F50?style=rounded)](https://github.com/panva/jose)
 
 </div>
----
+
 
 # 项目建议
 本平台的运行运行文件过于庞大，在之后也越来越大，所以建议使用7-zip，之所以用7-zip，因项目开发过程中也是使用这个打包
