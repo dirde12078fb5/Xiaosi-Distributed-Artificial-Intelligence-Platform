@@ -1,4 +1,4 @@
-![输入图片说明](xiaosi.png)
+![xiao-si.gif](https://raw.gitcode.com/user-images/assets/9293520/cfb16c5e-3b9e-4673-8be2-ebf715eaecc1/xiao-si.gif 'xiao-si.gif')
 
 **<span style="font-size:48px;">小思分布式人工智能平台</span>**
   
