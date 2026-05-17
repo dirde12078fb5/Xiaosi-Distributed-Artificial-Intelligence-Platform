@@ -319,7 +319,13 @@ pip install -r requirements 服务管理.txt
 ```bash
 python 内网通服.py && python 外网通服.py
 ```
+---
+# 版本管理
 
+|数字系列  | ULTRA  系列 | NEXT 系列 （非正式版本） |
+|--|--|--|
+|小思分布式人工智能平台 11系列 | 小思分布式人工智能平台 11 ULTRA X3D | 小思分布式人工智能平台 NEXT 1 2025 |
+---
 ---
 Made with ❤️ by Xiao Si Ai
 
