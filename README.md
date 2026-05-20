@@ -26,7 +26,7 @@
 [![jose 6.2.1](https://img.shields.io/badge/jose-6.2.1-FF7F50?style=rounded)](https://github.com/panva/jose)
 
 </div>
-## Stargazers over time
+# Stargazers over time
 
 ![Stargazers over time](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/starcharts.svg?variant=light)
 # 项目建议
