@@ -27,7 +27,8 @@
 
 </div>
 
-
+## Stargazers over time
+![Stargazers over time](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/starcharts.svg?variant=adaptive)
 # 项目建议
 本平台的运行文件过于庞大，在之后也越来越大，所以建议使用7-zip，之所以用7-zip，因项目开发过程中也是使用这个打包
 ```bash
