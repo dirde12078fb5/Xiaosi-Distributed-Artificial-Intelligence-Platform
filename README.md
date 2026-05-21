@@ -328,7 +328,21 @@ python 内网通服.py && python 外网通服.py
 |数字系列  | ULTRA  系列 | NEXT 系列 （非正式版本） |
 |--|--|--|
 |小思分布式人工智能平台 11系列 | 小思分布式人工智能平台 11 ULTRA X3D | 小思分布式人工智能平台 NEXT 1 2025 |
+
 ---
+# 软件下载
+
+[![docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png](https://raw.gitcode.com/user-images/assets/9293520/720ebf73-27c5-4720-93d8-a67094fdc239/docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png 'docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png')
+](https://pan.quark.cn/s/af19527f82eb)提取码：qYWD
+
+
+[![docs_content_public_assets_download-buttons_download-buttons.linux.dark.zh-Hans.png](https://raw.gitcode.com/user-images/assets/9293520/9eba84b9-e9fe-487a-93ca-54a5f0e76064/docs_content_public_assets_download-buttons_download-buttons.linux.dark.zh-Hans.png 'docs_content_public_assets_download-buttons_download-buttons.linux.dark.zh-Hans.png')
+](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform.git)
+
+```
+￥ Git 
+git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform.git
+```
 ---
 Made with ❤️ by Xiao Si Ai
 
