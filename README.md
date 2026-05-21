@@ -286,7 +286,7 @@ openclaw onboard --install-daemon
 还有更多，在你自己的硬件上本地运行。
 
 ---
-# 下载
+# LM Studio 下载
 Mac / Linux
 
 `curl -fsSL https://lmstudio.ai/install.sh | bash`
