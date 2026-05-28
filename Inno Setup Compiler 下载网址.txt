@@ -1,2 +1,0 @@
-官网：https://jrsoftware.org/isinfo.php
-下载地址：https://files.jrsoftware.org/is/6/innosetup-6.3.2.exe

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
+		<VBox margin="0,0,0,0" width="stretch" height="stretch">
+			<!-- Software group: Computer + OS in one row -->
+			<HBox width="stretch" height="auto" margin="25,25,25,6" padding="3,3,3,3" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<VBox margin="5,5,5,5" width="stretch" height="auto">
+					<HBox width="stretch" height="auto" margin="0,0,0,8" valign="center">
+						<Label name="software_group_title" font="system_bold_14" width="auto" height="auto" valign="center"/>
+						<Control width="stretch"/>
+						<Label name="software_last_update_label" font="system_12" width="auto" height="auto" valign="center" margin="0,0,8,0"/>
+						<Button class="normal_button" name="software_refresh_button" width="auto" minwidth="80" height="30" valign="center" textid="STRING_REFRESH"/>
+					</HBox>
+				<!-- Columns: Left (Computer, OS, Startup Cost) | Right (Proxy, Runtime) -->
+				<HBox width="stretch" height="auto" childmargin="12">
+					<VBox width="400" height="auto" childmargin="12">
+						<VBox name="sys_info_computer" width="stretch" height="auto"/>
+						<VBox name="sys_info_os" width="stretch" height="auto"/>
+					</VBox>
+					<VBox width="stretch" height="auto" childmargin="12">
+						<VBox name="sys_info_proxy" width="stretch" height="auto"/>
+					</VBox>
+				</HBox>
+				</VBox>
+			</HBox>
+
+			<!-- Hardware group: Hardware info tabs and content -->
+			<VBox margin="25,6,25,12" width="stretch" height="stretch" padding="3,3,3,3" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<VBox margin="5,5,5,5" width="stretch" height="stretch">
+					<HBox width="stretch" height="30" margin="0,0,0,8" valign="center">
+						<Label name="hardware_group_title" font="system_bold_14" width="auto" height="auto" valign="center"/>
+					</HBox>
+					<VBox width="stretch" height="stretch" margin="0,0,0,0" padding="1,1,1,1" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+						<HListBox margin="0,0,0,0" name="hardware_info_tab" width="stretch" height="auto" hscrollbar="true" defaultdisplayscrollbar="true"/>
+						<Control class="splitline_hor_level1"/>
+						<VListBox margin="3,5,0,0" name="hardware_info_content" width="stretch" height="stretch" vscrollbar="true" defaultdisplayscrollbar="true"/>
+					</VBox>
+				</VBox>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

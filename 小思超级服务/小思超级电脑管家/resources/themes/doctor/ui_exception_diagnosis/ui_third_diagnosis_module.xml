@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<HBox width="stretch" height="auto" margin="0,0,0,3">
+		<Control width="16" height="16" name="icon" margin="0,0,4,0" valign="center"/>
+		<Label font="system_bold_12" name="module_name" mouse="true" width="241" height="auto" valign="center"/>
+		<Label font="system_bold_12" name="software_manufacturer" mouse="false" width="200" height="auto" valign="center"/>
+		<Label font="system_bold_12" name="detect_type" mouse="false" width="180" height="auto" valign="center"/>
+		<Label font="system_bold_12" name="detect_from" mouse="false" width="stretch" height="auto" valign="center"/>
+		<HBox width="180" height="auto" valign="center">
+			<ButtonEx class="btn_blue_text" margin="0,0,15,0" textpadding="1,0,1,0" width="auto" height="auto" valign="center" name="openurl_btn" textid="STRING_DETAIL"/>
+			<ButtonEx class="btn_blue_text" textpadding="1,0,1,0" width="auto" height="auto" valign="center" name="block_btn" textid="STRING_BLOCK"/>
+		</HBox>
+	</HBox>
+</Window>

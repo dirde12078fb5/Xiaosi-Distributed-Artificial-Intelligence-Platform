@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box bkcolor="bk_wnd_msg_darkcolor" width="stretch" height="stretch">
+		<VBox bkcolor="white" name="msgbox" width="720" height="700" valign="center" halign="center" visible="true" borderround="10,10">
+			<Button class="btn_wnd_close" valign="top" halign="right" name="msg_cls_btn" margin="0,10,10,0"/>
+			<VBox margin="24,4,24,24">
+				<Label font="system_bold_20" name="msg_title" width="stretch" height="auto"/>
+				
+				<!-- Mode Selection: Manual / Auto -->
+				<HBox margin="0,12,0,8" height="30">
+					<Option class="circle_option_2" name="radio_manual_dump" textid="STRING_TAB_TOOLS_DUMP_MODE_MANUAL" width="auto" height="auto" valign="center" group="dump_mode" selected="true"/>
+					<Option class="circle_option_2" name="radio_auto_dump" textid="STRING_TAB_TOOLS_DUMP_MODE_AUTO" width="auto" height="auto" margin="12,0,0,0" valign="center" group="dump_mode"/>
+				</HBox>
+				
+				<Control class="splitline_hor_level1"/>
+				
+				<!-- Auto Dump Configuration Panel -->
+				<VBox name="auto_dump_panel" width="stretch" height="stretch" visible="false" margin="0,8,0,0">
+					<Label font="system_bold_14" textid="STRING_TAB_TOOLS_DUMP_AUTO_TRIGGER_TITLE" width="stretch" height="auto" margin="0,0,0,4"/>
+					
+				<!-- CPU Threshold -->
+				<HBox height="28" margin="0,0,0,4">
+					<CheckBox class="list_tab_checkbox" name="check_cpu_threshold" width="16" height="16" valign="center" selected="true"/>
+					<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_CPU" width="80" height="auto" margin="8,0,0,0" valign="center"/>
+					<Label text="≥" width="auto" height="auto" margin="8,0,0,0" valign="center"/>
+					<Box borderround="10,10" bordersize="1" bordercolor="color_btn_border" valign="center" width="187" height="24" margin="4,0,0,0">
+						<NumberEdit name="edit_cpu_threshold" margin="6,0,6,0" valign="center" width="stretch" height="auto" normaltextcolor="black" multiline="false" text="80" intonly="false" allownegative="false"/>
+					</Box>
+					<Label text="%" width="auto" height="auto" margin="4,0,0,0" valign="center"/>
+				</HBox>
+				
+				<!-- Memory Threshold -->
+				<HBox height="28" margin="0,0,0,4">
+					<CheckBox class="list_tab_checkbox" name="check_memory_threshold" width="16" height="16" valign="center" selected="true"/>
+					<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_MEMORY" width="80" height="auto" margin="8,0,0,0" valign="center"/>
+					<Label text="≥" width="auto" height="auto" margin="8,0,0,0" valign="center"/>
+					<Box borderround="10,10" bordersize="1" bordercolor="color_btn_border" valign="center" width="187" height="24" margin="4,0,0,0">
+						<NumberEdit name="edit_memory_threshold" margin="6,0,6,0" valign="center" width="stretch" height="auto" normaltextcolor="black" multiline="false" text="1024" intonly="true" allownegative="false"/>
+					</Box>
+					<Label text="MB" width="auto" height="auto" margin="4,0,0,0" valign="center"/>
+				</HBox>
+				
+				<!-- IO Rate Threshold -->
+				<HBox height="28" margin="0,0,0,4">
+					<CheckBox class="list_tab_checkbox" name="check_io_threshold" width="16" height="16" valign="center" selected="true"/>
+					<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_IO_RATE" width="80" height="auto" margin="8,0,0,0" valign="center"/>
+					<Label text="≥" width="auto" height="auto" margin="8,0,0,0" valign="center"/>
+					<Box borderround="10,10" bordersize="1" bordercolor="color_btn_border" valign="center" width="187" height="24" margin="4,0,0,0">
+						<NumberEdit name="edit_io_threshold" margin="6,0,6,0" valign="center" width="stretch" height="auto" normaltextcolor="black" multiline="false" text="100" intonly="true" allownegative="false"/>
+					</Box>
+					<Label text="MB/s" width="auto" height="auto" margin="4,0,0,0" valign="center"/>
+				</HBox>
+					
+					<!-- Window Hang Detection -->
+					<HBox height="28" margin="0,0,0,4">
+						<CheckBox class="list_tab_checkbox" name="check_window_hang" width="16" height="16" valign="center"/>
+						<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_HANG" width="80" height="auto" margin="8,0,0,0" valign="center"/>
+					<Label name="static_find_window" cursortype="hand" width="15" height="15" margin="1,0,0,0" valign="center" bkimage="aiming.svg"/>
+						<Box borderround="10,10" bordersize="1" bordercolor="color_btn_border" valign="center" width="187" height="24" margin="4,0,0,0">
+							<RichEdit name="edit_window_handle" margin="6,0,6,0" valign="center" width="stretch" height="auto" normaltextcolor="black" multiline="false" enabled="false" text=""/>
+						</Box>
+					</HBox>
+					
+				<!-- Duration -->
+				<HBox height="28" margin="0,0,0,6">
+					<Control width="16" height="16" margin="0,0,0,0"/>
+					<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_DURATION" width="80" height="auto" margin="8,0,0,0" valign="center"/>
+					<Label text="≥" width="auto" height="auto" margin="8,0,0,0" valign="center"/>
+					<Box borderround="10,10" bordersize="1" bordercolor="color_btn_border" valign="center" width="187" height="24" margin="4,0,0,0">
+						<NumberEdit name="edit_duration" margin="6,0,6,0" valign="center" width="stretch" height="auto" normaltextcolor="black" multiline="false" text="10" intonly="true" allownegative="false"/>
+					</Box>
+					<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_SECONDS" width="auto" height="auto" margin="4,0,0,0" valign="center"/>
+				</HBox>
+					
+					<!-- Dump Settings -->
+					<Label font="system_bold_14" textid="STRING_TAB_TOOLS_DUMP_AUTO_SETTINGS_TITLE" width="stretch" height="auto" margin="0,4,0,4"/>
+					
+					<HBox height="26" margin="0,0,0,8">
+						<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_DUMP_TYPE" width="104" height="auto" margin="0,0,0,0" valign="center"/>
+						<Combo class="list" vscrollbar="false" bkimage="file='combox.svg' dest='171,1,195,25'" name="combo_auto_dump_type" width="200" height="25" margin="8,0,0,0" padding="6,0,0,0" borderround="10,10" bordersize="1" bordercolor="color_btn_border"/>
+					</HBox>
+					
+					<HBox height="26" margin="0,0,0,12">
+						<CheckBox class="list_tab_checkbox" name="check_auto_stop" width="16" height="auto" valign="center" selected="true"/>
+						<Label textid="STRING_TAB_TOOLS_DUMP_AUTO_STOP_MONITOR" width="auto" height="auto" margin="8,0,0,0" valign="center"/>
+						<Control width="stretch"/>
+						<ButtonEx class="normal_button" textpadding="20,0,20,0" width="auto" height="26" name="btn_confirm_config" textid="STRING_TAB_TOOLS_DUMP_AUTO_CONFIRM_CONFIG" valign="center"/>
+						<ButtonEx class="normal_button" textpadding="20,0,20,0" width="auto" height="26" margin="8,0,0,0" name="btn_start_monitor" textid="STRING_TAB_TOOLS_DUMP_AUTO_START_MONITOR" valign="center"/>
+					</HBox>
+					
+					<!-- Monitoring Section -->
+					<Control class="splitline_hor_level1" margin="0,0,0,4"/>
+					
+					<HBox height="32">
+						<CheckBox class="list_tab_checkbox" name="select_all_auto" width="16" height="16" align="left" valign="center"/>
+						<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_PROCESS_NAME" width="120" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+						<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_PID" width="80" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+						<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_TYPE" width="80" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+						<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_CMD_LINE" width="stretch" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+						<Control width="100"/>
+					</HBox>
+					<Control class="splitline_hor_level1"/>
+					
+					<!-- Process List for Auto Mode - Same as Manual Mode -->
+					<VBox width="stretch" height="stretch" margin="0,0,0,0" name="auto_proc_list_container">
+						<VListBox vscrollbar="true" name="proc_info_list_auto" width="stretch" height="stretch" valign="center" padding="0,0,0,8"/>
+					</VBox>
+				</VBox>
+				
+				<!-- Manual Dump Panel (Original) -->
+				<VBox name="manual_dump_panel" width="stretch" height="stretch" visible="true">
+					<HBox margin="0,4,0,10" height="42">
+						<Combo class="list" vscrollbar="false" bkimage="file='combox.svg' dest='171,3,195,27'" name="combo_select_dump_type" width="200" height="30" margin="0,12,0,0" padding="6,0,0,0" borderround="10,10" bordersize="1" bordercolor="color_btn_border"/>
+						<Control name="stretch"/>
+						<ButtonEx class="normal_button" textpadding="20,0,20,0" width="auto" height="30" margin="0,12,0,0" name="btn_refresh_proc_list" textid="STRING_TAB_TOOLS_DUMP_BTN_REFRESH_PROC_LIST"/>
+						<ButtonEx class="normal_button" textpadding="20,0,20,0" width="auto" height="30" margin="6,12,0,0" name="btn_create_dump" textid="STRING_TAB_TOOLS_DUMP_BTN_CREATE_DUMP"/>
+					</HBox>
+					<VBox width="stretch" height="stretch" name="result_checking">
+						<Label width="auto" height="auto" textid="STRING_TAB_TOOLS_DUMP_CHECKING" valign="center"/>
+					</VBox>
+					<VBox width="stretch" height="stretch" name="result">
+						<Control class="splitline_hor_level1"/>
+						<HBox height="30" margin="0,0,0,0">
+							<CheckBox class="list_tab_checkbox" name="select_all" width="16" height="16" align="left" valign="center"/>
+							<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_PROCESS_NAME" width="120" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+							<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_PID" width="80" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+							<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_TYPE" width="80" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+							<Label textid="STRING_TAB_TOOLS_DUMP_HEAD_CMD_LINE" width="stretch" margin="5,0,0,0" font="system_bold_14" align="left" valign="center"/>
+						</HBox>
+						<Control class="splitline_hor_level1"/>
+						<VListBox vscrollbar="true" name="proc_info_list_dump" width="stretch" height="stretch" valign="center" padding="0,0,0,16"/>
+					</VBox>
+				</VBox>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

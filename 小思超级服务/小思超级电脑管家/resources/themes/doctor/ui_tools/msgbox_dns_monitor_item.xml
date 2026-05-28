@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem" width="stretch" height="auto" normalcolor="white" hotcolor="bk_wnd_darkcolor" pushedcolor="bk_wnd_darkcolor">
+		<HBox margin="0,2,0,2" height="auto" mouse="false">
+			<Label class="text_path" name="time" width="80" mouse="false" align="left"/>
+			<Label class="text_path" name="process_name" width="100" mouse="true" align="left"/>
+			<Label class="text_path" name="pid" width="80" mouse="false" align="left"/>
+			<Label class="text_path" name="host_name" width="200" align="left" mouse="true"/>
+			<Label class="text_path" name="query_type" width="80" align="left" mouse="true"/>
+			<Label class="text_path" name="query_status" width="150" align="left" mouse="true"/>
+			<Label class="text_path" name="query_result" width="stretch" mouse="true" align="left"/>
+		</HBox>
+	</ListContainerElement>
+</Window>

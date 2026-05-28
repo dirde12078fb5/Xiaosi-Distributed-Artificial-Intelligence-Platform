@@ -1,0 +1,5 @@
+<svg width="62" height="62" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+  <!-- 最小化按钮 -->
+  <rect x="4" y="4" width="54" height="54" rx="8" fill="#e0e0e0" stroke="#888" stroke-width="1"/>
+  <line x1="20" y1="31" x2="42" y2="31" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+</svg>

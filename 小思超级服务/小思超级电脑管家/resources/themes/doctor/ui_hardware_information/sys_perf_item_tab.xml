@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="list_sys_perf_tab" width="stretch" height="stretch" minheight="60" cursortype="hand">
+		<VBox mouse="false" valign="center" halign="center" width="stretch" height="auto">
+			<Label name="item_icon" mouse="false" width="stretch"/>
+			<Label class="list_sys_perf_tab_text" name="item_title" mouse="false" width="stretch" align="vcenter,hcenter"/>
+			<Label name="item_usage" singleline="false" mouse="false" width="stretch" align="vcenter,hcenter"/>
+		</VBox>
+	</ListContainerElement>
+</Window>

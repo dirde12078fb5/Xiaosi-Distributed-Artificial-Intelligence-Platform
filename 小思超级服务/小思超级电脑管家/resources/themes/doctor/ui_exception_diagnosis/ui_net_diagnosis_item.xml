@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<HBox width="stretch" height="auto" margin="0,0,0,3">
+		<Control width="16" height="16" name="icon" margin="0,0,5,0" valign="center"/>
+		<Label font="system_bold_12" endellipsis="true" singleline="true" name="key_label" mouse="false" width="225" height="auto" valign="center"/>
+		<Label font="system_bold_12" endellipsis="true" singleline="false" margin="15,0,0,0" name="value_label" mouse="false" width="stretch" height="auto" valign="center"/>
+	</HBox>
+</Window>

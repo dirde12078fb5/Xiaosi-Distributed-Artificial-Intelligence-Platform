@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
+		<VBox margin="0,0,0,0" height="auto">
+			<HBox bkcolor="bg_title_color" width="stretch" height="115">
+				<Label name="ico_title" margin="27,0,0,0" mouse="false" width="auto" height="auto" bkimage="ui_exception_diagnosis\diagnose_init.svg" valign="center"/>
+				<Label class="ui_exception_diagnosis_text_16" margin="10,0,0,0" name="text_title" mouse="false" maxwidth="660" width="auto" singleline="false" height="auto" valign="center" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_TITLE_NORMAL"/>
+				<ButtonBox class="btn_great" name="btn_great" width="30" height="30" margin="20,0,0,0" valign="center">
+					<Label name="btn_great_ico" mouse="false" width="14" height="14" halign="center" valign="center" bkimage="ui_exception_diagnosis\great.svg"/>
+				</ButtonBox>
+				<ButtonBox class="btn_lousy" name="btn_lousy" width="30" height="30" margin="20,0,0,0" valign="center">
+					<Label mouse="false" width="14" height="14" halign="center" valign="center" bkimage="ui_exception_diagnosis\lousy.svg"/>
+				</ButtonBox>
+				<Control name="stretch"/>
+				<ButtonEx class="btn_blue_font15" textpadding="20,0,20,0" width="auto" height="40" margin="0,0,33,0" valign="center" name="btn_send_result" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_BTN_SEND_RESULT"/>
+				<VBox width="auto" height="auto" margin="0,0,33,0" valign="center">
+					<ButtonEx class="btn_blue_font14" textpadding="20,0,20,0" width="auto" height="40" name="btn_analyze" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_BTN_START"/>
+					<Label name="last_diagnose_time_label" margin="0,6,0,0" mouse="false" width="auto" height="auto" font="system_12" visible="false"/>
+				</VBox>
+			</HBox>
+			<VBox margin="24,0,24,24" width="stretch" height="auto" name="analyze_list"/>
+		</VBox>
+	</Box>
+</Window>

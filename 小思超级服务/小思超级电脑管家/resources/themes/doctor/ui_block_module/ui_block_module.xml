@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box valign="center" halign="center" width="stretch" height="stretch" bkcolor="tab_background_color">
+		<VBox padding="25,15,25,25" valign="center" halign="center" width="stretch" height="stretch">
+			<VBox width="stretch" height="stretch">
+				<Label font="system_bold_18" margin="0,0,0,0" mouse="false" width="auto" height="auto" name="dll_block_title" valign="center"/>
+				<VBox margin="0,10,0,0" padding="15,15,15,15" height="stretch" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+					<VBox margin="0,0,0,0" height="stretch" width="stretch" name="dll_block_body_normal">
+						<VBox margin="0,0,0,0" height="stretch" width="stretch">
+							<Label class="text_path" halign="left" width="stretch" height="auto" name="dll_block_list_title_path"/>
+							<Label margin="0,10,0,0" width="auto" height="auto" valign="center" name="dll_block_list_title"/>
+							<VBox margin="0,5,0,0" padding="5,5,5,5" height="stretch" width="stretch" bordersize="1" bordercolor="splitline_level1">
+								<HBox margin="0,0,0,0" bkcolor="bk_wnd_darkcolor" height="auto" mouse="false" padding="19,3,3,3">
+									<Label class="text_path" textid="STRING_TAB_BLOCK_MODULE_TEXT_MODULE_NAME" width="170" mouse="false"/>
+									<Label class="text_path" textid="STRING_TAB_BLOCK_MODULE_TEXT_SOFTWARE_MANUFACTURER" width="170" mouse="false"/>
+									<Label class="text_path" textid="STRING_TAB_BLOCK_MODULE_TEXT_DETECT_TYPE" width="100" mouse="false"/>
+									<Label class="text_path" textid="STRING_TAB_BLOCK_MODULE_TEXT_FROM" width="140" mouse="false"/>
+									<Label class="text_path" textid="STRING_TAB_BLOCK_MODULE_TEXT_ROUTE" width="stretch" mouse="false"/>
+								</HBox>
+								<VListBox class="list" name="dll_block_list" width="stretch" height="stretch" vscrollbar="true"/>
+							</VBox>
+						</VBox>
+						<HBox margin="0,10,0,0" height="auto" width="auto">
+							<ButtonEx class="normal_button" margin="0,0,10,0" width="auto" height="30" valign="center" textid="STRING_TAB_BLOCK_MODULE_BUTTON_SHIELDED_ALL_MODULE" name="dll_all_block"/>
+							<ButtonEx class="normal_button" margin="0,0,10,0" width="auto" height="30" valign="center" textid="STRING_TAB_BLOCK_MODULE_BUTTON_SHIELDED_MODULE" name="dll_block"/>
+							<ButtonEx class="normal_button" margin="0,0,10,0" width="auto" height="30" valign="center" name="dll_unblock" textid="STRING_TAB_BLOCK_MODULE_BUTTON_UNSHIELDED_MODULE"/>
+							<ButtonEx class="normal_button" margin="0,0,10,0" width="auto" height="30" valign="center" textid="STRING_TAB_BLOCK_MODULE_BUTTON_REFRESH" name="dll_block_refresh"/>
+						</HBox>
+					</VBox>
+					<VBox margin="0,0,0,0" height="auto" width="auto" name="dll_block_body_checking">
+						<Label width="auto" height="auto" textid="STRING_TAB_BLOCK_MODULE_TEXT_APP_CHECKING" valign="center"/>
+					</VBox>
+				</VBox>
+			</VBox>
+			<VBox width="stretch" height="stretch"/>
+		</VBox>
+	</Box>
+</Window>

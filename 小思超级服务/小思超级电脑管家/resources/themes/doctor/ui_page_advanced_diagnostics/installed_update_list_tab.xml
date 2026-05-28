@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Box margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
+        <VBox margin="0,0,0,0" padding="25,25,25,25">
+            <VBox margin="0,0,0,0" padding="12,12,12,12" height="auto" bkcolor="white" borderround="8,8" bordersize="1"
+                  bordercolor="splitline_level1">
+                <HBox margin="0,0,0,0" mouse="false" width="stretch" height="auto" halign="right">
+                    <HBox width="stretch"/>
+                    <Button class="normal_button" name="refresh_button" width="auto" minwidth="80" height="30"
+                            margin="0,0,0,0" valign="center" textid="STRING_REFRESH"/>
+                </HBox>
+            </VBox>
+            <VBox margin="0,25,0,0" padding="12,0,12,12" height="stretch" bkcolor="white" borderround="8,8"
+                  bordersize="1" bordercolor="splitline_level1">
+                <HBox margin="16,1,0,0" mouse="false" width="auto" height="auto" halign="left">
+                    <ButtonEx name="title_button" class="tab_header_button"
+                              width="300" height="30"
+                              textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_INSTALLED_UPDATE_TITLE"/>
+                    <ButtonEx name="install_date_button" class="tab_header_button"
+                              width="150" height="30"
+                              textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_INSTALLED_UPDATE_INSTALL_DATE"/>
+                    <ButtonEx name="operation_result_button" class="tab_header_button"
+                              width="100" height="30"
+                              textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_INSTALLED_UPDATE_OPERATION_RESULT"/>
+                    <ButtonEx name="hresult_button" class="tab_header_button"
+                              width="100" height="30"
+                              text="HResult"/>
+                    <ButtonEx name="service_id_button" class="tab_header_button"
+                              width="300" height="30"
+                              textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_INSTALLED_UPDATE_SERVICE_ID"/>
+                    <ButtonEx name="update_id_button" class="tab_header_button"
+                              width="300" height="30"
+                              textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_INSTALLED_UPDATE_UPDATE_ID"/>
+                    <ButtonEx name="revision_number_button" class="tab_header_button"
+                              width="100" height="30"
+                              textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_INSTALLED_UPDATE_REVISION_NUMBER"/>
+                </HBox>
+                <VListBox class="list" name="installed_software_list" margin="0,0,0,0" width="stretch" height="stretch"
+                          vscrollbar="true" hscrollbar="true"/>
+            </VBox>
+        </VBox>
+    </Box>
+</Window>

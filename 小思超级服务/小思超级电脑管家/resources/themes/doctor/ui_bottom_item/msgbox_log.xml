@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box bkcolor="bk_wnd_msg_darkcolor" width="stretch" height="stretch">
+		<VBox bkcolor="white" name="msgbox" width="550" height="auto" valign="center" halign="center" visible="true" borderround="10,10">
+			<Button class="btn_wnd_close" valign="top" halign="right" name="msg_cls_btn" margin="0,10,10,0"/>
+			<VBox margin="24,4,24,24" height="auto">
+				<VBox height="auto" margin="0,0,0,10" name="log_aha_div">
+					<Label font="system_18" width="stretch" height="auto" singleline="false" textid="STRING_TAB_MSGBOX_LOG_OPERATE_TITLE"/>
+					<HBox margin="0,10,0,0" width="stretch" height="auto">
+						<ButtonBox class="btn_tools_ui" margin="5,5,5,5" width="stretch" height="50" name="button_log_file">
+							<Label mouse="false" font="system_14" width="auto" height="auto" halign="center" valign="center" name="text"/>
+						</ButtonBox>
+						<ButtonBox class="btn_tools_ui" margin="5,5,5,5" width="stretch" height="50" name="button_data_dir">
+							<Label mouse="false" font="system_14" width="auto" height="auto" halign="center" valign="center" name="text"/>
+						</ButtonBox>
+					</HBox>
+				</VBox>
+				<VBox height="auto" margin="0,0,0,10" name="log_packet_div">
+					<Label font="system_18" width="stretch" height="auto" singleline="false" textid="STRING_TAB_MSGBOX_LOG_PACKET_TITLE"/>
+					<HBox margin="0,10,0,0" width="stretch" height="auto">
+						<ButtonBox class="btn_tools_ui" margin="5,5,5,5" width="stretch" height="50" name="button_log_dir">
+							<Label mouse="false" font="system_14" width="auto" height="auto" halign="center" valign="center" name="text"/>
+						</ButtonBox>
+						<ButtonBox class="btn_tools_ui" margin="5,5,5,5" width="stretch" height="50" name="button_log_all_dir">
+							<Label mouse="false" font="system_14" width="auto" height="auto" halign="center" valign="center" name="text"/>
+						</ButtonBox>
+					</HBox>
+				</VBox>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

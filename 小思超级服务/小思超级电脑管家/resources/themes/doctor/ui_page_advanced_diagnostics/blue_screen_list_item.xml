@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <ListContainerElement class="listitem"
+                          width="stretch" height="auto">
+        <VBox width="stretch" height="auto" padding="0,0,0,0"
+              bordercolor="color_btn_border" bordersize="0,1,0,0">
+            <HBox width="auto" minheight="30" height="stretch" valign="center" halign="left" padding="0,0,0,0"
+                  bordercolor="color_btn_border">
+                <HBox margin="0,0,0,0" width="16" height="stretch" valign="center" halign="center">
+                    <Button class="btn_expand_right" width="16" height="16" name="btn_expand" valign="center"
+                            halign="center"/>
+                    <Button class="btn_contract" width="16" height="16" name="btn_contract" valign="center"
+                            halign="center"/>
+                </HBox>
+                <Label name="crash_time_label"
+                       margin="4,0,4,0" width="132" height="auto" valign="center" halign="center"
+                       align="left" singleline="true" endellipsis="true"/>
+                <Label name="dump_file_label"
+                       margin="4,0,4,0" width="192" height="auto" valign="center" halign="center"
+                       align="left" singleline="true" endellipsis="true"/>
+                <Label name="bug_check_code_label"
+                       margin="4,0,4,0" width="142" height="auto" valign="center" halign="center"
+                       align="left" singleline="true" endellipsis="true"/>
+                <Label name="bug_check_string_label"
+                       margin="4,0,4,0" width="292" height="auto" valign="center" halign="center"
+                       align="left" singleline="true" endellipsis="true"/>
+            </HBox>
+            <VBox name="detail_box"
+                  width="stretch" height="auto" valign="center" halign="left"
+                  padding="16,0,0,0"
+                  bordercolor="color_btn_border">
+                <HBox width="stretch" minheight="30" height="stretch" valign="center" halign="left" padding="0,0,0,0"
+                      margin="0,0,8,0" bordercolor="color_btn_border" bordersize="0,1,0,0">
+                    <Label width="100" height="auto" valign="center" halign="center"
+                           align="left,vcenter" singleline="true" endellipsis="true"
+                           textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_BLUE_SCREEN_SYSTEM_BOOT_TIME"/>
+                    <Label name="bool_time_label" width="stretch" height="auto"
+                           valign="center" halign="center" align="left,vcenter" singleline="true" endellipsis="true"/>
+                </HBox>
+                <HBox width="stretch" minheight="30" height="stretch" valign="center" halign="left" padding="0,0,0,0"
+                      margin="0,0,8,0" bordercolor="color_btn_border" bordersize="0,1,0,0">
+                    <Label width="100" height="auto" valign="center" halign="center"
+                           align="left,vcenter" singleline="true" endellipsis="true"
+                           textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_BLUE_SCREEN_CRASH_MODULE"/>
+                    <Label name="crash_module_path_label" width="stretch" height="auto"
+                           valign="center" halign="center" align="left,vcenter" singleline="true" endellipsis="true"/>
+                </HBox>
+                <HBox width="stretch" minheight="30" height="stretch" valign="center" halign="left" padding="0,0,0,0"
+                      margin="0,0,8,0" bordercolor="color_btn_border" bordersize="0,1,0,0">
+                    <Label width="100" height="auto" valign="center" halign="center"
+                           align="left,vcenter" singleline="true" endellipsis="true"
+                           textid="STRING_PAGE_ADVANCED_DIAGNOSTICS_BLUE_SCREEN_FULL_PATH"/>
+                    <Label name="full_path_label" width="stretch" height="auto"
+                           valign="center" halign="center" align="left,vcenter" singleline="true" endellipsis="true"/>
+                </HBox>
+                <HBox width="stretch" minheight="30" height="auto" valign="center" halign="left" padding="0,0,0,0"
+                      margin="0,0,8,0" bordercolor="color_btn_border" bordersize="0,1,0,0">
+                    <Label width="100" height="auto" valign="center" halign="center"
+                           align="left,vcenter" singleline="true" endellipsis="true"
+                           text="Parameter"/>
+                    <Label name="parameter_label" width="stretch" height="auto"
+                           valign="center" halign="center" align="left,vcenter" singleline="true" endellipsis="true"/>
+                </HBox>
+                <HBox width="stretch" minheight="30" height="auto" valign="center" halign="left" padding="0,0,0,0"
+                      margin="0,0,8,0" bordercolor="color_btn_border" bordersize="0,1,0,0">
+                    <Label width="100" height="auto" valign="center" halign="center"
+                           align="left,vcenter" singleline="true" endellipsis="true"
+                           text="Stack"/>
+                    <VListBox name="stack_list"
+                              width="stretch" height="auto" maxheight="200"
+                              vscrollbar="true" hscrollbar="false" halign="left" valign="center"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="list_tab_item" width="stretch" height="80">
+		<VBox mouse="false" valign="center" halign="center" height="auto" width="auto">
+			<Label name="item_icon" mouse="false" width="auto" height="auto" halign="center"/>
+			<Label class="list_tab_text" name="item_title" mouse="false" margin="0,8,0,0" maxwidth="75" singleline="false" halign="center"/>
+		</VBox>
+	</ListContainerElement>
+</Window>
