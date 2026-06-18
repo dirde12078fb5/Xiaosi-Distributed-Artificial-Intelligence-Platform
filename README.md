@@ -1,6 +1,6 @@
 ![xiao-si.gif](https://raw.gitcode.com/user-images/assets/9293520/cfb16c5e-3b9e-4673-8be2-ebf715eaecc1/xiao-si.gif 'xiao-si.gif')
 
-**<span style="font-size:58px;">小思分布式人工智能平台</span>**
+**<span style="font-size:48px;">小思分布式人工智能平台</span>**
   
 
 <div align="center">
@@ -327,7 +327,21 @@ python 内网通服.py && python 外网通服.py
 
 |数字系列  | ULTRA  系列 | NEXT 系列 （非正式版本） |
 |--|--|--|
-|小思分布式人工智能平台 11系列 | 小思分布式人工智能平台 11 ULTRA X3D | 小思分布式人工智能平台 NEXT 1 2025 |
+|小思分布式人工智能平台 11系列| 小思分布式人工智能平台 11 ULTRA X3D | 小思分布式人工智能平台 NEXT 1 2025 |
+
+---
+# 软件展示
+
+
+<span style="font-size:48px;">小思超级电脑管家</span>2026年10月发布
+![屏幕录制-2026-06-13-194220-Trim.gif](https://raw.gitcode.com/user-images/assets/9293520/c4654bcd-a2ae-49d2-808c-a80c00f5e919/屏幕录制-2026-06-13-194220-Trim.gif '屏幕录制-2026-06-13-194220-Trim.gif')
+
+
+
+
+
+<span style="font-size:48px;">第五代GEN 架构</span>2027年元旦
+![屏幕录制-2026-06-13-195243.gif](https://raw.gitcode.com/user-images/assets/9293520/f4ebc651-3209-4de5-813f-db53229b05fc/屏幕录制-2026-06-13-195243.gif '屏幕录制-2026-06-13-195243.gif')
 
 ---
 # 软件下载
@@ -345,13 +359,11 @@ python 内网通服.py && python 外网通服.py
 git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform.git
 ```
 ---
-Made with ❤️ by Xiao Si Ai
-
----
 欢迎加入此项目，让更多开源软件接入进来 : 邀请人: 小思人工智能平台@dirde12078fb5，邀请您成为 AtomGit | GitCode 项目 参与者
 邀请链接: https://gitcode.com/invite/link/cdd051b1807242f69dfc
 过期时间: 2027-02-01
 
----
+----
+Made with ❤️ by Xiao Si Ai
 
 Made in Xiaosi Distributed Artificial Intelligence
