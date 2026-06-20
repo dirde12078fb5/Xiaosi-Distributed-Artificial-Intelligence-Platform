@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
+		<VBox margin="0,0,0,0" height="auto" padding="25,25,25,25">
+			<VBox margin="0,0,0,0" height="auto" padding="12,12,12,12" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<HBox margin="0,0,0,0" width="auto" height="auto" halign="left" mouse="false">
+					<VBox width="auto" height="auto" mouse="false" halign="left">
+						<Box width="auto" mouse="false" halign="left" height="30">
+							<Label font="system_14" textid="STRING_TAB_NETWORK_DIAGNOSIS_LINK_TYPE_LABEL" valign="center" width="auto" height="auto"/>
+						</Box>
+						<Box width="auto" margin="0,3,0,0" mouse="false" halign="left" height="30">
+							<Label font="system_14" textid="STRING_TAB_NETWORK_DIAGNOSIS_LINK_PROTOCOL_LABEL" valign="center" width="auto"/>
+						</Box>
+					</VBox>
+					<VBox margin="6,0,0,0" width="auto" height="auto" mouse="false" halign="left">
+						<HBox width="auto" height="auto" mouse="false" halign="left">
+							<Box width="65" margin="0,0,6,0" mouse="false" halign="left" height="30">
+								<Option class="circle_option_2" name="option_ping" valign="center" align="top" singleline="true" text="Ping" group="option_type_group" selected="true" height="auto"/>
+							</Box>
+							<Box width="auto" mouse="false" halign="left" height="30">
+								<Option class="circle_option_2" name="option_traceroute" valign="center" align="top" singleline="true" text="Traceroute" group="option_type_group" height="auto"/>
+							</Box>
+						</HBox>
+						<HBox margin="0,3,0,0" width="auto" height="auto" mouse="false" halign="left">
+							<Box width="65" margin="0,0,6,0" mouse="false" halign="left" height="30">
+								<Option class="circle_option_2" name="option_icmp" valign="center" text="ICMP"  group="option_packet_group" selected="true">
+									<Event type="select" receiver="target_port_label" applyattribute="visible=&quot;false&quot;"/>
+									<Event type="select" receiver="target_port_box" applyattribute="visible=&quot;false&quot;"/>
+								</Option>
+							</Box>
+							<Box width="auto" mouse="false" halign="left" height="30">
+								<Option class="circle_option_2" name="option_tcp" valign="center" text="TCP" group="option_packet_group">
+									<Event type="select" receiver="target_port_label" applyattribute="visible=&quot;true&quot;"/>
+									<Event type="select" receiver="target_port_box" applyattribute="visible=&quot;true&quot;"/>
+									<Event type="unselect" receiver="target_port_label" applyattribute="visible=&quot;false&quot;"/>
+									<Event type="unselect" receiver="target_port_box" applyattribute="visible=&quot;false&quot;"/>
+								</Option>
+							</Box>
+						</HBox>
+					</VBox>
+				</HBox>
+				<HBox margin="0,8,0,0" width="auto" height="auto" halign="left" mouse="false">
+					<Label margin="0,0,0,0" width="25" height="auto" valign="center" text="IP" font="system_14" mouse="false"/>
+					<Box margin="6,0,0,0" width="200" height="30" valign="center" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+						<RichEdit name="target_ip_edit" margin="12,0,0,0" width="stretch" height="auto" valign="center" font="system_14" normaltextcolor="black" multiline="false" promptmode="true" promptcolor="splitline_level1" prompttext="www.example.com"/>
+					</Box>
+					<Label name="target_port_label" margin="6,0,0,0" width="30" height="auto" valign="center" text="Port" font="system_14" mouse="false" visible="false"/>
+					<Box name="target_port_box" margin="6,0,0,0" width="200" height="30" valign="center" borderround="8,8" bordersize="1" bordercolor="splitline_level1" visible="false">
+						<RichEdit name="target_port_edit" margin="10,2,10,2" width="stretch" height="auto" valign="center" font="system_14" normaltextcolor="black" multiline="false" promptmode="true" promptcolor="splitline_level1" prompttext="443"/>
+					</Box>
+				</HBox>
+				<HBox margin="0,8,0,0" width="auto" height="auto" halign="left" mouse="false">
+					<Label margin="0,0,0,0" width="25" height="auto" valign="center" text="TTL" font="system_14" mouse="false"/>
+					<Box margin="6,0,0,0" width="200" height="30" valign="center" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+						<RichEdit name="ttl_edit" margin="12,0,0,0" width="stretch" height="auto" valign="center" font="system_14" normaltextcolor="black" multiline="false" promptmode="true" promptcolor="splitline_level1" prompttext="30"/>
+					</Box>
+				</HBox>
+				<HBox margin="0,8,0,0" width="auto" height="auto" halign="left" mouse="false">
+					<Button class="normal_button" name="detect_button" margin="0,0,10,0" width="auto" minwidth="80" height="30" valign="center" textid="STRING_TAB_NETWORK_DIAGNOSIS_START_DETECT"/>
+					<Button class="normal_button" name="cancel_button" margin="0,0,0,0" width="auto" minwidth="80" height="30" valign="center" textid="STRING_TAB_NETWORK_DIAGNOSIS_CANCEL"/>
+				</HBox>
+			</VBox>
+			<VBox margin="0,25,0,0" height="auto" padding="12,12,12,12" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<HBox margin="0,0,0,0" height="auto" padding="0,0,0,0">
+					<Label name="detect_status" width="16" height="16" valign="center" halign="center" mouse="false"/>
+					<Label margin="4,0,0,0" height="auto" valign="center" font="system_14" textid="STRING_TAB_NETWORK_DIAGNOSIS_DETECT_RESULT" mouse="false"/>
+				</HBox>
+				<VListBox class="list" name="detect_list" margin="0,10,0,0" width="stretch" height="auto" vscrollbar="true" hscrollbar="true"/>
+				<Box name="detect_desc_div" width="stretch" height="40" bordercolor="color_btn_border" bordersize="0,1,0,0">
+					<Label margin="4,0,0,0" name="detect_desc" width="auto" height="auto" valign="center" singleline="true" mouse="false" />
+				</Box>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

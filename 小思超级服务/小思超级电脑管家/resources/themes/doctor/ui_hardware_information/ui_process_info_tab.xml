@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
+		<VBox margin="0,0,0,0" width="stretch" height="stretch">
+			<VBox width="stretch" height="320" margin="25,25,25,6" padding="3,3,3,3" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<HBox width="stretch" height="stretch" margin="0,0,0,0" padding="0,0,0,0" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+						<VListBox name="hardware_perf_tab" width="120" height="stretch" vscrollbar="true" defaultdisplayscrollbar="true"/>
+						<Box bkcolor="bk_wnd_white" name="hardware_perf_content" padding="0,1,0,1"/>
+				</HBox>
+			</VBox>
+
+			<VBox width="stretch" height="stretch" margin="25,6,25,12" padding="3,3,3,3" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<HBox margin="0,2,0,4" padding="0,0,0,0" width="stretch" height="auto" minheight="28" mouse="false" childmargin="8" valign="center">
+					<Label font="system_bold_14" normaltextcolor="black" textid="STRING_TAB_SYSTEM_INFO_PROCESS_SHORTCUT_HINT" width="auto" height="auto" valign="center" align="left,vcenter"/>
+					<Label name="process_help_sep" font="system_14" normaltextcolor="gray" text="|" width="auto" height="auto" valign="center" align="left,vcenter"/>
+					<Label class="text_path" name="process_help_link" font="system_bold_16" normaltextcolor="btn_blue_normal" hottextcolor="btn_blue_hover" textid="STRING_PAGE_SYSTEM_INFORMATION_PROCESS_HELP_LINK" width="auto" height="auto" cursortype="hand" mouse="true" valign="center" align="left,vcenter"/>
+				</HBox>
+				<HBox margin="0,0,0,4" padding="0,0,0,0" width="stretch" height="auto" mouse="false" childmargin="8" valign="center">
+					<Label name="process_admin_hint" font="system_12" normaltextcolor="gray" textid="STRING_TAB_SYSTEM_INFO_PROCESS_ADMIN_HINT" width="auto" height="auto" valign="center" align="left,vcenter"/>
+					<ButtonEx class="normal_button" name="restart_as_admin_btn" textid="STRING_TAB_SYSTEM_INFO_RESTART_AS_ADMIN" textpadding="10,0,10,0" width="auto" height="24" valign="center"/>
+					<Control width="stretch"/>
+				</HBox>
+				<HBox margin="0,0,0,0" padding="1,0,1,0" width="stretch" height="auto" mouse="false">
+					<Button class="proc_info_header_no_btn" name="proc_info_title_name" textid="STRING_TAB_SYSTEM_INFO_PROCESS" width="160" align="left"/>
+					<Button class="proc_info_header" name="proc_info_title_pid" text="PID" width="50"/>
+					<Button class="proc_info_header" name="proc_info_title_cpu" text="CPU" width="85"/>
+					<Button class="proc_info_header" name="proc_info_title_private_bytes" text="Private Bytes" width="145"/>
+					<Button class="proc_info_header" name="proc_info_title_page_faults" text="Page Faults" width="80"/>
+					<Button class="proc_info_header" name="proc_info_title_io_rwo_count" text="IO R/W Count" width="90"/>
+					<Button class="proc_info_header" name="proc_info_title_io_rwo_rate" text="IO R/W Rate (KB/s)" width="120"/>
+					<Button class="proc_info_header" name="proc_info_title_network" textid="STRING_TAB_SYSTEM_INFO_PROCESS_NET_RW" width="120"/>
+					<HListBox name="proc_info_title_list_gpu" width="auto"/>
+					<Button class="proc_info_header_no_btn" name="proc_info_title_create_time" textid="STRING_TAB_SYSTEM_INFO_PROCESS_CREATE_TIME" width="100" align="left"/>
+					<Button class="proc_info_header_no_btn" name="proc_info_title_running_time" textid="STRING_TAB_SYSTEM_INFO_PROCESS_RUNNING_TIME" width="100" align="left"/>
+					<Button class="proc_info_header_no_btn" name="proc_info_title_path" textid="STRING_TAB_SYSTEM_INFO_PROCESS_PATH" width="stretch" align="left"/>
+				</HBox>
+				<VListBox name="proc_info_list_brand" padding="1,0,1,0" width="stretch" height="auto"/>
+				<Control class="splitline_hor_level1"/>
+				<VListBox name="proc_info_list_top_n" padding="1,0,1,0" width="stretch" height="stretch" vscrollbar="true" defaultdisplayscrollbar="true"/>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

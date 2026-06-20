@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem" name="list_item" width="stretch" height="auto">
+		<HBox padding="0,3,0,3" height="auto" mouse="false">
+			<Box width="16" height="16">
+				<CheckBox class="list_tab_checkbox" width="16" name="module_check"/>
+			</Box>
+			<Label class="text_path" margin="3,0,0,0" name="module_name" width="170" mouse="false"/>
+			<Label class="text_path" name="app_name" width="170" mouse="false"/>
+			<Label class="text_path" name="detect_type" width="100" mouse="false"/>
+			<Label class="text_path" name="detect_from" width="140" mouse="true"/>
+			<Label class="text_path" name="module_path" width="stretch" mouse="true"/>
+		</HBox>
+	</ListContainerElement>
+</Window>

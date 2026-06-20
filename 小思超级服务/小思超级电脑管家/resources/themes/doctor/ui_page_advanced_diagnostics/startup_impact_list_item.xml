@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem"
+					  width="stretch" height="auto">
+		<VBox width="stretch" height="auto" padding="0,0,0,0"
+			  bordercolor="color_btn_border" bordersize="0,1,0,0">
+			<HBox width="auto" minheight="30" height="stretch" valign="center" halign="left" padding="0,0,0,0"
+				  bordercolor="color_btn_border">
+				<Control width="20" height="30"/>
+				<Label name="impact_name_label"
+					   margin="4,0,4,0" width="172" height="auto" valign="center" halign="center"
+					   align="left" singleline="true" endellipsis="true"/>
+				<Label name="impact_time_label"
+					   margin="4,0,4,0" width="132" height="auto" valign="center" halign="center"
+					   align="left" singleline="true" endellipsis="true"/>
+				<Label name="impact_delta_label"
+					   margin="4,0,4,0" width="132" height="auto" valign="center" halign="center"
+					   align="left" singleline="true" endellipsis="true"/>
+				<Label name="impact_company_label"
+					   margin="4,0,4,0" width="232" height="auto" valign="center" halign="center"
+					   align="left" singleline="true" endellipsis="true"/>
+				<Label name="impact_path_label"
+					   margin="4,0,4,0" width="624" height="auto" valign="center" halign="center"
+					   align="left" singleline="true" endellipsis="true"/>
+			</HBox>
+		</VBox>
+	</ListContainerElement>
+</Window>

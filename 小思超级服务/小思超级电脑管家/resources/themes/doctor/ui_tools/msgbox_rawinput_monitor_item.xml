@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem" width="stretch" height="auto" normalcolor="white" hotcolor="bk_wnd_darkcolor" pushedcolor="bk_wnd_darkcolor">
+		<VBox width="stretch" height="auto">
+			<HBox margin="0,2,0,2" height="auto" mouse="false">
+				<HBox margin="0,0,0,0" width="16" height="stretch" valign="center" halign="center">
+					<Button class="btn_expand_right" width="16" height="16" name="btn_expand" valign="center" halign="center"/>
+					<Button class="btn_contract" width="16" height="16" name="btn_contract" valign="center" halign="center"/>
+				</HBox>
+				<Label class="text_path" name="time" width="80" mouse="false" align="left"/>
+				<Label class="text_path" name="key_name" width="140" mouse="false" align="left"/>
+				<Label class="text_path" name="device_id" width="300" align="left" mouse="true"/>
+				<Label class="text_path" name="process_info" width="stretch" mouse="true" align="left"/>
+			</HBox>
+			<VListBox vscrollbar="true" name="detail_list" width="stretch" height="auto" valign="center" margin="16,1,0,1" bordercolor="color_btn_border" bordersize="0,1,0,1"/>
+		</VBox>
+	</ListContainerElement>
+</Window>

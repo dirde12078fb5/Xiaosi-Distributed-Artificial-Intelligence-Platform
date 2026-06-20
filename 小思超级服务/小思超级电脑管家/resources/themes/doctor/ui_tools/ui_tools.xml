@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box valign="center" halign="center" width="stretch" height="stretch" bkcolor="tab_background_color">
+		<VBox padding="25,15,25,25" valign="center" halign="center" width="stretch" height="stretch">
+			<Label margin="0,0,0,0" font="system_bold_18" mouse="false" width="auto" height="auto" textid="STRING_TAB_TOOLS_DIAGNOSIS_TITLE"/>
+			<VBox margin="0,10,0,0" padding="15,15,15,15" width="stretch" height="auto" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<VListBox class="list" name="tools_list_diagnosis" width="stretch" height="auto"/>
+			</VBox>
+			<Label margin="0,25,0,0" font="system_bold_18" mouse="false" width="auto" height="auto" textid="STRING_TAB_TOOLS_NETWORK_TOOLS_TITLE"/>
+			<VBox margin="0,10,0,0" padding="15,15,15,15" width="stretch" height="auto" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<VListBox class="list" name="tools_list_certificate" width="stretch" height="auto"/>
+			</VBox>
+			<Label margin="0,25,0,0" font="system_bold_18" mouse="false" width="auto" height="auto" textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_TITLE"/>
+			<VBox margin="0,10,0,0" padding="15,15,15,15" width="stretch" height="auto" bkcolor="white" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+				<VListBox class="list" name="tools_list_system_monitor" width="stretch" height="auto"/>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

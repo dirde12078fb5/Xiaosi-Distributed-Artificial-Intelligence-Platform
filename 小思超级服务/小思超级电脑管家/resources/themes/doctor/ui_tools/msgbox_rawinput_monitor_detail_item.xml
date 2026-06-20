@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem" width="stretch" height="auto" hotcolor="bk_wnd_darkcolor" pushedcolor="bk_wnd_darkcolor">
+		<HBox margin="0,2,0,2" height="auto" mouse="false">
+			<Label class="text_path" name="time" width="80" mouse="false" align="left"/>
+			<Label class="text_path" name="key_name" width="140" mouse="false" align="left"/>
+			<Label class="text_path" name="device_id" width="300" align="left" mouse="true"/>
+			<Label class="text_path" name="process_info" width="stretch" mouse="true" align="left"/>
+		</HBox>
+	</ListContainerElement>
+</Window>

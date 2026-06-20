@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box bkcolor="bk_wnd_msg_darkcolor" width="stretch" height="stretch">
+		<VBox bkcolor="white" name="msgbox" width="1000" height="758" valign="center" halign="center" visible="true" borderround="10,10">
+			<Button class="btn_wnd_close" valign="top" halign="right" name="msg_cls_btn" margin="0,10,10,0"/>
+			<VBox margin="24,4,24,24">
+				<Label font="system_bold_20" name="msg_title" width="stretch" height="auto"/>
+				<HBox margin="0,4,0,10" height="auto">
+					<Label textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_FILTER_NAME" width="auto" valign="center"/>
+					<Box margin="8,0,0,0" borderround="8,8" bordersize="1" bordercolor="color_btn_border" valign="center" width="240" height="30" disabledcolor="textdefaultdisablecolor">
+						<RichEdit name="edit_input_handle_name" margin="10,0,10,0" valign="center" width="stretch" height="auto" normaltextcolor="black" multiline="false" rich="false" autohscroll="true"/>
+					</Box>
+					<Control name="stretch"/>
+					<Label name="ico_loading" visible="false" margin="0,0,10,0" mouse="false" width="24" height="24" halign="center" valign="center" bkimage="..\public\animation\ani_loading_ex.gif"/>
+					<ButtonEx class="normal_button" valign="center" halign="right" textpadding="20,0,20,0" width="auto" height="30" name="btn_monitor_select" visible="false" textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_SELECT"/>
+					<ButtonEx class="normal_button" margin="10,0,0,0" valign="center" halign="right" textpadding="20,0,20,0" width="auto" height="30" name="btn_monitor_start" textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_START"/>
+					<ButtonEx class="normal_button" margin="10,0,0,0" valign="center" halign="right" textpadding="20,0,20,0" width="auto" height="30" name="btn_monitor_stop" textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_STOP"/>
+					<ButtonEx class="normal_button" margin="10,0,0,0" valign="center" halign="right" textpadding="20,0,20,0" width="auto" height="30" name="btn_clean" textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_CLEAN"/>
+				</HBox>
+				<VBox padding="15,15,15,15" width="stretch" height="stretch" name="handle_result" borderround="8,8" bordersize="1" bordercolor="splitline_level1">
+					<Label width="auto" height="auto" margin="0,0,0,5" name="notice" valign="center" halign="left" textpadding="0,0,2,0"/>
+					<Control class="splitline_hor_level1"/>
+					<HBox height="30">
+						<Label textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_PROCESS" width="250" font="system_bold_12" align="left" valign="center"/>
+						<Label textid="STRING_TAB_TOOLS_SYSTEM_MONITOR_SUB_MONITOR_FILE_HANDLE_NAME" width="stretch" font="system_bold_12" align="left" valign="center"/>
+						<Label text="PID" width="80" font="system_bold_12" align="left" valign="center"/>
+					</HBox>
+					<Control class="splitline_hor_level1"/>
+					<VListBox vscrollbar="true" name="monitor_handle_list" width="stretch" height="stretch" valign="center"/>
+				</VBox>
+			</VBox>
+		</VBox>
+	</Box>
+</Window>

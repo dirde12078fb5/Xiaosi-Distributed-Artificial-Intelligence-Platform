@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <ListContainerElement width="stretch" height="auto" normalcolor="white" hotcolor="bk_wnd_darkcolor" pushedcolor="bk_wnd_darkcolor" selectednormalcolor="bk_wnd_darkcolor" mouse="true" menu="true">
+		<HBox margin="0,0,0,0" padding="0,0,0,0" height="auto" mouse="true">
+			<HBox name="proc_info_box" width ="160" bordersize="1,0,0,0" bordercolor="white" mouse="true">
+				<Button class="btn_contract" name="btn_zip_brand_info" width="16" height="16" valign="center" visible="false"/>
+				<Label name="blank_label" width="16" height="16" visible="false" mouse="false"/>
+				<Label name="name" endellipsis="true" singleline="true" textpadding="4,3,3,3" width="stretch" align="left" mouse="false"/>
+			</HBox>
+			<Label class="proc_info_body" name="pid" width="50"/>
+			<Label class="proc_info_body" name="cpu" width="85"/>
+			<Label class="proc_info_body" name="private_bytes" width="145"/>
+			<Label class="proc_info_body" name="page_faults" width="80"/>
+			<Label class="proc_info_body" name="io_rwo_count" width="90"/>
+			<Label class="proc_info_body" name="io_rwo_rate" width="120"/>
+			<Label class="proc_info_body" name="network" width="120"/>
+			<HListBox name="list_gpu" width="auto"/>
+			<Label class="proc_info_body" name="create_time" width="100" align="left"/>
+			<Label class="proc_info_body" name="running_time" width="100" align="left"/>
+			<Label class="proc_info_body" name="path" width="stretch" align="left"/>
+		</HBox>
+	</ListContainerElement>
+</Window>

@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'sinatra', '~> 3.0'
+gem 'json', '~> 2.6'
+gem 'bcrypt', '~> 4.1'
+gem 'jwt', '~> 2.7'
+
+group :development do
+  gem 'pry', '~> 0.14'
+end

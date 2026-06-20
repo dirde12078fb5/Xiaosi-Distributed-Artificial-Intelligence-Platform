@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<VBox margin="0,30,0,0" width="stretch" height="auto">
+		<VBox width="stretch" height="auto" name="third_module">
+			<HBox width="stretch" height="auto">
+				<Label name="ico_title" mouse="false" width="22" height="22" bkimage="ui_exception_diagnosis\icon_warning.svg" valign="center"/>
+				<Label margin="10,0,0,0" font="system_bold_18" mouse="false" width="auto" height="auto" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_THIRD_TITLE" valign="center"/>
+				<Label margin="10,0,0,0" mouse="false" width="auto" height="auto" textid="" valign="center"/>
+				<Control name="stretch"/>
+				<HBox margin="0,0,0,10" width="auto" height="auto">
+					<Button class="btn_expand_left" width="16" height="16" name="btn_expand" valign="center"/>
+					<Button class="btn_contract" width="16" height="16" name="btn_contract" valign="center"/>
+				</HBox>
+			</HBox>
+			<VBox margin="10,10,0,0" padding="0,10,0,10" width="stretch" height="auto" name="content_div" borderround="6,6">
+				<VBox margin="2,0,0,3" width="stretch" height="auto" name="result_content_div">
+					<VBox margin="20,3,0,0" width="stretch" height="auto" name="result_content_div_warning">
+						<VBox width="stretch" height="auto">
+							<HBox margin="20,0,0,0" width="stretch" height="auto" mouse="false">
+								<Label class="text_path_bold" textid="STRING_TAB_BLOCK_MODULE_TEXT_MODULE_NAME" width="241" mouse="false"/>
+								<Label class="text_path_bold" textid="STRING_TAB_BLOCK_MODULE_TEXT_SOFTWARE_MANUFACTURER" width="200" mouse="false"/>
+								<Label class="text_path_bold" textid="STRING_TAB_BLOCK_MODULE_TEXT_DETECT_TYPE" width="180" mouse="false"/>
+								<Label class="text_path_bold" textid="STRING_TAB_BLOCK_MODULE_TEXT_FROM" width="stretch" mouse="false"/>
+								<Label class="text_path_bold" name="header_operate" textid="STRING_TAB_BLOCK_MODULE_TEXT_OPERATE" width="180" mouse="false"/>
+							</HBox>
+							<VBox margin="0,3,0,0" width="stretch" height="auto" name="result_content_div_list"/>
+						</VBox>
+						<HBox margin="20,10,15,0" width="stretch" height="auto" valign="center">
+							<VBox width="auto" height="auto" valign="center" bordersize="0,1,0,0" bordercolor="block_tips" padding="0,5,5,0">
+								<Label class="text_path_bold_tips" margin="0,0,0,5" textid="STRING_TAB_BLOCK_MODULE_TIPS1"/>
+								<Label class="text_path_bold_tips" textid="STRING_TAB_BLOCK_MODULE_TIPS2"/>
+							</VBox>
+							<Control name="stretch"/>
+							<HBox width="auto" height="auto" valign="center" name="dll_block_div">
+								<ButtonEx class="btn_blue_font12" textpadding="8,8,8,8" width="auto" height="auto" valign="center" name="dll_unblock" textid="STRING_TAB_BLOCK_MODULE_BUTTON_UNSHIELDED_MODULE"/>
+								<ButtonEx class="btn_blue_font12" margin="10,0,0,0" textpadding="8,8,8,8" width="auto" height="auto" valign="center" name="dll_block" textid="STRING_TAB_BLOCK_MODULE_BUTTON_SHIELDED_ALL_MODULE"/>
+							</HBox>
+						</HBox>
+					</VBox>
+					<HBox margin="20,3,0,0" width="stretch" height="auto" name="result_content_div_normal">
+						<Control width="16" height="16" bkimage="ui_exception_diagnosis\icon_result_noraml.svg" margin="0,0,4,0" valign="center"/>
+						<Label font="system_bold_12" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_THIRD_TITLE_NULL" mouse="false" width="auto" height="auto" valign="center"/>
+					</HBox>
+				</VBox>
+			</VBox>
+		</VBox>
+	</VBox>
+</Window>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<VBox margin="0,30,0,0" width="stretch" height="auto">
+		<HBox width="stretch" height="auto">
+			<Label name="ico_title" mouse="false" width="22" height="22" bkimage="ui_exception_diagnosis\icon_warning.svg" valign="center"/>
+			<Label margin="10,0,0,0" font="system_bold_18" mouse="false" width="auto" height="auto" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_SYS_ENV_TITLE" valign="center"/>
+			<Label margin="10,0,0,0" mouse="false" width="auto" height="auto" textid="" valign="center"/>
+			<Control />
+			<HBox margin="0,0,0,10" width="auto" height="auto">
+				<Button class="btn_expand_left" width="16" height="16" name="btn_expand" valign="center"/>
+				<Button class="btn_contract" width="16" height="16" name="btn_contract" valign="center"/>
+			</HBox>
+		</HBox>
+		<VBox margin="10,10,0,0" padding="2,10,0,10" width="stretch" height="auto" name="content_div" borderround="6,6">
+			<VBox margin="0,0,0,3" width="stretch" height="auto" name="result_content_div_vdi">
+				<HBox margin="2,0,0,0" width="auto" height="auto">
+					<Button class="btn_expand_right" width="16" height="16" name="btn_expand" valign="center"/>
+					<Button class="btn_contract" width="16" height="16" name="btn_contract" valign="center"/>
+					<Label margin="2,0,0,0" mouse="false" font="system_bold_12" width="auto" height="auto" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_VDI_TITLE" valign="center"/>
+				</HBox>
+				<VBox margin="20,3,0,0" width="stretch" height="auto" name="content_list"/>
+			</VBox>
+			<VBox margin="0,0,0,3" width="stretch" height="auto" name="result_content_div_app">
+				<HBox margin="2,0,0,0" width="auto" height="auto">
+					<Button class="btn_expand_right" width="16" height="16" name="btn_expand" valign="center"/>
+					<Button class="btn_contract" width="16" height="16" name="btn_contract" valign="center"/>
+					<Label margin="2,0,0,0" mouse="false" font="system_bold_12" width="auto" height="auto" textid="STRING_TAB_EXCEPTION_DIAGNOSIS_SYS_ENV_APP_TITLE" valign="center"/>
+				</HBox>
+				<VBox margin="20,3,0,0" width="stretch" height="auto" name="content_list"/>
+			</VBox>
+		</VBox>
+	</VBox>
+</Window>

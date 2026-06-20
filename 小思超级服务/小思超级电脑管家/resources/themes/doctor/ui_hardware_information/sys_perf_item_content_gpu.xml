@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<VBox margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
+		<HBox>
+			<VBox margin="5,0,5,5">
+				<HBox height="auto">
+					<Label font="system_12" text="3D" width ="100"/>
+				</HBox>
+				<DrawControl class="sys_perf_draw_ctrl" name="usage_draw_gpu_3d" gridlines="5"/>
+			</VBox>
+			<VBox margin="5,0,5,5">
+				<HBox height="auto">
+					<Label font="system_12" text="Copy" width ="100"/>
+				</HBox>
+				<DrawControl class="sys_perf_draw_ctrl" name="usage_draw_gpu_copy" gridlines="5"/>
+			</VBox>
+		</HBox>
+		<HBox>
+			<VBox margin="5,5,5,0">
+				<HBox height="auto">
+					<Label font="system_12" text="Video Encode" width ="100"/>
+				</HBox>
+				<DrawControl class="sys_perf_draw_ctrl" name="usage_draw_gpu_encode" gridlines="5"/>
+			</VBox>
+			<VBox margin="5,5,5,0">
+				<HBox height="auto">
+					<Label font="system_12" text="Video Decode" width ="100"/>
+				</HBox>
+				<DrawControl class="sys_perf_draw_ctrl" name="usage_draw_gpu_decode" gridlines="5"/>
+			</VBox>
+		</HBox>
+	</VBox>
+</Window>
