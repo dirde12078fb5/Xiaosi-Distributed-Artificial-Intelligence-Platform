@@ -1,7 +1,0 @@
-<svg width="62" height="62" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg"> 
-  <!-- 白色X符号（两条交叉对角线） -->
-  <line x1="15" y1="15" x2="47" y2="47" 
-        stroke="#969ca3" stroke-width="3" stroke-linecap="round"/>
-  <line x1="47" y1="15" x2="15" y2="47" 
-        stroke="#969ca3" stroke-width="3" stroke-linecap="round"/>
-</svg>

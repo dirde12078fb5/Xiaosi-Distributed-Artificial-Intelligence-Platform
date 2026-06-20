@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Window>
-	<ListContainerElement width="125" height="auto" mouse="false">
-		<HBox margin="0,0,0,0" padding="0,0,0,0" mouse="false">
-			<Label class="proc_info_body" name="gpu_body" width="125"/>
-		</HBox>
-	</ListContainerElement>
-</Window>

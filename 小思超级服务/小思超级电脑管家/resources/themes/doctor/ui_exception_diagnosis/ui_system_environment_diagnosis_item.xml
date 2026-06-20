@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Window>
-	<HBox width="stretch" height="auto" margin="0,0,0,3">
-		<Control width="16" height="16" name="icon" margin="0,0,4,0" valign="center"/>
-		<Label class="text_path_bold" name="item_1" mouse="false" width="241" height="auto" valign="center"/>
-		<Label class="text_path_bold" name="item_2" mouse="true" width="200" height="auto" valign="center"/>
-		<Label class="text_path_bold" name="item_3" mouse="true" width="stretch" height="auto" valign="center"/>
-	</HBox>
-</Window>
