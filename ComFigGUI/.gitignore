@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Local data / workflow outputs
+workflows/*.json
+!workflows/.gitkeep
+
+# Reports and temp files
+*.log
+*.tmp
+*.report.json
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Server logs (when running server.py)
+server_log.txt
+server_err.txt
+server_pid.txt
