@@ -1,0 +1,9 @@
+{
+  "api": {
+    "invalidJson": "服务器返回的不是合法 JSON",
+    "bizError": "业务错 (code {{code}})",
+    "extractFail": "extract 失败 HTTP {{status}}",
+    "fetchSamplesFail": "拉取已存样本数失败 HTTP {{status}}",
+    "saveFail": "保存失败 HTTP {{status}}"
+  }
+}

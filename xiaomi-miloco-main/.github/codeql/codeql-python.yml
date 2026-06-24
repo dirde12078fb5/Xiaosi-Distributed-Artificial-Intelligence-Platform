@@ -1,0 +1,13 @@
+# CodeQL Python 扫描范围：backend（miloco + miot）+ cli。
+# 只选范围和忽略项，不写自定义 QL——查询套件由 workflow 用 security-extended /
+# security-and-quality 指定。
+name: miloco-codeql-python
+
+paths:
+  - backend
+  - cli
+
+paths-ignore:
+  - "**/tests/**"
+  - "**/test_*.py"
+  - "**/conftest.py"

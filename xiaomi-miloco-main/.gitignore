@@ -1,0 +1,80 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage
+temp
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Build Outputs
+.next/
+out/
+build
+dist
+target
+
+# Build-time generated skills copy
+plugins/openclaw/skills/
+
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+.venv
+.mypy_cache
+__pycache__
+*.egg-info
+*.py[oc]
+.pytest_cache/
+.ruff_cache/
+
+# Backend test artifacts
+.test_cache
+/test_results/
+testcases
+
+# Large media test files
+*.mp4
+*.mkv
+*.avi
+*.wav
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Misc
+.DS_Store
+*.pem
+*.key
+temp
+.temp
+
+# IDE
+.vscode
+.claude/*
+CLAUDE.md
+openspec
+_workspace
+_local/
+xaf/

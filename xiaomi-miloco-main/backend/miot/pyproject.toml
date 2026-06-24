@@ -1,0 +1,31 @@
+[project]
+name = "miloco-miot"
+dynamic = ["version"]
+description = "MIoT SDK - Xiaomi IoT device communication"
+requires-python = ">=3.11"
+authors = [{ name = "Miloco team", email = "xiaomi-miloco@xiaomi.com" }]
+dependencies = [
+  "aiocache>=0.12.3",
+  "aiofiles>=25.1.0",
+  "aiohttp>=3.14.1",
+  "av>=17.1.0",
+  "fastmcp>=3.4.2",
+  "paho-mqtt>=2.1.0",
+  "pillow>=12.2.0",
+  "psutil>=7.2.2",
+  "pydantic>=2.13.4",
+  "zeroconf>=0.149.16",
+]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+# 版本号从 git tag 派生（发布时 build.sh 经 SETUPTOOLS_SCM_PRETEND_VERSION 注入）；
+# fallback-version 让无 tag 的克隆仍能 uv sync。root 指向仓库根（git 元数据所在）。
+[tool.hatch.version]
+source = "vcs"
+raw-options = { root = "../..", fallback_version = "0.0.0" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/miot"]

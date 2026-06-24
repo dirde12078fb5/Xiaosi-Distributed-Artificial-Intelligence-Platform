@@ -1,0 +1,26 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+.DS_Store
+_mock
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript incremental build cache（本地路径相关，不入仓）
+*.tsbuildinfo

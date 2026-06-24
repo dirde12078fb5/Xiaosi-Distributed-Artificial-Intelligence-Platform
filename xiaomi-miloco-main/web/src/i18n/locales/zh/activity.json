@@ -1,0 +1,30 @@
+{
+  "activity": {
+    "title": "家里发生了什么",
+    "loadedCount": "已加载 {{n}} 条{{more}}",
+    "loading": "加载中…",
+    "emptyFiltered": "该时间段内没事 · 试试调整范围",
+    "emptyDefault": "今天还没什么事 · 它在替你看着",
+    "loadMore": "查看更早",
+    "collapse": "收起",
+    "playback": "事件回放",
+    "close": "关闭",
+    "filterSince": "起始时间",
+    "filterSincePlaceholder": "不限",
+    "filterToNow": "至现在",
+    "filterBeforeDefault": "截止时间(默认至现在)",
+    "filterBefore": "截止时间",
+    "resumeLive": "恢复实时刷新",
+    "liveButton": "↻ 实时",
+    "videoPlayback": "事件视频回放",
+    "audioPlayback": "事件音频回放",
+    "noPlaybackAria": "本次事件无回放",
+    "noPlayback": "🎤 本次事件无回放",
+    "clipExpiredAria": "clip 已过期",
+    "clipExpired": "🎬 已过期",
+    "audioExpiredAria": "音频已过期",
+    "audioExpired": "🎤 音频已过期",
+    "audioOnly": "🎤 仅音频",
+    "zoomPlay": "放大播放"
+  }
+}

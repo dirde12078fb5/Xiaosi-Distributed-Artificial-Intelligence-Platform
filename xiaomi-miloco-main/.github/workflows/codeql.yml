@@ -1,0 +1,59 @@
+# CodeQL 安全扫描：Python + TypeScript + Actions 三语言矩阵并行，
+# 用内置 security-extended 套件，结果（SARIF）自动上传 GitHub Security 面板。
+# Python/TS 为解释型，无需 build，autobuild 即可。
+name: CodeQL
+
+on:
+  pull_request:
+    paths:
+      - "backend/**"
+      - "cli/**"
+      - "plugins/openclaw/**"
+      - "web/**"
+      - ".github/workflows/**"
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - "cli/**"
+      - "plugins/openclaw/**"
+      - "web/**"
+      - ".github/workflows/**"
+  schedule:
+    - cron: "0 6 * * *"
+
+concurrency:
+  group: codeql-${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: python
+            config: ./.github/codeql/codeql-python.yml
+          - language: javascript-typescript
+            config: ./.github/codeql/codeql-ts.yml
+          - language: actions
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          config-file: ${{ matrix.config }}
+          queries: security-extended
+      - uses: github/codeql-action/autobuild@v3
+      - uses: github/codeql-action/analyze@v3
+        continue-on-error: true # 未开 Code Scanning 时上传会失败；不阻塞（findings 不影响退出码）
+        with:
+          category: "/security/${{ matrix.language }}"

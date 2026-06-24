@@ -1,0 +1,53 @@
+# PR 自动打标签：按变更路径打分类标签（配置见 .github/labeler.yml），
+# 并按 diff 行数打 size 标签（XS~XL）。
+name: Labeler
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: labeler-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  path-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v5
+        with:
+          sync-labels: true
+
+  size-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const changes = pr.additions + pr.deletions;
+            const bucket =
+              changes < 10 ? 'XS' :
+              changes < 50 ? 'S' :
+              changes < 200 ? 'M' :
+              changes < 800 ? 'L' : 'XL';
+            const want = `size/${bucket}`;
+            const labels = (await github.rest.issues.listLabelsOnIssue({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number: pr.number,
+            })).data.map(l => l.name);
+            for (const name of labels) {
+              if (name.startsWith('size/') && name !== want) {
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner, repo: context.repo.repo, issue_number: pr.number, name,
+                });
+              }
+            }
+            if (!labels.includes(want)) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: pr.number, labels: [want],
+              });
+            }

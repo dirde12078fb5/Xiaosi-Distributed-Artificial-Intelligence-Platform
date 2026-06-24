@@ -1,0 +1,33 @@
+{
+  "app": {
+    "loadHomeStatusFail": "Couldn't load home status",
+    "loadPersonsFail": "Couldn't load family list",
+    "loadCamerasFail": "Couldn't load cameras",
+    "loadScopeCamerasFail": "Couldn't load camera scope",
+    "loadScopeHomesFail": "Couldn't load homes",
+    "loadDevicesFail": "Couldn't load devices",
+    "loadScenesFail": "Couldn't load scenes",
+    "loadActivityFail": "Couldn't load today's events",
+    "loadHomeEntriesFail": "Couldn't load home profile",
+    "loadTasksFail": "Couldn't load family tasks",
+    "tabHomeError": "Couldn't load home: {{msg}}",
+    "tabHomeLoading": "Checking on your home…",
+    "tabDevicesError": "Couldn't load devices: {{msg}}",
+    "tabDevicesLoading": "Reading devices at home…",
+    "tabFamilyError": "Couldn't load family list: {{msg}}",
+    "tabFamilyLoading": "Reading family list…",
+    "tabActivityError": "Couldn't load today's events: {{msg}}",
+    "tabActivityLoading": "Reading what happened today…",
+    "switchedTo": "Switched to {{name}}",
+    "anotherHome": "another home",
+    "woke": "It woke up",
+    "wakeFail": "Couldn't wake it up, try again later",
+    "restartFailEngineRunning": "Couldn't restart, engine still running: {{msg}}",
+    "restartFailEngineRunningNoMsg": "Couldn't restart, engine still running",
+    "engineRestarted": "Engine restarted",
+    "engineStoppedWakeManually": "Engine stopped, wake it manually: {{msg}}",
+    "engineStoppedWakeManuallyNoMsg": "Engine stopped, wake it manually",
+    "stopFail": "Couldn't stop, try again later",
+    "miotBound": "Xiaomi Home connected"
+  }
+}

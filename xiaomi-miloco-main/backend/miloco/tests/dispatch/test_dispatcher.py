@@ -1,0 +1,528 @@
+# Copyright (C) 2025 Xiaomi Corporation
+# This software may be used and distributed according to the terms of the Xiaomi Miloco License Agreement.
+
+"""Tests for the backend AgentDispatcher (per-session single-flight + same-type merge).
+
+Behaviors under test:
+  * 同类合并：单飞期间到达的同类事件，合并进下一轮 turn 的一条 message。
+  * builder 契约：builder 收到 *扁平合并后* 的 items；返回 None/空 → 跳过该批。
+  * 单飞：同一 session 平台在途 turn 恒 ≤1。
+  * 优先级 + 时序：_take_batch 取最高优先级类型、同类按入队时间升序。
+  * 双层淘汰：超长时按 (类型优先级, 条目级 intra_priority, -时间) 淘汰最不紧急者；
+    条目级仅参与淘汰、不改 _take_batch 渲染序；被淘汰的 dispatch 返回 False。
+  * 超时 / 传输失败：均跳过该批、不写 agent_runs，drainer 存活继续。
+  * 可观测：成功且类型 ∈ {interaction,rule,suggestion} 才 track_agent_run；bind 不统计。
+  * 生命周期：stop() 取消在途 drainer；closed 后 dispatch 丢弃。
+"""
+
+from __future__ import annotations
+
+import asyncio
+import time
+import uuid
+from types import SimpleNamespace
+
+import pytest
+from miloco.config import get_settings
+from miloco.dispatch import (
+    AgentDispatcher,
+    dispatch_event,
+    get_agent_dispatcher,
+    join_text_blocks,
+    set_agent_dispatcher,
+)
+from miloco.dispatch import dispatcher as disp_mod
+from miloco.dispatch.dispatcher import _QueuedEvent
+from miloco.middleware.exceptions import AgentWebhookException
+
+# 队列上限的唯一真源现为 settings；测试读取它，与 dispatcher._enforce_cap 同源。
+MAX_QUEUE = get_settings().dispatcher.max_queue
+
+
+def _join(items: list) -> str | None:
+    """Trivial builder: space-join string items; None when empty."""
+    return " ".join(str(i) for i in items) if items else None
+
+
+async def _settle(d: AgentDispatcher, timeout: float = 2.0) -> None:
+    """Wait until all queues are empty and no drainer is in flight."""
+    loop = asyncio.get_event_loop()
+    deadline = loop.time() + timeout
+    while loop.time() < deadline:
+        await asyncio.sleep(0.01)
+        if not d._draining and not any(d._queues.values()):
+            return
+    raise AssertionError("dispatcher did not settle within timeout")
+
+
+@pytest.fixture
+def patched(monkeypatch):
+    """Patch the dispatcher module's collaborators; return a call recorder.
+
+    Default ``run_agent_turn`` is instantaneous and returns an ok status with a
+    monotonically-numbered runId. Tests needing slow/timeout/raising behavior
+    re-``monkeypatch.setattr`` ``disp_mod.run_agent_turn`` themselves.
+    """
+    rec = SimpleNamespace(turns=[], tracks=[])
+
+    async def default_turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        rec.turns.append(
+            SimpleNamespace(
+                msg=msg,
+                session_key=session_key,
+                lane=lane,
+                trace_id=trace_id,
+                wait_timeout_ms=wait_timeout_ms,
+            )
+        )
+        return f"run-{len(rec.turns)}", "ok", 1.0
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", default_turn)
+
+    def fake_track(trace_id, run_id, source, rtt_ms):
+        rec.tracks.append(
+            SimpleNamespace(
+                trace_id=trace_id, run_id=run_id, source=source, rtt_ms=rtt_ms
+            )
+        )
+
+    monkeypatch.setattr(disp_mod, "track_agent_run", fake_track)
+    monkeypatch.setattr(
+        disp_mod,
+        "get_settings",
+        lambda: SimpleNamespace(
+            dispatcher=SimpleNamespace(
+                turn_wait_timeout_ms=30_000, max_queue=MAX_QUEUE
+            )
+        ),
+    )
+    return rec
+
+
+# --------------------------------------------------------------- pure logic (no async)
+
+
+def test_enforce_cap_evicts_least_urgent_first():
+    """priority 数字大者(最不紧急)优先淘汰，即使它是最新入队的。"""
+    d = AgentDispatcher()
+    sk = "agent:main:miloco"
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    for i in range(MAX_QUEUE):
+        q.append(_QueuedEvent("interaction", [f"i{i}"], _join, 0, now + i))
+    # bind: least urgent (30) but newest — must still be the eviction victim.
+    q.append(_QueuedEvent("bind", ["b"], _join, 30, now + 1000))
+
+    d._enforce_cap(sk)
+
+    assert len(q) == MAX_QUEUE
+    assert all(e.event_type == "interaction" for e in q)
+
+
+def test_enforce_cap_same_priority_evicts_oldest():
+    """同优先级时淘汰最旧者。"""
+    d = AgentDispatcher()
+    sk = "agent:main:miloco"
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    for i in range(MAX_QUEUE + 3):
+        q.append(_QueuedEvent("interaction", [f"i{i}"], _join, 0, now + i))
+
+    d._enforce_cap(sk)
+
+    assert len(q) == MAX_QUEUE
+    kept = {e.items[0] for e in q}
+    assert {"i0", "i1", "i2"}.isdisjoint(kept)  # 3 oldest evicted
+    assert "i3" in kept
+
+
+def test_enforce_cap_intra_priority_evicts_least_urgent_within_type():
+    """同类型内,先淘汰条目级最不紧急(intra_priority 数字最大)者,即便它最新。"""
+    d = AgentDispatcher()
+    sk = "agent:main:miloco-suggest"
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    for i in range(MAX_QUEUE):  # 满队 high(intra=-2),最旧
+        q.append(_QueuedEvent("suggestion", [f"h{i}"], _join, 20, now + i, -2))
+    # low(intra=0)最新 → 因条目级最不紧急被淘汰。
+    q.append(_QueuedEvent("suggestion", ["low_new"], _join, 20, now + 1000, 0))
+
+    d._enforce_cap(sk)
+
+    assert len(q) == MAX_QUEUE
+    assert all(e.items[0] != "low_new" for e in q)
+
+
+def test_enforce_cap_type_priority_dominates_intra():
+    """类型优先级是第一层:更不紧急的类型即便条目级极紧急也先被淘汰。"""
+    d = AgentDispatcher()
+    sk = "agent:main:miloco"  # interaction(0) & bind(30) 共用
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    for i in range(MAX_QUEUE):
+        q.append(_QueuedEvent("interaction", [f"i{i}"], _join, 0, now + i, 0))
+    # bind 给一个极端紧急的 intra=-100,仍因类型最不紧急(30)而被淘汰。
+    q.append(_QueuedEvent("bind", ["b"], _join, 30, now + 1, -100))
+
+    d._enforce_cap(sk)
+
+    assert len(q) == MAX_QUEUE
+    assert all(e.event_type == "interaction" for e in q)
+
+
+def test_take_batch_render_order_ignores_intra_priority():
+    """渲染/出批仍按时序:_take_batch 不因 intra_priority 重排(后到的 high 仍排后)。"""
+    d = AgentDispatcher()
+    sk = "agent:main:miloco-suggest"
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    q.append(_QueuedEvent("suggestion", ["low_early"], _join, 20, now + 1, 0))
+    q.append(_QueuedEvent("suggestion", ["high_late"], _join, 20, now + 5, -2))
+
+    batch = d._take_batch(sk)
+
+    assert [e.items[0] for e in batch] == ["low_early", "high_late"]
+
+
+def test_take_batch_picks_highest_priority_and_sorts_by_time():
+    d = AgentDispatcher()
+    sk = "agent:main:miloco"  # shared by interaction(0) & bind(30)
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    q.append(_QueuedEvent("bind", ["b1"], _join, 30, now + 5))
+    q.append(_QueuedEvent("interaction", ["i_late"], _join, 0, now + 9))
+    q.append(_QueuedEvent("interaction", ["i_early"], _join, 0, now + 1))
+
+    batch = d._take_batch(sk)
+
+    # interaction (priority 0) wins over bind (30); time-sorted ascending.
+    assert [e.event_type for e in batch] == ["interaction", "interaction"]
+    assert [e.items[0] for e in batch] == ["i_early", "i_late"]
+    # the un-chosen type stays queued.
+    assert [e.event_type for e in d._queues[sk]] == ["bind"]
+
+
+def test_join_text_blocks():
+    assert join_text_blocks(["a", "b"]) == "a\n\nb"
+    assert join_text_blocks(["only"]) == "only"
+    assert join_text_blocks(["a", "", "b"]) == "a\n\nb"  # empties filtered
+    assert join_text_blocks([""]) is None
+    assert join_text_blocks([]) is None
+
+
+# --------------------------------------------------------------- async behavior
+
+
+@pytest.mark.asyncio
+async def test_same_type_merge_into_one_turn(patched, monkeypatch):
+    """单飞期间到达的同类事件合并到下一轮：builder 收到扁平合并列表。"""
+    gate = asyncio.Event()
+    builder_calls: list[list] = []
+
+    def rec_builder(items):
+        builder_calls.append(list(items))
+        return "MSG:" + ",".join(items)
+
+    n = {"i": 0}
+
+    async def turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        n["i"] += 1
+        if n["i"] == 1:
+            await gate.wait()  # hold turn-1 so b & c pile up behind it
+        return f"run-{n['i']}", "ok", 1.0
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", turn)
+
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        await d.dispatch("interaction", ["a"], rec_builder)
+        await asyncio.sleep(0.03)  # let drainer take [a] and block in turn-1
+        await d.dispatch("interaction", ["b"], rec_builder)
+        await d.dispatch("interaction", ["c"], rec_builder)
+        gate.set()
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    # turn-1 = [a] alone; turn-2 = [b, c] merged (single builder call, both items).
+    assert ["a"] in builder_calls
+    assert ["b", "c"] in builder_calls
+    assert len(builder_calls) == 2
+
+
+@pytest.mark.asyncio
+async def test_builder_none_skips_turn(patched):
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        accepted = await d.dispatch("interaction", [], _join)  # _join([]) -> None
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    assert accepted is True  # enqueued fine
+    assert patched.turns == []  # but nothing sent — builder produced no message
+
+
+@pytest.mark.asyncio
+async def test_single_flight_per_session(patched, monkeypatch):
+    """同一 session 永不并发 turn(平台在途恒 ≤1)。"""
+    state = {"inflight": 0, "max": 0}
+
+    async def turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        state["inflight"] += 1
+        state["max"] = max(state["max"], state["inflight"])
+        await asyncio.sleep(0.02)
+        state["inflight"] -= 1
+        return "run-x", "ok", 1.0
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", turn)
+
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        for i in range(6):
+            await d.dispatch("interaction", [f"m{i}"], _join)
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    assert state["max"] == 1
+
+
+@pytest.mark.asyncio
+async def test_tracks_on_success_with_source(patched):
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        await d.dispatch("interaction", ["x"], _join)
+        await d.dispatch("rule", ["y"], _join)  # different session — runs in parallel
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    sources = {t.source for t in patched.tracks}
+    assert sources == {"interaction", "rule"}
+
+
+@pytest.mark.asyncio
+async def test_bind_not_tracked(patched):
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        await d.dispatch("bind", ["new device"], _join)
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    assert len(patched.turns) == 1  # turn still sent
+    assert patched.tracks == []  # but not recorded to agent_runs
+
+
+@pytest.mark.asyncio
+async def test_missing_run_id_not_tracked(patched, monkeypatch):
+    async def turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        return None, "ok", 1.0  # ok status but no runId
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", turn)
+
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        await d.dispatch("interaction", ["x"], _join)
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    assert patched.tracks == []
+
+
+@pytest.mark.asyncio
+async def test_timeout_skips_and_does_not_track(patched, monkeypatch):
+    async def turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        return "run-x", "timeout", 1.0
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", turn)
+
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        await d.dispatch("interaction", ["x"], _join)
+        await _settle(d)  # must not hang
+    finally:
+        await d.stop()
+
+    assert patched.tracks == []
+
+
+@pytest.mark.asyncio
+async def test_transport_exception_retries_then_skips_and_survives(patched, monkeypatch):
+    calls = 0
+
+    async def turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        nonlocal calls
+        calls += 1
+        raise AgentWebhookException("boom")
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", turn)
+
+    d = AgentDispatcher()
+    d._TRANSPORT_BACKOFF_S = 0.0  # neutralize backoff sleeps for a fast test
+    await d.start()
+    try:
+        await d.dispatch("interaction", ["x"], _join)
+        await _settle(d)  # drainer retries transport, then swallows and finishes
+    finally:
+        await d.stop()
+
+    # 传输失败被重试 _TRANSPORT_RETRIES+1 次后跳过该批,drainer 存活、不写 agent_runs。
+    assert calls == d._TRANSPORT_RETRIES + 1
+    assert patched.tracks == []
+
+
+@pytest.mark.asyncio
+async def test_fresh_trace_id_per_batch(patched):
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        await d.dispatch("interaction", ["x"], _join)
+        await _settle(d)
+        await d.dispatch("interaction", ["y"], _join)
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    assert len(patched.turns) == 2
+    t0, t1 = patched.turns[0].trace_id, patched.turns[1].trace_id
+    assert t0 != t1
+    uuid.UUID(t0)  # parses as a valid uuid
+    uuid.UUID(t1)
+
+
+@pytest.mark.asyncio
+async def test_dispatch_returns_false_when_new_event_evicted(patched):
+    d = AgentDispatcher()
+    await d.start()
+    sk = "agent:main:miloco"
+    now = time.monotonic()
+    q = d._queues.setdefault(sk, [])
+    for i in range(MAX_QUEUE):  # full of urgent interactions
+        q.append(_QueuedEvent("interaction", [f"i{i}"], _join, 0, now + i))
+    try:
+        # bind is least urgent → it is the victim of its own over-cap append.
+        accepted = await d.dispatch("bind", ["late"], _join)
+        await _settle(d)
+    finally:
+        await d.stop()
+
+    assert accepted is False
+
+
+@pytest.mark.asyncio
+async def test_unknown_event_type_dropped(patched):
+    d = AgentDispatcher()
+    await d.start()
+    try:
+        accepted = await d.dispatch("nope", ["x"], _join)  # type: ignore[arg-type]
+    finally:
+        await d.stop()
+
+    assert accepted is False
+    assert patched.turns == []
+
+
+@pytest.mark.asyncio
+async def test_closed_dispatcher_drops(patched):
+    d = AgentDispatcher()
+    await d.start()
+    await d.stop()
+
+    assert await d.dispatch("interaction", ["x"], _join) is False
+    assert patched.turns == []
+
+
+@pytest.mark.asyncio
+async def test_stop_cancels_inflight(patched, monkeypatch):
+    async def turn(msg, *, session_key, lane, trace_id, wait_timeout_ms):
+        await asyncio.sleep(3600)  # park forever; stop() must cancel it
+        return "run-x", "ok", 1.0
+
+    monkeypatch.setattr(disp_mod, "run_agent_turn", turn)
+
+    d = AgentDispatcher()
+    await d.start()
+    await d.dispatch("interaction", ["x"], _join)
+    await asyncio.sleep(0.03)  # let the drainer enter the parked turn
+    assert d._tasks  # a drainer is in flight
+
+    await d.stop()
+
+    assert d._tasks == set()
+    assert d._closed is True
+    assert await d.dispatch("interaction", ["y"], _join) is False
+
+
+@pytest.mark.asyncio
+async def test_dispatch_event_routes_to_singleton(patched):
+    d = AgentDispatcher()
+    await d.start()
+    set_agent_dispatcher(d)
+    try:
+        ok = await dispatch_event("interaction", ["hi"], _join)
+        await _settle(d)
+        assert ok is True
+        assert get_agent_dispatcher() is d
+        assert len(patched.turns) == 1
+    finally:
+        set_agent_dispatcher(None)
+        await d.stop()
+
+
+@pytest.mark.asyncio
+async def test_dispatch_event_without_dispatcher_returns_false():
+    set_agent_dispatcher(None)
+    assert await dispatch_event("interaction", ["hi"], _join) is False
+
+
+@pytest.mark.asyncio
+async def test_dispatch_threads_intra_priority(patched, monkeypatch):
+    """dispatch 把 intra_priority 落到队列事件上(冻结 drainer 以同步断言队列)。"""
+    d = AgentDispatcher()
+    await d.start()
+    monkeypatch.setattr(d, "_kick", lambda sk: None)  # 冻结 drainer,留住事件供检查
+    try:
+        await d.dispatch("suggestion", ["s"], _join, intra_priority=-2)
+        q = d._queues["agent:main:miloco-suggest"]
+        assert len(q) == 1
+        assert q[0].intra_priority == -2
+    finally:
+        await d.stop()
+
+
+@pytest.mark.asyncio
+async def test_dispatch_intra_priority_defaults_zero(patched, monkeypatch):
+    """不传 intra_priority 时缺省 0(无内层优先级的类型行为不变)。"""
+    d = AgentDispatcher()
+    await d.start()
+    monkeypatch.setattr(d, "_kick", lambda sk: None)
+    try:
+        await d.dispatch("interaction", ["x"], _join)
+        assert d._queues["agent:main:miloco"][0].intra_priority == 0
+    finally:
+        await d.stop()
+
+
+@pytest.mark.asyncio
+async def test_dispatch_event_threads_intra_priority(patched, monkeypatch):
+    """模块级 dispatch_event 透传 intra_priority 到单例。"""
+    d = AgentDispatcher()
+    await d.start()
+    set_agent_dispatcher(d)
+    monkeypatch.setattr(d, "_kick", lambda sk: None)
+    try:
+        await dispatch_event("suggestion", ["s"], _join, intra_priority=-1)
+        assert d._queues["agent:main:miloco-suggest"][0].intra_priority == -1
+    finally:
+        set_agent_dispatcher(None)
+        await d.stop()

@@ -1,0 +1,11 @@
+{
+  "time": {
+    "justNow": "just now",
+    "minAgo": "{{n}} min ago",
+    "yesterdayAt": "Yesterday {{time}}",
+    "dateYMD": "{{mon}} {{d}}, {{y}}",
+    "dateMD": "{{mon}} {{d}}",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  }
+}

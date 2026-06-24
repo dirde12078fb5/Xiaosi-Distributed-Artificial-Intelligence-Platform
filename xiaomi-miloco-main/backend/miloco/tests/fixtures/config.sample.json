@@ -1,0 +1,20 @@
+{
+  "debug": true,
+  "server": {
+    "url": "http://localhost:1810",
+    "token": "fixture-token-0001",
+    "tls_verify": false,
+    "python_bin": "/opt/miloco/.venv/bin/python"
+  },
+  "agent": {
+    "webhook_url": "http://127.0.0.1:18789/miloco/webhook",
+    "auth_bearer": "fixture-gateway-token"
+  },
+  "model": {
+    "omni": {
+      "model": "xiaomi/mimo-v2.5",
+      "base_url": "https://api.xiaomimimo.com/v1",
+      "api_key": "sk-fixture-xxxx"
+    }
+  }
+}

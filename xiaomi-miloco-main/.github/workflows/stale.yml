@@ -1,0 +1,40 @@
+# 定期清理无活动的 Issue / PR：30 天无活动标记 stale，再 7 天无活动自动关闭。
+# 带特定标签（pinned/security/no-stale）的豁免，不参与清理。
+name: Stale
+
+on:
+  schedule:
+    - cron: "23 2 * * *" # 每日 02:23 跑一次
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: stale
+  cancel-in-progress: false
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: pinned,security,no-stale
+          exempt-pr-labels: pinned,security,no-stale
+          exempt-all-assignees: true
+          operations-per-run: 200
+          stale-issue-message: |
+            此 issue 已 30 天无活动，已标记为 `stale`。如仍需跟进，请留言或更新；否则 7 天后将自动关闭。
+          stale-pr-message: |
+            此 PR 已 30 天无活动，已标记为 `stale`。如仍需推进，请留言或更新；否则 7 天后将自动关闭。
+          close-issue-message: |
+            因持续无活动，自动关闭此 issue。如仍需处理，可随时重新打开。
+          close-pr-message: |
+            因持续无活动，自动关闭此 PR。如仍需推进，可随时重新打开。
+          close-issue-reason: not_planned

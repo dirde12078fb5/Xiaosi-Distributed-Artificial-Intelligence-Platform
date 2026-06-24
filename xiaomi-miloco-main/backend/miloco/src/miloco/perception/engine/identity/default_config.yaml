@@ -1,0 +1,133 @@
+# omni 身份识别系统默认配置
+# ----------------------------------------------------------------------------
+# 加载入口：``identity/config_loader.py::load_identity_engine_config()``
+#
+# 配置层级：
+#   default_config.yaml（本文件，模块级默认值）
+#       ↑ 被 ``settings.yaml::perception.engine.identity_engine`` 块同名字段覆盖
+#       ↑ 最终被运行时调用方传入的 override dict 覆盖
+# ----------------------------------------------------------------------------
+
+enabled: true
+
+# 跟踪策略：
+#   track_based —— SORT 维持跨帧身份连续性（已实施）
+#   track_free  —— 暂未实施
+tracking: track_based
+
+# omni 调用方式：
+#   "fused"    —— 主调用同时输出 environments / speeches / identity_assignments
+#                  （省一次独立的识别调用）
+#   "separate" —— 占位，未实施
+omni_call_mode: fused
+
+sort:
+  n_init: 1                    # 首帧 confirmed bbox 即形成 track
+  max_age_sec: 1.0             # track 丢失多久（秒）后注销；按 fps 换算成帧数
+  iou_threshold: 0.3
+  detector_conf_threshold: 0.5
+  track_human_only: true       # 只对 HUMAN 形成 track；FACE/CAT/DOG 仅留在 last_detections
+
+# DeepSORT 配置(IoU + Kalman + ReID 关联;ReID embedding 暴露给陌生人池复用)。
+# 仅暴露用户可能要调的 7 参数;max_cosine_distance / reid_model_path / use_gpu
+# 等部署/接口级配置以及 static_displacement_ratio / static_min_abs_px 等几何
+# 固定阈值走代码 dataclass 默认值。
+deep_sort:
+  # 跟踪基本(与 sort 段同名同义)
+  n_init: 1
+  # max_age_sec 是 track 丢失多久(墙钟秒)后注销;换算 max_age_frames = round(sec * fps),
+  # track 在 time_since_update > max_age_frames 时删除。各 fps 下一致生效
+  # (旧版 fps<=1 会被强制 cap 到 2 帧、架空此秒数,已移除该特殊逻辑)。
+  # 2.0s 容忍 detector 偶发 confidence 抖动(避免"track 死→新建"循环产生同人多 singleton),
+  # 又不过长导致已离开目标长时间残留。@3fps = 6 帧。
+  max_age_sec: 2.0
+  iou_threshold: 0.3
+  detector_conf_threshold: 0.5
+  track_human_only: true
+  # fast 模式(静止 track 跳过 ReID 推理,降 CPU)
+  mode: "fast"                       # "normal" / "fast"
+  human_reid_skip_windows: 4         # CPU 紧张时调高(降 ReID 抽取频次)
+
+# Pending State 置信度感知 commit + recheck hysteresis
+# 单次 omni 识别可能误判，按 best_conf 决定需要几次同答才 commit；
+# confirmed / unknown 状态周期性重审，连续 N 次不一致才退回 pending
+stability:
+  high_conf_threshold: 0.85
+  mid_conf_threshold: 0.65
+  low_conf_threshold: 0.50
+  commit_threshold_high: 1
+  commit_threshold_mid: 3
+  commit_threshold_low: 3
+  pending_timeout_sec: 60.0
+  # 重审周期用**秒**标定; needs_omni_call 入口按 engine_fps 运行时换算成帧(round(sec×fps)),
+  # 与 max_age_sec 同款"秒标定、运行时换算", 改 fps 自动跟随、墙钟周期不漂移。
+  recheck_interval_sec: 30.0  # confirmed/unknown 重审周期, 兼作写库冷却期慢重审
+  recheck_interval_accumulating_sec: 10.0  # confirmed 攒写库资格阶段(非冷却)的快重审
+  hysteresis_unmatched_count: 2
+  # 时序一致性写库门 (tier_c 污染修复): 同一 person_id **连续 N 次 confirmed 重审一致**
+  # 才允许写 tier_c; None(弃权)/矛盾/coasting/commit 任一打断即清 0 重攒。跟"显示用 commit"解耦。
+  write_eligible_min_count: 6
+  # 写库冷却(秒) = mult × write_eligible_min_count × 快重审间隔(秒) = 2×6×10 = 120s
+  # (engine 内按 engine_fps 换算成帧计冷却)。冷却期内: 慢重审验身份、不写、不攒。
+  tier_c_cooldown_mult: 2
+  # 翻转专用阈值(仅"由 confirmed 退回的 pending"重确认用, 首次识别仍走 commit_threshold_*):
+  # 翻成员按 best_conf 高2/中2、低3; 翻陌生人(低置信)3。黏满 flip_sticky_max_recheck 窗未定则放手。
+  flip_commit_threshold_high: 2
+  flip_commit_threshold_mid: 2
+  flip_commit_threshold_low: 3
+  flip_sticky_max_recheck: 2
+
+# 识别派发节流（避免每帧调 omni 浪费 token）
+dispatch:
+  min_interval_sec: 5.0
+  max_queries_per_call: 4
+  stale_threshold_sec: 30.0
+  max_retries: 1
+
+# omni prompt 中 gallery snapshot 渲染参数
+# 每人渲染 1 张 body composite + 1 张 face composite——人脸用于精准匹配，全身辅助
+gallery:
+  body_refs_per_person: 3
+  face_refs_per_person: 3
+  library_root: "data/identity_lib"
+
+# 陌生人编号策略：
+#   false —— 所有未识别目标归为 "unknown"，不区分（默认）
+#   true  —— 启用 unknown_<n> 自增编号；仅 tracking=track_based 时合法
+stranger:
+  distinguish: false
+
+# tier_c 闲时定期清: 每晚低活跃窗口整池清空(对错都清), 限污染寿命 + 只留"今天"外观
+# 默认无条件清(require_absence: false); 置 true 恢复"确认无人"漏斗(下方三项仅此模式生效)
+tierc_clear:
+  enabled: true
+  require_absence: false        # false=到点无条件清; true=确认无人才清(走下方三道闸)
+  window_start_hour: 3          # 清理时间窗 [start, end) 本地 24h(凌晨3点起)
+  window_end_hour: 5
+  poll_interval_sec: 3600       # 窗内轮询间隔(60min); 每相机每晚最多清一次
+  pool_quiet_sec: 1800.0        # 仅 require_absence: 该相机 tier_c 最新写入 mtime ≥ 此秒数
+  gate_quiet_sec: 600.0         # 仅 require_absence: 距上次 visual gate pass ≥ 此秒数
+  detect_person_conf: 0.8       # 仅 require_absence: 拉帧检测无 conf≥此值的人才判确无人(抓静止人)
+
+# Track 身份漂移自检(commit 后人物交叉/交互致 track 跟错人的纠正安全网)。
+#   enforce —— 撤嫌疑集回 pending 丢回 omni 重判 + 采信复认护栏(默认)
+#   observe —— 只算 sim + 打 [Identity/drift] 日志、不撤(调试 / 抓阈值分布)
+#   off     —— 完全不算、不打、不撤
+# 全程 body-only、零额外推理(复用 tracker ReID 特征 + 库里已落盘 .npy)。
+drift_check:
+  mode: "enforce"              # "off" | "observe" | "enforce"
+  recency_sec: 900.0           # 参考样本时间窗 15min(跨天旧外观对今天不可比)
+  threshold: 0.55              # sim < 此值视为不同人; 0.55 = 该 ReID 模型区分"绝对不同人"的既定经验阈值(误撤极少)
+  consecutive_windows: 2       # 累计 M 个低窗才入嫌疑集(无数据窗不计不清)
+  min_track_emb: 3             # track 质心要求最少 emb 数
+
+body_crop_padding_ratio: 0.05  # bbox 紧贴；过多 padding 降低 omni 分辨率利用率
+tier_c_accumulate_on_commit: true
+tier_c_verify_enabled: true           # 写 tier_c 前 omni 同人校验(E7), 挡非本人误判落库; 默认开; 也是 C3 回喂的前提
+tier_c_verify_conf_threshold: 0.8     # 上述校验: same_person 且 confidence >= 此值才写库
+confidence_cutoff: 0.5         # response 中低于此置信度的 person_id 强制视作 unknown，防 omni 幻觉
+
+# 暂未启用的开关（对应功能尚未实施）
+ensemble_grounding: false
+body_attr_text: false
+alias_frequency: false         # AliasFrequencyTracker（track_free 专用）

@@ -1,0 +1,8320 @@
+devices:
+  ab-wheel:
+    description:
+      en: Ab Wheel
+    optional-services:
+    - battery
+    required-services:
+    - ab-wheel
+  accessories:
+    description:
+      en: Accessories
+    optional-services: []
+    required-services: []
+  air-condition-outlet:
+    description:
+      en: Air Condition Outlet
+    optional-services:
+    - alarm
+    - indicator-light
+    - power-consumption
+    - air-condition-outlet-matching
+    - switch-sensor-for-ble
+    required-services:
+    - air-condition-outlet
+    - air-conditioner
+    - fan-control
+  air-conditioner:
+    description:
+      en: Air Conditioner
+    optional-services:
+    - air-conditioner
+    - fan-control
+    - environment
+    - alarm
+    - indicator-light
+    - countdown
+    - filter
+    - auto-clean
+    - air-fresh
+    - power-consumption
+    - air-conditioner-dev-mode
+    - product-appearance
+    required-services: []
+  air-fresh:
+    description:
+      en: Fresh Air System
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    - indicator-light
+    - air-fresh-favorite
+    required-services:
+    - air-fresh
+    - environment
+    - filter
+  air-fryer:
+    description:
+      en: Air Fryer
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    - indicator-light
+    required-services:
+    - air-fryer
+  air-monitor:
+    description:
+      en: Air Monitor
+    optional-services:
+    - battery
+    - screen
+    - alarm
+    - indicator-light
+    required-services:
+    - air-monitor
+    - environment
+  air-purifier:
+    description:
+      en: Air Purifier
+    optional-services:
+    - indicator-light
+    - alarm
+    - screen
+    - physical-controls-locked
+    - air-purifier-favorite
+    required-services:
+    - air-purifier
+    - environment
+    - filter
+  airer:
+    description:
+      en: Airer
+    optional-services:
+    - light
+    required-services:
+    - airer
+  alertor:
+    description:
+      en: Alertor
+    optional-services:
+    - battery
+    required-services:
+    - alertor
+  analyzer:
+    description:
+      en: Analyzer
+    optional-services:
+    - analyzer
+    required-services: []
+  audio-video-amplifier:
+    description:
+      en: Audio Video Amplifier
+    optional-services:
+    - channel-volume-tuning
+    - howling-suppression
+    - microphone
+    - play-control
+    required-services:
+    - audio-video-amplifier
+  baby-bottle-warmer:
+    description:
+      en: Baby Bottle Warmer
+    optional-services:
+    - night-light
+    required-services:
+    - baby-bottle-warmer
+  bath-heater:
+    description:
+      en: Bath Heater
+    optional-services:
+    - light
+    - light-bath-heater
+    - ptc-bath-heater
+    - fan-control
+    required-services: []
+  beauty-instrument:
+    description:
+      en: Beauty Instrument
+    optional-services: []
+    required-services: []
+  bed:
+    description:
+      en: Bed
+    optional-services:
+    - backrest-control
+    - leg-rest-control
+    - physical-controls-locked
+    required-services:
+    - bed
+  bedstand:
+    description:
+      en: Bedstand
+    optional-services:
+    - safe-box
+    - door
+    - light
+    - play-control
+    - speaker
+    required-services: []
+  ble-speaker:
+    description:
+      en: Ble Speaker
+    optional-services: []
+    required-services: []
+  boiler:
+    description:
+      en: Boiler
+    optional-services:
+    - boiler
+    - water-heater
+    - thermostat
+    required-services: []
+  breast-pump:
+    description:
+      en: "Breast Pump\t"
+    optional-services:
+    - battery
+    required-services:
+    - breast-pump
+  calendar:
+    description:
+      en: Calendar
+    optional-services: []
+    required-services: []
+  camera:
+    description:
+      en: Camera
+    optional-services:
+    - indicator-light
+    - memory-card-management
+    - motion-detection
+    - speaker
+    - microphone
+    - ai-detection
+    - p2p-stream
+    - camera-fav-area
+    - cruise
+    - key-call
+    - smart-care
+    - camera-ipc-cloud
+    - idm
+    - white-light
+    - virtual-fence
+    - sound-and-light-warning
+    - camera-stream-for-amazon-alexa
+    - camera-stream-for-google-home
+    - nas
+    - region-privacy
+    - fire-smoke
+    - mobile-network
+    - timelapse
+    required-services:
+    - camera-control
+  car:
+    description:
+      en: Car
+    optional-services: []
+    required-services: []
+  car-fridge:
+    description:
+      en: Car Fridge
+    optional-services: []
+    required-services: []
+  card-switch:
+    description:
+      en: Card Switch
+    optional-services: []
+    required-services:
+    - card-switch
+  carlight:
+    description:
+      en: Carlight
+    optional-services: []
+    required-services: []
+  cat-litter-box:
+    description:
+      en: Cat Litter Box
+    optional-services:
+    - deodorant
+    - cat-litter
+    - physical-controls-locked
+    required-services:
+    - cat-toilet
+  ceiling-fan:
+    description:
+      en: Ceiling Fan
+    optional-services:
+    - physical-controls-locked
+    required-services:
+    - ceiling-fan
+  chair:
+    description:
+      en: Chair
+    optional-services: []
+    required-services:
+    - chair
+  charging-pile:
+    description:
+      en: Charging Pile
+    optional-services:
+    - charging-pile
+    required-services: []
+  clock:
+    description:
+      en: Clock
+    optional-services:
+    - countdown
+    - speaker
+    - microphone
+    - screen
+    - indicator-light
+    - motion-sensor
+    required-services:
+    - clock
+  clothes-dryer:
+    description:
+      en: Clothes Dryer
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    required-services:
+    - clothes-dryer
+  coffee-machine:
+    description:
+      en: Coffee Machine
+    optional-services: []
+    required-services:
+    - coffee-machine
+  control-panel:
+    description:
+      en: Control Panel
+    optional-services:
+    - screen
+    - intelligent-speaker
+    - speaker
+    - microphone
+    - play-control
+    - switch
+    required-services: []
+  cooker:
+    description:
+      en: Cooker
+    optional-services:
+    - alarm
+    required-services:
+    - cooker
+  cooking-machine:
+    description:
+      en: Cooking Machine
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - cooking-machine
+  cooler:
+    description:
+      en: Cooler
+    optional-services:
+    - cooler
+    - cooler-light
+    - delay
+    required-services: []
+  cup:
+    description:
+      en: Cup
+    optional-services: []
+    required-services: []
+  curtain:
+    description:
+      en: Curtain
+    optional-services: []
+    required-services:
+    - curtain
+  dehumidifier:
+    description:
+      en: Dehumidifier
+    optional-services:
+    - environment
+    - alarm
+    - indicator-light
+    - physical-controls-locked
+    required-services:
+    - dehumidifier
+  dial:
+    description:
+      en: Dial
+    optional-services:
+    - dial
+    required-services: []
+  diffuser:
+    description:
+      en: Diffuser
+    optional-services:
+    - light
+    - environment
+    - countdown
+    - fragrance-liquid-management
+    required-services:
+    - diffuser
+  dimmer:
+    description:
+      en: dimmer
+    optional-services:
+    - indicator-light
+    required-services: []
+  dishwasher:
+    description:
+      en: Dishwasher
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    - detergent-management
+    - water-softener-management
+    - rinse-management
+    required-services:
+    - dishwasher
+  dlock:
+    description:
+      en: Drawerlock
+    optional-services:
+    - lock
+    - door
+    - battery
+    - doorbell
+    - customized-service-for-ble
+    - lock-history
+    - lock-manage
+    - no-disturb
+    - alarm
+    - time-management
+    - lock-version
+    - lock-volume-management
+    - door-lock-camera
+    required-services: []
+  door:
+    description:
+      en: Door
+    optional-services:
+    - lock
+    - door
+    - battery
+    - doorbell
+    - ai-detection
+    required-services: []
+  doorbell:
+    description:
+      en: Doorbell
+    optional-services:
+    - indicator-light
+    required-services:
+    - doorbell
+  driving-recorder:
+    description:
+      en: Driving Recorder
+    optional-services: []
+    required-services: []
+  dryer:
+    description:
+      en: Dryer
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    required-services:
+    - dryer
+  dumbbell:
+    description:
+      en: Dumbbell
+    optional-services:
+    - dumbbell
+    - battery
+    required-services: []
+  eco-pods:
+    description:
+      en: Eco Pods
+    optional-services:
+    - physical-controls-locked
+    - light
+    required-services:
+    - eco-pods
+  electric-blanket:
+    description:
+      en: Electric Blanket
+    optional-services:
+    - physical-controls-locked
+    required-services:
+    - electric-blanket
+  electric-power:
+    description:
+      en: Electric Power
+    optional-services:
+    - battery
+    required-services: []
+  electric-steamer:
+    description:
+      en: Electric Steamer
+    optional-services: []
+    required-services:
+    - electric-steamer
+  electronic-valve:
+    description:
+      en: Electronic Valve
+    optional-services:
+    - battery
+    required-services:
+    - electronic-valve
+  engraving-machine:
+    description:
+      en: Engraving Machine
+    optional-services: []
+    required-services: []
+  fan:
+    description:
+      en: Fan
+    optional-services:
+    - fan
+    - physical-controls-locked
+    - battery
+    required-services: []
+  fish-tank:
+    description:
+      en: Fish Tank
+    optional-services:
+    - light
+    - tds-sensor
+    - ambient-light
+    - physical-controls-locked
+    required-services:
+    - fish-tank
+  fitting:
+    description:
+      en: Fitting
+    optional-services:
+    - find-device
+    required-services: []
+  flowerpot:
+    description:
+      en: Flowerpot
+    optional-services:
+    - plant-monitor
+    - environment
+    - battery
+    required-services:
+    - flowerpot
+  foot-bath:
+    description:
+      en: Foot Bath
+    optional-services: []
+    required-services:
+    - foot-bath
+  formula-dispenser:
+    description:
+      en: Formula Dispenser
+    optional-services:
+    - formula-dispenser
+    required-services: []
+  fridge:
+    description:
+      en: Fridge
+    optional-services:
+    - physical-controls-locked
+    - ice-maker
+    - food-management
+    - fridger-dev-mode
+    required-services:
+    - fridge
+    - fridge-chamber
+  fruit-vegetable-purifier:
+    description:
+      en: Fruit Vegetable Purifier
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    required-services:
+    - fruit-vegetable-purifier
+  garbage-can:
+    description:
+      en: Garbage Can
+    optional-services:
+    - battery
+    - garbage-bag
+    - indicator-light
+    required-services:
+    - garbage-can
+  garbage-disposal:
+    description:
+      en: Garbage Disposal
+    optional-services: []
+    required-services:
+    - garbage-disposal
+  gas-sensor:
+    description:
+      en: Gas Sensor
+    optional-services:
+    - battery
+    - self-check
+    required-services:
+    - gas-sensor
+  gateway:
+    description:
+      en: Gateway
+    optional-services:
+    - light
+    - motion-sensor
+    required-services:
+    - gateway
+  germicidal-lamp:
+    description:
+      en: Germicidal Lamp
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - germicidal-lamp
+  gesture:
+    description:
+      en: Gesture
+    optional-services:
+    - battery
+    required-services:
+    - gesture
+  gimbal:
+    description:
+      en: Gimbal
+    optional-services:
+    - gimbal
+    required-services: []
+  hair-drier:
+    description:
+      en: Hair Drier
+    optional-services: []
+    required-services:
+    - hair-drier
+  hand-dryer:
+    description:
+      en: Hand Dryer
+    optional-services: []
+    required-services: []
+  head-up-display:
+    description:
+      en: Head Up Display
+    optional-services: []
+    required-services:
+    - head-up-display
+  headphone:
+    description:
+      en: Headphone
+    optional-services: []
+    required-services: []
+  health-pot:
+    description:
+      en: Health Pot
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - health-pot
+  heater:
+    description:
+      en: Heater
+    optional-services:
+    - countdown
+    - environment
+    - physical-controls-locked
+    - alarm
+    - indicator-light
+    - screen
+    - foot-warmer
+    required-services:
+    - heater
+  height-meter:
+    description:
+      en: Height Meter
+    optional-services:
+    - battery
+    required-services:
+    - height-meter
+  hood:
+    description:
+      en: Hood
+    optional-services:
+    - fan-control
+    - environment
+    - physical-controls-locked
+    - light
+    - hood-smart-dry-wash
+    - kitchen-stove
+    - delay
+    required-services:
+    - hood
+  humidifier:
+    description:
+      en: Humidifier
+    optional-services:
+    - environment
+    - filter
+    - clean
+    required-services:
+    - humidifier
+  ice-maker:
+    description:
+      en: Ice Maker
+    optional-services:
+    - delay
+    required-services:
+    - ice-maker
+  illumination-sensor:
+    description:
+      en: Illumination Sensor
+    optional-services:
+    - battery
+    required-services:
+    - illumination-sensor
+  induction-cooker:
+    description:
+      en: Induction Cooker
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - induction-cooker
+  insect-killer:
+    description:
+      en: Insect Killer
+    optional-services:
+    - insect-killer
+    - battery
+    - insecticide
+    required-services: []
+  insight:
+    description:
+      en: Insight
+    optional-services: []
+    required-services: []
+  integrated-stove:
+    description:
+      en: Integrated Stove
+    optional-services:
+    - integrated-stove
+    - kitchen-stove
+    - hood
+    - fan-control
+    - light
+    - environment
+    - indicator-light
+    - physical-controls-locked
+    required-services: []
+  intercom:
+    description:
+      en: Intercom
+    optional-services: []
+    required-services: []
+  ir-remote-control:
+    description:
+      en: IR Remote Control
+    optional-services: []
+    required-services: []
+  juicer:
+    description:
+      en: Juicer
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - juicer
+  jump-rope:
+    description:
+      en: Jump Rope
+    optional-services:
+    - battery
+    required-services:
+    - jump-rope
+  kettle:
+    description:
+      en: Kettle
+    optional-services:
+    - tds-sensor
+    - physical-controls-locked
+    - alarm
+    required-services:
+    - kettle
+  keyboard:
+    description:
+      en: Keyboard
+    optional-services:
+    - keyboard
+    required-services: []
+  kitchen-scale:
+    description:
+      en: Kitchen Scale
+    optional-services:
+    - kitchen-scale
+    required-services: []
+  laptop:
+    description:
+      en: Laptop
+    optional-services:
+    - laptop
+    - cpu-management
+    - battery
+    required-services: []
+  led-matrix:
+    description:
+      en: LED Matrix
+    optional-services: []
+    required-services:
+    - led-matrix
+  light:
+    description:
+      en: Light
+    optional-services:
+    - motion-sensor
+    required-services:
+    - light
+  lock:
+    description:
+      en: Lock
+    optional-services:
+    - lock
+    - door
+    - battery
+    - doorbell
+    - customized-service-for-ble
+    - lock-history
+    - lock-manage
+    - no-disturb
+    - alarm
+    - time-management
+    - lock-version
+    - lock-volume-management
+    - door-lock-camera
+    - camera-control
+    - self-check
+    required-services: []
+  magnet-sensor:
+    description:
+      en: Magnet Sensor
+    optional-services:
+    - battery
+    required-services:
+    - magnet-sensor
+  massage:
+    description:
+      en: Massage
+    optional-services:
+    - backrest-control
+    - physical-controls-locked
+    required-services:
+    - massage
+  massager:
+    description:
+      en: Massager
+    optional-services:
+    - battery
+    required-services:
+    - massager
+  mattress:
+    description:
+      en: Mattress
+    optional-services: []
+    required-services:
+    - mattress
+  microphone:
+    description:
+      en: Microphone
+    optional-services: []
+    required-services: []
+  microwave-oven:
+    description:
+      en: Microwave Oven
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - microwave-oven
+  mirror:
+    description:
+      en: Mirror
+    optional-services:
+    - screen
+    - speaker
+    - light
+    - play-control
+    - motion-sensor
+    required-services:
+    - mirror
+  module:
+    description:
+      en: Module
+    optional-services: []
+    required-services: []
+  mopping-machine:
+    description:
+      en: Mopping Machine
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    - scraper-management
+    - brush-cleaner
+    - speaker
+    required-services:
+    - mopping-machine
+    - battery
+  mosquito-dispeller:
+    description:
+      en: Mosquito Dispeller
+    optional-services:
+    - repellent
+    - battery
+    required-services:
+    - mosquito-dispeller
+  motion-sensor:
+    description:
+      en: Motion Sensor
+    optional-services:
+    - customized-service-for-ble
+    - indicator-light
+    - battery
+    required-services:
+    - motion-sensor
+  motor-controller:
+    description:
+      en: Motor Controller
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    - indicator-light
+    required-services:
+    - motor-controller
+  moxibustion:
+    description:
+      en: Moxibustion
+    optional-services:
+    - battery
+    - physical-controls-locked
+    required-services:
+    - moxibustion
+  multifunction-cooking-pot:
+    description:
+      en: Multifunction Cooking Pot
+    optional-services:
+    - alarm
+    required-services:
+    - multifunction-cooking-pot
+  nas:
+    description:
+      en: NAS
+    optional-services:
+    - nas
+    - task-management
+    - indicator-light
+    - nas-memory-management
+    - hard-disk-memory-management
+    - cpu-management
+    - memory-management
+    - member-management
+    - fan-control
+    required-services: []
+  nebulizer:
+    description:
+      en: Nebulizer
+    optional-services:
+    - nebulizer
+    - battery
+    - no-disturb
+    - customized-service-for-ble
+    required-services: []
+  night-light:
+    description:
+      en: Night Light
+    optional-services:
+    - night-light
+    - illumination-sensor
+    - battery
+    - motion-sensor
+    required-services: []
+  noodle-press:
+    description:
+      en: Noodle Press
+    optional-services:
+    - noodle-press
+    - battery
+    - physical-controls-locked
+    required-services: []
+  occupancy-sensor:
+    description:
+      en: Occupancy Sensor
+    optional-services:
+    - indicator-light
+    - customized-service-for-ble
+    - temperature-humidity-sensor
+    - single-use-battery
+    required-services:
+    - occupancy-sensor
+  oral-irrigator:
+    description:
+      en: Oral Irrigator
+    optional-services:
+    - battery
+    - customized-service-for-ble
+    required-services:
+    - oral-irrigator
+  outlet:
+    description:
+      en: Outlet
+    optional-services:
+    - indicator-light
+    - power-consumption
+    - physical-controls-locked
+    required-services:
+    - switch
+  oven:
+    description:
+      en: Oven
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    - indicator-light
+    - self-check
+    required-services:
+    - oven
+  pet-collar:
+    description:
+      en: Pet-Collar
+    optional-services:
+    - time-management
+    - battery
+    - power-consumption
+    required-services:
+    - pet-collar
+  pet-drinking-fountain:
+    description:
+      en: Pet Drinking Fountain
+    optional-services:
+    - filter
+    - physical-controls-locked
+    - battery
+    - no-disturb
+    - indicator-light
+    - time-management
+    required-services:
+    - pet-drinking-fountain
+  pet-dryer-machine:
+    description:
+      en: Pet Dryer Machine
+    optional-services:
+    - pet-dryer-machine
+    required-services: []
+  pet-feeder:
+    description:
+      en: Pet Feeder
+    optional-services:
+    - indicator-light
+    - desiccant
+    - physical-controls-locked
+    - no-disturb
+    required-services:
+    - pet-feeder
+  pet-toy:
+    description:
+      en: Pet Toy
+    optional-services: []
+    required-services: []
+  phone:
+    description:
+      en: Phone
+    optional-services:
+    - wlan
+    - bluetooth
+    - screen
+    - display
+    - sound-and-touch
+    - call
+    - battery
+    - application
+    - play-control
+    - cast-screen
+    - system
+    - location
+    - portable-hotspot
+    - nfc
+    - mobile-data
+    - clock
+    required-services: []
+  phone-holder:
+    description:
+      en: Phone Holder
+    optional-services:
+    - phone-holder
+    required-services: []
+  photography-video:
+    description:
+      en: Photography Video
+    optional-services:
+    - photography-video
+    - battery
+    - lens
+    - wear-car-interconnect
+    - ai-detection
+    required-services: []
+  pickup-light:
+    description:
+      en: Pickup Light
+    optional-services:
+    - pickup-light
+    required-services: []
+  pillow:
+    description:
+      en: Pillow
+    optional-services:
+    - massager
+    - sleep-monitor
+    - speaker
+    - play-control
+    - battery
+    - customized-service-for-ble
+    required-services:
+    - pillow
+  plant-monitor:
+    description:
+      en: Plant Monitor
+    optional-services:
+    - environment
+    - battery
+    required-services:
+    - plant-monitor
+  pre-water-purifier:
+    description:
+      en: Pre Water Purifier
+    optional-services:
+    - indicator-light
+    - alarm
+    - battery
+    required-services:
+    - pre-water-purifier
+  pressure-cooker:
+    description:
+      en: Pressure Cooker
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    required-services:
+    - pressure-cooker
+  pressure-sensor:
+    description:
+      en: Pressure Sensor
+    optional-services:
+    - battery
+    - customized-service-for-ble
+    - indicator-light
+    required-services:
+    - pressure-sensor
+  printer:
+    description:
+      en: Printer
+    optional-services:
+    - cartridge
+    - indicator-light
+    - battery
+    required-services:
+    - printer
+  projector:
+    description:
+      en: Projector
+    optional-services:
+    - projector
+    - speaker
+    - play-control
+    - message-router
+    required-services: []
+  pump:
+    description:
+      en: Pump
+    optional-services:
+    - pump
+    required-services: []
+  rangefinder:
+    description:
+      en: Range Finder
+    optional-services:
+    - drawer-lock
+    - battery
+    required-services: []
+  relay:
+    description:
+      en: Relay
+    optional-services:
+    - power-consumption
+    required-services:
+    - switch
+  remote-control:
+    description:
+      en: Remote Control
+    optional-services:
+    - switch-sensor
+    - battery
+    - switch-sensor-for-ble
+    - customized-service-for-ble
+    - rotate-sensor
+    - occupancy-sensor
+    - motion-sensor
+    required-services: []
+  repeater:
+    description:
+      en: Repeater
+    optional-services:
+    - indicator-light
+    required-services:
+    - repeater
+  rice-bin:
+    description:
+      en: Rice Bin
+    optional-services: []
+    required-services: []
+  robot:
+    description:
+      en: Robot
+    optional-services:
+    - alarm
+    - speaker
+    - battery
+    required-services:
+    - robot
+  roller-shutter:
+    description:
+      en: Roller Shutter
+    optional-services: []
+    required-services: []
+  router:
+    description:
+      en: Router
+    optional-services:
+    - router
+    - wifi
+    - guest-wifi
+    - indicator-light
+    - ambient-light
+    required-services: []
+  rowing-machine:
+    description:
+      en: Rowing Machine
+    optional-services: []
+    required-services:
+    - rowing-machine
+  safe-box:
+    description:
+      en: Safe Box
+    optional-services:
+    - safe-box
+    - battery
+    - door
+    - lock-manage
+    - lock-history
+    - lock-version
+    - time-management
+    - lock
+    required-services: []
+  safety-seat:
+    description:
+      en: Safety Seat
+    optional-services:
+    - safety-seat
+    - battery
+    required-services: []
+  scale:
+    description:
+      en: Scale
+    optional-services:
+    - battery
+    - customized-service-for-ble
+    - time-management
+    - self-check
+    required-services:
+    - scale
+  scooter:
+    description:
+      en: Scooter
+    optional-services: []
+    required-services: []
+  shaver:
+    description:
+      en: Shaver
+    optional-services:
+    - blade
+    - physical-controls-locked
+    - battery
+    - identify
+    required-services:
+    - shaver
+  shoes:
+    description:
+      en: Shoes
+    optional-services: []
+    required-services: []
+  shower:
+    description:
+      en: Shower
+    optional-services: []
+    required-services:
+    - shower
+  sleep-monitor:
+    description:
+      en: Sleep Monitor
+    optional-services:
+    - vital-signs
+    required-services:
+    - sleep-monitor
+  smart-stove:
+    description:
+      en: Smart Stove
+    optional-services:
+    - smart-stove
+    required-services: []
+  smoke-sensor:
+    description:
+      en: Smoke Sensor
+    optional-services:
+    - battery
+    - indicator-light
+    - self-check
+    - single-use-battery
+    - customized-service-for-ble
+    - extra-device-information
+    required-services:
+    - smoke-sensor
+  soap-dispenser:
+    description:
+      en: Soap Dispenser
+    optional-services:
+    - battery
+    required-services:
+    - soap-dispenser
+  sofa:
+    description:
+      en: Sofa
+    optional-services:
+    - backrest-control
+    required-services:
+    - sofa
+  speaker:
+    description:
+      en: Speaker
+    optional-services:
+    - microphone
+    - intelligent-speaker
+    - clock
+    required-services:
+    - speaker
+    - play-control
+  sphygmomanometer:
+    description:
+      en: Sphygmomanometer
+    optional-services:
+    - battery
+    required-services:
+    - sphygmomanometer
+  split-tv:
+    description:
+      en: Split TV
+    optional-services:
+    - split-tv
+    - speaker
+    - play-control
+    - message-router
+    required-services: []
+  stationary-bicycle:
+    description:
+      en: Stationary Bicycle
+    optional-services: []
+    required-services:
+    - stationary-bicycle
+  stb:
+    description:
+      en: Set Top Box
+    optional-services:
+    - message-router
+    required-services: []
+  steamer:
+    description:
+      en: Steamer
+    optional-services: []
+    required-services: []
+  sterilizer:
+    description:
+      en: Sterilizer
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    - no-disturb
+    required-services:
+    - sterilizer
+  story-machine:
+    description:
+      en: Story Machine
+    optional-services:
+    - light
+    - physical-controls-locked
+    - battery
+    - memory-card-management
+    - screen
+    required-services:
+    - story-machine
+    - speaker
+    - play-control
+  submersion-sensor:
+    description:
+      en: Submersion Sensor
+    optional-services:
+    - battery
+    - power-consumption
+    - rain-sensor
+    - customized-service-for-ble
+    required-services:
+    - submersion-sensor
+  suitcase:
+    description:
+      en: Suitcase
+    optional-services: []
+    required-services: []
+  switch:
+    description:
+      en: Switch
+    optional-services:
+    - switch
+    - power-consumption
+    - indicator-light
+    - switch-sensor
+    required-services: []
+  table:
+    description:
+      en: Table
+    optional-services:
+    - physical-controls-locked
+    required-services:
+    - table
+  teabar:
+    description:
+      en: Tea Bar
+    optional-services:
+    - teabar
+    - water-dispenser
+    - health-pot
+    - sterilizer
+    - screen
+    - self-check
+    - recommended-standard
+    required-services: []
+  television:
+    description:
+      en: Television
+    optional-services:
+    - television
+    - play-control
+    - speaker
+    - message-router
+    - virtual-remote
+    required-services: []
+  temperature-humidity-sensor:
+    description:
+      en: Temperature Humidity Sensor
+    optional-services:
+    - time-management
+    - device-display-unit
+    - switch-sensor
+    - switch-sensor-for-ble
+    - illumination-sensor
+    - battery
+    - customized-service-for-ble
+    - ht-sensor-historical-sync
+    required-services:
+    - temperature-humidity-sensor
+    - environment
+  test-xjpl:
+    description:
+      en: Test-xjpl
+    optional-services: []
+    required-services:
+    - ai-detection
+  thermostat:
+    description:
+      en: Thermostat
+    optional-services:
+    - environment
+    - physical-controls-locked
+    required-services:
+    - thermostat
+  timer:
+    description:
+      en: Timer
+    optional-services:
+    - battery
+    - customized-service-for-ble
+    required-services:
+    - timer
+  toilet:
+    description:
+      en: Toilet
+    optional-services:
+    - seat
+    - night-light
+    - filter
+    - alarm
+    - physical-controls-locked
+    - indicator-light
+    required-services:
+    - toilet
+  toothbrush:
+    description:
+      en: Toothbrush
+    optional-services:
+    - toothbrush
+    - brush-head
+    - battery
+    - customized-service-for-ble
+    required-services: []
+  towel-rack:
+    description:
+      en: Towel Rack
+    optional-services: []
+    required-services:
+    - towel-rack
+  tracker:
+    description:
+      en: Tracker
+    optional-services: []
+    required-services: []
+  treadmill:
+    description:
+      en: Treadmill
+    optional-services:
+    - indicator-light
+    required-services:
+    - treadmill
+  tv-box:
+    description:
+      en: TV Box
+    optional-services:
+    - tv-box
+    - speaker
+    - play-control
+    - message-router
+    required-services: []
+  tv-cabinet:
+    description:
+      en: TV Cabinet
+    optional-services:
+    - ambient-light
+    required-services:
+    - tv-cabinet
+  ulock:
+    description:
+      en: U-lock
+    optional-services:
+    - lock
+    - lock-volume-management
+    - lock-version
+    - lock-manage
+    - lock-history
+    - physical-controls-locked
+    - battery
+    - doorbell
+    - customized-service-for-ble
+    - no-disturb
+    - alarm
+    - time-management
+    - door
+    required-services: []
+  uwb:
+    description:
+      en: UWB
+    optional-services: []
+    required-services: []
+  vacuum:
+    description:
+      en: Robot Cleaner
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    - identify
+    - sterilizer-module
+    - sensor-clean-alert
+    - mop
+    - vacuum-map
+    - no-disturb
+    - battery
+    - voice-management
+    - dust-bag
+    - detergent-management
+    - stream-management
+    - vacuum-standard-map
+    - screen
+    required-services:
+    - vacuum
+  vacuum-cleaner:
+    description:
+      en: Vacuum Cleaner
+    optional-services:
+    - vacuum-cleaner
+    - battery
+    - filter
+    - dust-bag
+    - cotton-filter
+    required-services: []
+  vibration-sensor:
+    description:
+      en: Vibration Sensor
+    optional-services:
+    - battery
+    required-services:
+    - vibration-sensor
+  video-doorbell:
+    description:
+      en: Video Doorbell
+    optional-services:
+    - indicator-light
+    - motion-detection
+    - battery
+    - speaker
+    - memory-card-management
+    - auto-reply
+    - receiver
+    - p2p-stream
+    - ai-detection
+    required-services:
+    - video-doorbell
+  walking-pad:
+    description:
+      en: Walking Pad
+    optional-services:
+    - indicator-light
+    required-services:
+    - walking-pad
+  washer:
+    description:
+      en: Washer
+    optional-services:
+    - physical-controls-locked
+    - screen
+    - alarm
+    - countdown
+    - fabric-softener-management
+    - specialized-detergent-management
+    - detergent-management
+    required-services:
+    - washer
+  watch:
+    description:
+      en: Watch
+    optional-services:
+    - vital-signs
+    - motion-data
+    - battery
+    - sleep
+    - gesture
+    - feedback
+    - device-status
+    - vibration
+    - wear-car-interconnect
+    required-services:
+    - watch
+  watch-winder:
+    description:
+      en: Watch Winder
+    optional-services: []
+    required-services:
+    - watch-winder
+  water-dispenser:
+    description:
+      en: Water Dispenser
+    optional-services:
+    - tds-sensor
+    - physical-controls-locked
+    - filter
+    required-services:
+    - water-dispenser
+  water-faucet:
+    description:
+      en: Water Faucet
+    optional-services:
+    - water-faucet
+    required-services: []
+  water-heater:
+    description:
+      en: Water Heater
+    optional-services:
+    - tds-sensor
+    - physical-controls-locked
+    - screen
+    - alarm
+    - usage-report
+    - filter
+    required-services:
+    - water-heater
+  water-propeller:
+    description:
+      en: Water Propeller
+    optional-services: []
+    required-services: []
+  water-purifier:
+    description:
+      en: Water Purifier
+    optional-services:
+    - filter
+    - tds-sensor
+    - physical-controls-locked
+    - alarm
+    - water-dispenser
+    - water-use-details
+    - self-check
+    - sterilization
+    required-services:
+    - water-purifier
+  water-softener:
+    description:
+      en: Water Softener
+    optional-services:
+    - physical-controls-locked
+    - alarm
+    - indicator-light
+    required-services:
+    - water-softener
+  watermon:
+    description:
+      en: Water Monitor
+    optional-services: []
+    required-services: []
+  weather-sensor:
+    description:
+      en: Weather Sensor
+    optional-services:
+    - battery
+    required-services:
+    - weather-sensor
+    - illumination-sensor
+    - rain-sensor
+  window-opener:
+    description:
+      en: Window Opener
+    optional-services:
+    - alarm
+    - physical-controls-locked
+    - indicator-light
+    required-services:
+    - window-opener
+  wine-tank:
+    description:
+      en: Wine Tank
+    optional-services:
+    - indicator-light
+    - screen
+    required-services:
+    - wine-tank
+services:
+  ab-wheel:
+    description:
+      en: Ab Wheel
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - exercise-time
+    - exercise-count
+    - current-calorie-consumption
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ai-detection:
+    description:
+      en: Ai Detection
+    optional-actions: []
+    optional-events:
+    - someone-left
+    - someone-appeared
+    - goods-appeared
+    - goods-taken-away
+    - pet-left
+    - pet-appeared
+    - detected-babycry-event
+    - detected-hand-gesture-event
+    - someone-at-the-door
+    - object-motion
+    - louder-sound
+    - car-detected
+    - fall-detected
+    - cough-detected
+    - crossed-the-line
+    - detected-people-number
+    - package-appears
+    - package-moving
+    - children-out-of-home
+    - person-approaching-car-detected
+    - abnormal-sound
+    - no-human-appear
+    - car-entry
+    - car-exit
+    - illegal-parking
+    - non-motor-detected
+    - people-approaching-non-motor
+    - event-detected
+    - id-event-detected
+    - pet-ate
+    - quilt-not-cover
+    - quilt-cover
+    - warning-area-invasion
+    - baby-fence-in
+    - baby-fence-out
+    - pet-fence-in
+    - pet-fence-out
+    - lens-obstructed
+    - detected-head-gesture-event
+    optional-properties:
+    - identity-id
+    - pets-type
+    - goods-type
+    - face-detection-switch
+    - pet-detection-switch
+    - hand-gesture-detection-switch
+    - hand-gesture-name
+    - human-detection
+    - move-detection
+    - babycry-detection-switch
+    - current-time
+    - car-detection
+    - goods-detection
+    - detection-area
+    - detection-area-active
+    - detection-area-osd-switch
+    - car-detected-mode
+    - person-approaching-car-mode
+    - cough-detection-switch
+    - sound-detection-switch
+    - people-number
+    - pet-tracking
+    - human-close-up
+    - detection-area-switch
+    - detection-sensitivity
+    - abnormal-sound-detection
+    - no-human-time
+    - special-human-detection-switch
+    - detection-area-count
+    - detection-area-shape
+    - detection-area-support-concave
+    - illegal-parking-switch
+    - illegal-parking-area
+    - illegal-parking-area-osd-switch
+    - illegal-parking-mode
+    - license-plate
+    - people-detection-area
+    - people-detection-area-osd-switch
+    - car-detection-area
+    - car-detection-area-osd-switch
+    - motion-detection-area
+    - motion-detection-area-osd-switch
+    - zoom-close-up-function-switch
+    - car-steward-area
+    - car-steward-area-osd-switch
+    - car-entry-detection-switch
+    - car-exit-detection-switch
+    - people-approaching-car-detection-switch
+    - car-steward-switch
+    - non-motor-detection
+    - non-motor-detection-area
+    - non-motor-detection-area-osd-switch
+    - non-motor-detection-switch
+    - people-approaching-non-motor-detection-switch
+    - close-up-function-status
+    - kick-quilt-switch
+    - kick-quilt-sensitivity
+    - area-set
+    - area-get
+    - area-current-visible
+    - canvas-base-info
+    - event-type
+    - family-guard-switch
+    - family-guard-config
+    - warning-area-switch
+    - area-display-switch
+    - baby-fence-switch
+    - pet-fence-switch
+    - fence-in-switch
+    - fence-out-switch
+    - care-identity-id
+    - image-snapshot
+    - lens-obstruction-switch
+    - gesture-recognition-switch
+    - gesture-recognition-state
+    - head-gesture-name
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-condition-outlet:
+    description:
+      en: Air Condition Outlet
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-condition-outlet-matching:
+    description:
+      en: Air Condition Outlet Matching
+    optional-actions:
+    - set-ac-model
+    - set-ac-ctrl-info
+    optional-events: []
+    optional-properties:
+    - match-state
+    - ac-work-mode
+    - ac-state
+    - brand-id
+    - remote-id
+    - ac-type
+    - ac-ctrl-library
+    - ac-ctrl-library-crc32
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-conditioner:
+    description:
+      en: Air Conditioner
+    optional-actions:
+    - toggle
+    - favorite-toggle
+    optional-events:
+    - fault-occurred
+    - filter-screen-dirty-clogged
+    - power-on-favorite-mode
+    optional-properties:
+    - status
+    - target-humidity
+    - eco
+    - anion
+    - heater
+    - dryer
+    - sleep-mode
+    - soft-wind
+    - uv
+    - humidity-switch
+    - examine
+    - room-size
+    - room-size-on
+    - favorite-on
+    - favorite-type
+    - serial-number-outdoor
+    - area-type
+    - max-level
+    - purify-switch
+    - filter-screen-status
+    - filter-screen-detection-method
+    - filter-screen-detection-cycle
+    - list-soft-wind
+    - power-on-options
+    - smart-trigger-sleep-switch
+    - low-watt-level
+    - illumination
+    - people-approach-soft-wind
+    - keep-warm-target-temperature
+    - auto-keep-warm
+    - formaldehyde-removal
+    - off-auto-removal-formaldehyde
+    - mifd-purification
+    - off-auto-mifd
+    - filter-screen-type
+    - health-switch
+    - dehumidification-type
+    - powerful
+    - powerful-on-startup
+    - powerful-countdown
+    - left-soft
+    - right-soft
+    - up-soft
+    - down-soft
+    - left-up-list-soft-wind
+    - left-down-list-soft-wind
+    - right-up-list-soft-wind
+    - right-down-list-soft-wind
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - mode
+    - target-temperature
+  air-conditioner-dev-mode:
+    description:
+      en: Air Conditioner Dev Mode
+    optional-actions:
+    - restore-default-settings
+    optional-events: []
+    optional-properties:
+    - cooling-effect
+    - heating-effect
+    - relieve-air-deflector-condensation
+    - cooling-outdoor-fan-noise-reduction
+    - cooling-indoor-fan-noise-reduction
+    - heating-outdoor-fan-noise-reduction
+    - heating-indoor-fan-noise-reduction
+    - relieve-outdoor-compressors-noise
+    - improve-heat-tar-temp-stop
+    - mounting-distance
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-conditioner-smart:
+    description:
+      en: Air Conditioner Smart
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - smart-temperature-control
+    - smart-dehumidification
+    - smart-sleep
+    - smart-fresh-air
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-fresh:
+    description:
+      en: Air Fresh
+    optional-actions:
+    - toggle
+    optional-events: []
+    optional-properties:
+    - mode
+    - status
+    - fan-level
+    - heater
+    - heat-level
+    - wind-type
+    - vertical-swing
+    - horizontal-swing
+    - vertical-position
+    - horizontal-position
+    - soft-wind
+    - wind-sensation
+    - wind-direction
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  air-fresh-favorite:
+    description:
+      en: Air Fresh Favorite
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - fan-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-fryer:
+    description:
+      en: Air Fryer
+    optional-actions:
+    - cancel-cooking
+    - pause
+    - start-recipe-cook
+    - resume-cook
+    optional-events:
+    - cooking-finished
+    - cooking-start
+    - keep-warm-finished
+    optional-properties:
+    - 'on'
+    - mode
+    - left-time
+    - temperature
+    - recipe-command
+    - target-cooking-measure
+    - preheat
+    - recipe-id
+    - recipe-sync
+    - recipe-name
+    - turn-pot-config
+    - turn-pot
+    - texture
+    - current-keep-warm
+    - auto-keep-warm
+    - reservation-left-time
+    - cooking-weight
+    - fine-roasting-stage
+    - end-cooking-together
+    - double-pot-param-sync
+    required-actions:
+    - start-cook
+    required-events: []
+    required-properties:
+    - status
+    - fault
+    - target-time
+    - target-temperature
+  air-monitor:
+    description:
+      en: Air Monitor
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties: []
+  air-purifier:
+    description:
+      en: Air Purifier
+    optional-actions:
+    - toggle
+    optional-events:
+    - smoke-abnormal-alarm
+    optional-properties:
+    - status
+    - mode
+    - fan-level
+    - anion
+    - uv
+    - wet
+    - plasma
+    - smoke-abnormal-alarm-switch
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  air-purifier-favorite:
+    description:
+      en: Air Purifier Favorite
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - fan-level
+    - air-purifier-area
+    required-actions: []
+    required-events: []
+    required-properties: []
+  airc-fresh-linkage:
+    description:
+      en: Airc Fresh Linkage
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - switch-sync
+    - wind-sync
+    required-actions: []
+    required-events: []
+    required-properties: []
+  airer:
+    description:
+      en: Airer
+    optional-actions:
+    - set-upper-limit
+    - set-lower-limit
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - target-position
+    - current-position
+    - dryer
+    - drying-level
+    - left-time
+    - uv
+    - anion
+    - drying-time
+    - motion-end-position
+    - motion-start-position
+    - set-swing-direction
+    - convergent
+    - uv-left-time
+    - last-drying-time
+    - run-speed
+    - drying-position
+    - position-config
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+    - motor-control
+  alarm:
+    description:
+      en: Alarm
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - volume
+    - auto-alarm-off
+    required-actions: []
+    required-events: []
+    required-properties:
+    - alarm
+  alertor:
+    description:
+      en: Alertor
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events:
+    - alert
+    required-properties: []
+  ambient-light:
+    description:
+      en: Ambient Light
+    optional-actions:
+    - toggle-light-mode
+    - toggle
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - brightness
+    - color-temperature
+    - color
+    - saturability
+    - flow
+    - flow-speed-level
+    - effect-linkage
+    - parking-lights
+    required-actions: []
+    required-events: []
+    required-properties: []
+  analyzer:
+    description:
+      en: Analyzer
+    optional-actions:
+    - measuring-blood-sugar
+    - measuring-ureaar
+    - measuring-cholesterol
+    optional-events: []
+    optional-properties:
+    - cholesterol
+    - urea
+    - blood-sugar
+    - status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  application:
+    description:
+      en: Application
+    optional-actions:
+    - open-app
+    optional-events:
+    - app-closed
+    - app-opened
+    - app-duration
+    optional-properties:
+    - app-identity
+    - usage-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  audio-video-amplifier:
+    description:
+      en: Audio Video Amplifier
+    optional-actions:
+    - restore-default-settings
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - volume
+    - mute
+    - mode
+    - input-control
+    - effect-volume
+    required-actions: []
+    required-events: []
+    required-properties: []
+  auto-clean:
+    description:
+      en: Auto Clean
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - auto-clean
+    - status
+    - progress
+    - exitable
+    required-actions: []
+    required-events: []
+    required-properties: []
+  auto-reply:
+    description:
+      en: Auto Reply
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - auto-reply
+    - auto-reply-week
+    - auto-reply-start-time
+    - auto-reply-end-time
+    - auto-reply-item
+    required-actions: []
+    required-events: []
+    required-properties: []
+  baby-bottle-warmer:
+    description:
+      en: Baby Bottle Warmer
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    - mode
+    - temperature
+    - target-temperature
+    - left-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  backrest-control:
+    description:
+      en: Backrest Control
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - backrest-angle
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  battery:
+    description:
+      en: Battery
+    optional-actions:
+    - start-charge
+    optional-events:
+    - low-battery
+    - battery-status-change
+    - battery-run-out
+    - charging-notification
+    - exception-occurred
+    optional-properties:
+    - charging-state
+    - voltage
+    - status
+    - charge-progress
+    - usage-progress
+    - eco
+    - current-time
+    - abnormal-condition
+    - battery-cycle-count
+    - battery-health
+    required-actions: []
+    required-events: []
+    required-properties:
+    - battery-level
+  battery-camera-control:
+    description:
+      en: Battery Camera Control
+    optional-actions: []
+    optional-events:
+    - power-save-mode-activation
+    optional-properties:
+    - work-mode
+    - auto-lowbattery-switch
+    - aov-recording-interval
+    required-actions: []
+    required-events: []
+    required-properties: []
+  bed:
+    description:
+      en: Bed
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - hardness
+    - lumbar-angle
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  blade:
+    description:
+      en: Blade
+    optional-actions:
+    - reset-life
+    optional-events:
+    - clean-remind
+    optional-properties:
+    - used-time
+    - clean-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ble-control:
+    description:
+      en: BLE Local Control
+    optional-actions:
+    - turn-on
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  bluetooth:
+    description:
+      en: Bluetooth
+    optional-actions:
+    - connect
+    - disconnect
+    optional-events:
+    - device-connect
+    - device-disconnect
+    - connect-fail
+    optional-properties:
+    - 'on'
+    - connect-device-ids
+    - abnormal-condition
+    required-actions: []
+    required-events: []
+    required-properties: []
+  boiler:
+    description:
+      en: Boiler
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - gas-consumption
+    - water-consumption
+    required-actions: []
+    required-events: []
+    required-properties: []
+  breast-pump:
+    description:
+      en: Breast Pump
+    optional-actions:
+    - pause
+    - resume
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - working-level
+    - working-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  brush-cleaner:
+    description:
+      en: Brush Cleaner
+    optional-actions:
+    - reset-brush-life
+    optional-events: []
+    optional-properties:
+    - brush-left-time
+    - brush-life-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  brush-head:
+    description:
+      en: Brush Head
+    optional-actions:
+    - reset-brush-head-life
+    optional-events: []
+    optional-properties:
+    - brush-head-left-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  call:
+    description:
+      en: Call
+    optional-actions: []
+    optional-events:
+    - missed-call
+    - incoming-call
+    - hang-up
+    optional-properties:
+    - from
+    - caller
+    - video-call
+    - status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  camera-control:
+    description:
+      en: Camera Control
+    optional-actions:
+    - ptz-calibrate
+    - restart-device
+    - linkage-calibrate
+    optional-events:
+    - ir-turned-on
+    - ir-turned-off
+    - timelapse-finish
+    optional-properties:
+    - 'on'
+    - image-rollover
+    - night-shot
+    - time-watermark
+    - wdr-mode
+    - glimmer-full-color
+    - recording-mode
+    - motion-tracking
+    - local-storage
+    - ptz-camera
+    - human-tracking
+    - ai-frame
+    - hdr-mode
+    - image-distortion-correction
+    - auto-sound-and-light-warning
+    - manual-sound-and-light-warning
+    - power-frequency
+    - night-shot-full-color
+    - physical-mask
+    - box-dome-linkage
+    - camera-count
+    - watermark-status
+    - watermark-status-switch
+    - zoom-ratio
+    - human-ai-frame-osd-switch
+    - car-ai-frame-osd-switch
+    - pet-ai-frame-osd-switch
+    - package-ai-frame-osd-switch
+    - non-motor-ai-frame-osd-switch
+    - illumination-degree
+    - camera-status
+    - ptz-status
+    - pet-link-tracking
+    - human-link-tracking
+    - live-net-status
+    - video-storage-resolution
+    - manual-calibration
+    - sound-recording
+    required-actions: []
+    required-events: []
+    required-properties: []
+  camera-fav-area:
+    description:
+      en: Camera Fav Area
+    optional-actions: []
+    optional-events:
+    - into-fav-area
+    - out-fav-area
+    optional-properties:
+    - fav-area
+    - active-fav-area
+    required-actions: []
+    required-events: []
+    required-properties: []
+  camera-ipc-cloud:
+    description:
+      en: Camera Ipc Cloud
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties:
+    - gop-value
+    - vip-offset-num
+    - non-vip-offset-num
+  camera-stream-for-amazon-alexa:
+    description:
+      en: Camera Stream Management For Amazon Alexa
+    optional-actions:
+    - get-stream-configuration
+    - start-rtsp-stream
+    - stop-stream
+    - initiate-webrtc-session
+    - webrtc-session-connected
+    - webrtc-session-disconnected
+    - take-snapshot
+    optional-events: []
+    optional-properties:
+    - video-codec-type
+    - video-attribute
+    - audio-codec-type
+    - audio-attribute
+    - authorization-type
+    - stream-address
+    - image-snapshot
+    - expiration-time
+    - stream-status
+    - session-id
+    - webrtc-offer
+    - param-sleep-status
+    - camera-index
+    required-actions: []
+    required-events: []
+    required-properties: []
+  camera-stream-for-google-home:
+    description:
+      en: Camera Stream Management For Google Home
+    optional-actions:
+    - get-stream-configuration
+    - initiate-webrtc-session
+    - start-hls-stream
+    - stop-stream
+    optional-events: []
+    optional-properties:
+    - video-codec-type
+    - video-attribute
+    - audio-codec-type
+    - audio-attribute
+    - stream-address
+    - stream-receiver-id
+    - stream-auth-token
+    - expiration-time
+    - stream-status
+    - param-sleep-status
+    - camera-index
+    required-actions: []
+    required-events: []
+    required-properties: []
+  card-switch:
+    description:
+      en: Card Switch
+    optional-actions: []
+    optional-events:
+    - card-insert
+    - card-remove
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - card-insertion-state
+  cartridge:
+    description:
+      en: Cartridge
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - cartridge-left-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  cast-screen:
+    description:
+      en: Cast Screen
+    optional-actions:
+    - connect
+    - disconnect
+    optional-events:
+    - device-connect
+    - device-disconnect
+    - connect-fail
+    optional-properties:
+    - status
+    - device-identity
+    - abnormal-condition
+    required-actions: []
+    required-events: []
+    required-properties: []
+  cat-litter:
+    description:
+      en: Cat Litter
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - cat-litter-type
+    required-actions: []
+    required-events: []
+    required-properties:
+    - cat-litter-left-level
+  cat-toilet:
+    description:
+      en: Cat Toilet
+    optional-actions:
+    - start-deodorize
+    - turn-left
+    - turn-right
+    optional-events:
+    - pet-out
+    - pet-in
+    - motor-blocked
+    optional-properties:
+    - auto-deodorization
+    - usage-count
+    - trash-can-status
+    - auto-cleanup
+    - surrounding-cats-status
+    required-actions:
+    - start-clean
+    required-events:
+    - clean-complete
+    required-properties:
+    - status
+    - fault
+  ceiling-fan:
+    description:
+      en: Ceiling Fan
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - fan-level
+    - status
+    - mode
+    - fault
+    - vertical-swing
+    - horizontal-swing
+    - vertical-angle
+    - horizontal-angle
+    - off-delay
+    - off-delay-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ces:
+    description:
+      en: Test-yt
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - lumbar-angle
+    required-actions: []
+    required-events: []
+    required-properties:
+    - lumbar-angle
+  chair:
+    description:
+      en: Chair
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - seating-state
+    required-actions: []
+    required-events: []
+    required-properties: []
+  channel-volume-tuning:
+    description:
+      en: Channel Volume Tuning
+    optional-actions:
+    - test
+    optional-events: []
+    optional-properties:
+    - channel-volume
+    required-actions: []
+    required-events: []
+    required-properties: []
+  charging-pile:
+    description:
+      en: Charging Pile
+    optional-actions:
+    - start-charge
+    - stop-charge
+    optional-events:
+    - charging-finished
+    - door-open-notify
+    optional-properties:
+    - mode
+    - status
+    - 4g-signal
+    - timer-on
+    - start-time
+    - end-time
+    - full-charge
+    - authorize-mode
+    - maximum-current-regulation
+    - charged-quantity
+    - electric-power
+    - electric-current
+    - voltage
+    - order-id
+    - start-charge-time
+    - charge-continue-time
+    - local-history-orders-storage
+    - door-state
+    - lock-status
+    - auto-upgrade
+    - fault
+    - fault-list
+    - maximum-power
+    - left-time
+    - battery-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  clean:
+    description:
+      en: Clean
+    optional-actions:
+    - start-descale
+    - stop-descale
+    - start-self-clean
+    - stop-self-clean
+    optional-events: []
+    optional-properties:
+    - self-clean
+    - descale
+    - clean-left-time
+    - self-clean-status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  clock:
+    description:
+      en: Clock
+    optional-actions:
+    - stop-alarm
+    optional-events:
+    - alarm-event
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - ringtone
+    - identity
+    required-actions: []
+    required-events: []
+    required-properties: []
+  clothes-dryer:
+    description:
+      en: Clothes Dryer
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - left-time
+    - dryer
+    - drying-time
+    - drying-level
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  coffee-machine:
+    description:
+      en: Coffee Machine
+    optional-actions:
+    - start-cook
+    - cancel-cooking
+    - pause
+    - resume-cook
+    - set-recipe
+    - delete-recipe
+    optional-events:
+    - cooking-finished
+    - cooking-cancel
+    - cooking-start
+    - need-cleaning
+    - lack-of-handle
+    - lack-of-milk-tank
+    optional-properties:
+    - 'on'
+    - fault
+    - mode
+    - target-time
+    - left-time
+    - curstate-working-time
+    - timeout-time
+    - cup-volume
+    - temperature
+    - mixed-type
+    - mixed-proportion
+    - extraction-pressure
+    - extraction-flow
+    - recipe-id
+    - recipe-name
+    - recipe-type
+    - recipe-order
+    - menu-order
+    - recipe-command
+    - cook-step
+    - water-box-exist
+    - water-box-status
+    - presoak-switch
+    - presoak-time
+    - presoak-flow
+    - automatic-pressed-powder-switch
+    - bell
+    - auto-screen-off-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+  cooker:
+    description:
+      en: Cooker
+    optional-actions:
+    - set-recipe
+    - start-recipe-cook
+    - resume-cook
+    - pause
+    optional-events:
+    - cooking-finished
+    optional-properties:
+    - temperature
+    - cook-mode
+    - mode
+    - auto-keep-warm
+    - left-time
+    - target-time
+    - recipe-id
+    - reservation-left-time
+    - keep-warm-time
+    - rice-type
+    - 'on'
+    - texture
+    - recipe-type
+    - recipe-command
+    - cook-temp-history
+    - pan-status
+    - recipe-name
+    - reservation-complete-time
+    - has-keeping-warm-time
+    - set-factory-reset-flag
+    - operation-param
+    - viscosity
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  cooking-machine:
+    description:
+      en: Cooking Machine
+    optional-actions: []
+    optional-events:
+    - cooking-finished
+    optional-properties:
+    - 'on'
+    - left-time
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  cooler:
+    description:
+      en: Cooler
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mode
+    - temperature
+    - extreme-cold-limit
+    required-actions: []
+    required-events: []
+    required-properties: []
+  cooler-light:
+    description:
+      en: Cooler Light
+    optional-actions:
+    - reset-color
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - color
+    - color-combination
+    - flow-speed-level
+    - color1
+    - color2
+    - color3
+    required-actions: []
+    required-events: []
+    required-properties: []
+  cotton-filter:
+    description:
+      en: Cotton Filter
+    optional-actions:
+    - reset-cotton-filter-life
+    optional-events: []
+    optional-properties:
+    - cotton-filter-left-time
+    - cotton-filter-life-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  countdown:
+    description:
+      en: Countdown
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties:
+    - countdown-time
+  cpu-management:
+    description:
+      en: CPU Management
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - usage-rate
+    - temperature
+    required-actions: []
+    required-events: []
+    required-properties: []
+  cruise:
+    description:
+      en: Cruise
+    optional-actions: []
+    optional-events:
+    - cruise-started
+    - cruise-ended
+    optional-properties:
+    - cruise-switch
+    - cruise-cycle
+    - cruise-start-time
+    - cruise-end-time
+    - cruise-repetition
+    - cruise-mode
+    - cruise-position
+    required-actions: []
+    required-events: []
+    required-properties: []
+  curtain:
+    description:
+      en: Curtain
+    optional-actions:
+    - clear-travel
+    optional-events:
+    - curtain-manually-opened
+    - curtain-manually-closed
+    optional-properties:
+    - motor-control
+    - 'on'
+    - status
+    - mode
+    - current-position
+    - target-position
+    - motor-reverse
+    - default-open-position
+    - default-close-position
+    - wake-up-mode
+    - travel-setting-mode
+    - travel-point
+    - whole-journey-time
+    - speed-level
+    - enable-manual-draw-curtain
+    - fault
+    - manual-draw-speed-adaptive
+    - manual-draw-stop
+    - horizontal-angle
+    - vertical-angle
+    - travel-length
+    - dimming-angle
+    - light-transmission
+    - dimming-motor-control
+    - dimming-status
+    - wake-up-duration
+    - wake-up-style
+    - position
+    - two-motor-switch
+    - motor-sync
+    required-actions: []
+    required-events: []
+    required-properties: []
+  custom-sleep:
+    description:
+      en: Custom Sleep
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - custom-sleep-settings
+    - custom-sleep-enabled
+    - custom-sleep-activated
+    required-actions: []
+    required-events: []
+    required-properties: []
+  customized-service-for-ble:
+    description:
+      en: Customized Service For Ble
+    optional-actions: []
+    optional-events:
+    - customized-event-1
+    - customized-event-2
+    - customized-event-3
+    - customized-event-4
+    - customized-event-5
+    - customized-event-6
+    optional-properties:
+    - customized-property-2
+    - customized-property-1
+    - customized-argument-1
+    - customized-argument-2
+    - customized-argument-6
+    - customized-argument-5
+    - customized-argument-4
+    - customized-argument-3
+    - customized-property-3
+    - customized-property-4
+    - customized-property-5
+    - customized-property-6
+    required-actions: []
+    required-events: []
+    required-properties: []
+  dehumidifier:
+    description:
+      en: Dehumidifier
+    optional-actions:
+    - toggle
+    optional-events: []
+    optional-properties:
+    - mode
+    - status
+    - target-humidity
+    - water-level
+    - fan-level
+    - filter-off-dry
+    - air-dry-remain-time
+    - horizontal-swing
+    - horizontal-swing-included-angle
+    - plasma
+    - anion
+    - uv
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  delay:
+    description:
+      en: Delay
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties:
+    - delay
+    - delay-time
+    - delay-remain-time
+  demo:
+    description:
+      en: Demo
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - demo-mode-status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  deodorant:
+    description:
+      en: Deodorant
+    optional-actions:
+    - reset-deodorant-life
+    optional-events: []
+    optional-properties:
+    - deodorant-left-level
+    - deodorant-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  desiccant:
+    description:
+      en: Desiccant
+    optional-actions:
+    - reset-desiccant-life
+    optional-events: []
+    optional-properties:
+    - desiccant-left-level
+    - desiccant-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  detect-nobody-save-energy:
+    description:
+      en: Detect Nobody Save Energy
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - detect-nobody-save-energy
+    - detect-nobody-save-energy-status
+    - detect-nobody-adjust-temp
+    - detect-nobody-duration
+    - detect-someone-after-adjust-temp
+    - adjust-temp-cool
+    - adjust-temp-heat
+    - detect-nobody-power-off
+    - detect-someone-after-powered-off
+    required-actions: []
+    required-events: []
+    required-properties: []
+  detergent-management:
+    description:
+      en: Detergent Management
+    optional-actions:
+    - reset-detergent-management-level
+    optional-events:
+    - low-detergent-level
+    optional-properties:
+    - detergent-left-level
+    - detergent-self-delivery
+    - detergent-self-delivery-level
+    - detergent-left-time
+    - detergent-depletion-reminder
+    - detergent-self-delivery-notify
+    required-actions: []
+    required-events: []
+    required-properties: []
+  device-display-unit:
+    description:
+      en: Device Display Unit
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - temperature-display-unit
+    required-actions: []
+    required-events: []
+    required-properties: []
+  device-information:
+    description:
+      en: Device Information
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - serial-no
+    required-actions: []
+    required-events: []
+    required-properties:
+    - manufacturer
+    - model
+    - serial-number
+    - firmware-revision
+  device-lock:
+    description:
+      en: Device Lock
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - device-lock
+    - device-lock-avail
+    - if-set-password
+    - control-scene-change
+    required-actions: []
+    required-events: []
+    required-properties: []
+  device-status:
+    description:
+      en: Device Status
+    optional-actions:
+    - start-voice-linkage
+    optional-events:
+    - device-wearing-status-change
+    - mode-changed
+    optional-properties:
+    - device-wearing-status
+    - mode
+    - mute
+    - no-disturb
+    - sleep-mode
+    - voice-linkage-config
+    required-actions: []
+    required-events: []
+    required-properties: []
+  dial:
+    description:
+      en: Dial
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  diffuser:
+    description:
+      en: Diffuser
+    optional-actions: []
+    optional-events:
+    - low-water-level
+    optional-properties:
+    - mode
+    - status
+    - fan-level
+    - target-humidity
+    - anion
+    - water-level
+    - fragrance-out-time
+    - auto-start-stop
+    - top-cover-status
+    - awakening-function
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  dishwasher:
+    description:
+      en: Dishwasher
+    optional-actions:
+    - pause
+    - close-door
+    - open-door
+    - stop-reserve
+    - reserve
+    - stop-preservation
+    - stop-washing
+    optional-events:
+    - wash-end
+    - wash-start
+    - wash-continue
+    - reservation-start
+    - preservation-complete
+    - door-not-closed
+    optional-properties:
+    - left-time
+    - dryer
+    - door-state
+    - target-temperature
+    - power-consumption
+    - auto-open-door
+    - water-consumption
+    - target-time
+    - temperature
+    - tds-setting
+    - run-status
+    - door-open-reminder-time
+    - reservation-complete-time
+    - preservation-mode
+    - preservation-duration
+    - regular-preservation-data
+    - reservation-left-time
+    - wash-layer
+    - preservation-left-time
+    - enhance-drying
+    - enhanced-rinshing
+    - wash-end-reminder
+    - layered-set
+    - projector-lamp-switch
+    - inner-light-switch
+    - steam-sterilization
+    - child-protected-status
+    required-actions:
+    - start-wash
+    required-events: []
+    required-properties:
+    - 'on'
+    - status
+    - fault
+    - mode
+  display:
+    description:
+      en: Display
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - brightness
+    - auto-screen-brightness
+    - dark-mode
+    - anti-flicker-mode
+    - reading-mode
+    - alwasy-on-display
+    - direction-lock
+    - font-size
+    - font-weight
+    - dark-display
+    required-actions: []
+    required-events: []
+    required-properties: []
+  door:
+    description:
+      en: Door
+    optional-actions:
+    - remote-close-door
+    optional-events:
+    - door-event
+    - power-supply-event
+    optional-properties:
+    - door-state
+    - current-time
+    - power-supply-mode
+    - barrier-state
+    required-actions: []
+    required-events: []
+    required-properties: []
+  door-lock-camera:
+    description:
+      en: Door Lock Camera
+    optional-actions:
+    - remote-call
+    - light-up-screen
+    - wake-up
+    - video-recording
+    optional-events:
+    - someone-passed-by
+    - someone-at-the-door
+    - wechat-unauth-notify
+    - local-algorithm-event
+    - key-call-start
+    optional-properties:
+    - 'on'
+    - night-shot
+    - time-watermark
+    - wdr-mode
+    - eco
+    - ringtone
+    - image-distortion-correction
+    - current-time
+    - auto-screen-on
+    - live-video-streaming
+    - live-video-valid-time
+    - live-video-enable-time-period
+    - detection-sensitivity
+    - auto-screen-on-time
+    - glimmer-full-color
+    - mode
+    - pass-by-activated-switch
+    - someone-staying-activated-switch
+    - staying-time
+    - face-marking-switch
+    - screen-display-area
+    - video-recording-start-time
+    - video-recording-end-time
+    - video-recording-time-period
+    - wechat-info
+    - inside-unlock-recording
+    - event-type
+    - recording-mode
+    - package-area-setup
+    - identity-feature-recognition
+    - package-status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  doorbell:
+    description:
+      en: Doorbell
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - ringtone
+    - volume
+    - current-time
+    - doorbell-light-on
+    required-actions: []
+    required-events:
+    - doorbell-ring
+    required-properties: []
+  drawer-lock:
+    description:
+      en: Drawer Lock
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - motor-control
+    - status
+    - setting-data
+    required-actions: []
+    required-events: []
+    required-properties: []
+  dryer:
+    description:
+      en: Dryer
+    optional-actions:
+    - stop-dry
+    - set-customize-params
+    - stop-shake-disperse
+    optional-events:
+    - dry-complete
+    optional-properties:
+    - left-time
+    - drying-level
+    - drying-time
+    - door-state
+    - drying-degree
+    - uv
+    - auto-shake-disperse
+    - has-dried-times
+    - reservation-dry-status
+    - reservation-left-time
+    - run-status
+    - run-status-list
+    - water-box-reminder-on
+    - water-box-status
+    - filter-screen-reminder-on
+    - filter-screen-status
+    - shake-time
+    - child-protected-enabled
+    - child-protected-status
+    - ai-mode
+    - one-click-wash
+    - low-power-dry
+    - ion-clean
+    - anti-folds
+    - target-temperature
+    - sleep-mode
+    required-actions:
+    - start-drying
+    - pause
+    required-events: []
+    required-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+  dumbbell:
+    description:
+      en: Dumbbell
+    optional-actions:
+    - set-exercise-mode
+    optional-events: []
+    optional-properties:
+    - mode
+    - workout-status
+    - exercise-param
+    required-actions: []
+    required-events: []
+    required-properties: []
+  dust-bag:
+    description:
+      en: Dust Bag
+    optional-actions:
+    - reset-dust-bag-life
+    optional-events: []
+    optional-properties:
+    - dust-bag-life-level
+    - dust-bag-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  eco-pods:
+    description:
+      en: Eco Pods
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mode
+    - target-temperature
+    - target-humidity
+    - temperature
+    - relative-humidity
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  electric-blanket:
+    description:
+      en: Electric Blanket
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mode
+    - status
+    - target-temperature
+    - temperature
+    - heat-level
+    - water-level
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  electric-steamer:
+    description:
+      en: Electric Steamer
+    optional-actions:
+    - start-cook
+    - pause
+    - cancel-cooking
+    - resume-cook
+    - start-recipe-cook
+    optional-events:
+    - cooking-start
+    - cooking-finished
+    - low-water-level
+    - keep-warm-finished
+    optional-properties:
+    - status
+    - fault
+    - mode
+    - target-temperature
+    - target-time
+    - left-time
+    - recipe-id
+    - reservation-left-time
+    - keep-warm-time
+    - keep-warm-left-time
+    - recipe-sync
+    - auto-keep-warm
+    required-actions: []
+    required-events: []
+    required-properties: []
+  electronic-valve:
+    description:
+      en: Electronic Valve
+    optional-actions: []
+    optional-events:
+    - exception-occurred
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - target-time
+    - abnormal-condition
+    required-actions: []
+    required-events: []
+    required-properties:
+    - valve-switch
+    - target-water-level
+  environment:
+    description:
+      en: Environment
+    optional-actions:
+    - co2-density-calibration
+    optional-events:
+    - pm-warning
+    optional-properties:
+    - relative-humidity
+    - air-quality-index
+    - air-quality
+    - pm2.5-density
+    - pm10-density
+    - atmospheric-pressure
+    - temperature
+    - co2-density
+    - tvoc-density
+    - voc-density
+    - hcho-density
+    - pm1
+    - ch4-density
+    - co-density
+    - co2-collection-interval
+    required-actions: []
+    required-events: []
+    required-properties: []
+  extra-device-information:
+    description:
+      en: Extra Device Information
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - platform-id
+    - qrcode-information
+    - identification-code
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fabric-softener-management:
+    description:
+      en: Fabric Softener Management
+    optional-actions: []
+    optional-events:
+    - low-fabric-softener-level
+    optional-properties:
+    - fabric-softener-left-level
+    - fabric-softener-self-delivery
+    - softener-self-delivery-level
+    - disinfectant-mode
+    - fabric-softener-self-delivery-notify
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fan:
+    description:
+      en: Fan
+    optional-actions:
+    - toggle
+    - vertical-to-middle
+    - horizontal-to-middle
+    - turn-left
+    - turn-right
+    - turn-upward
+    - turn-downward
+    optional-events: []
+    optional-properties:
+    - horizontal-swing
+    - vertical-swing
+    - horizontal-angle
+    - vertical-angle
+    - mode
+    - status
+    - fault
+    - anion
+    - air-cooler
+    - wind-reverse
+    - horizontal-swing-included-angle
+    - vertical-swing-included-angle
+    - off-to-center
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fan-level
+  fan-control:
+    description:
+      en: Fan Control
+    optional-actions:
+    - horizontal-to-middle
+    - turn-left
+    - turn-right
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - fan-level
+    - horizontal-swing
+    - vertical-swing
+    - horizontal-angle
+    - vertical-angle
+    - horizontal-swing-included-angle
+    - vertical-swing-included-angle
+    - off-to-center
+    - swing-mode
+    - wind-direction
+    - vertical-area
+    - vertical-position
+    - horizontal-area
+    - horizontal-position
+    - wind-sensation
+    - soft-wind
+    - air-outlet
+    - left-horizontal-swing
+    - right-horizontal-swing
+    - up-vertical-swing
+    - down-vertical-swing
+    - left-up-vertical-swing
+    - left-down-vertical-swing
+    - right-up-vertical-swing
+    - right-down-vertical-swing
+    - left-horizontal-position
+    - right-horizontal-position
+    - up-vertical-position
+    - down-vertical-position
+    - left-up-vertical-position
+    - left-down-vertical-position
+    - right-up-vertical-position
+    - right-down-vertical-position
+    - auto-fan-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  favorite-config:
+    description:
+      en: Favorite Config
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - fan-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  feedback:
+    description:
+      en: Feedback
+    optional-actions: []
+    optional-events:
+    - negative-feedback
+    - positive-feedback
+    - warning-feedback
+    optional-properties:
+    - text-content
+    required-actions: []
+    required-events: []
+    required-properties: []
+  filter:
+    description:
+      en: Filter
+    optional-actions:
+    - reset-filter-life
+    optional-events: []
+    optional-properties:
+    - filter-life-level
+    - filter-left-time
+    - filter-used-time
+    - filter-used-flow
+    - filter-left-flow
+    - anti-fake
+    - rfid-product-id
+    - working-level
+    - cleanliness
+    - filter-installatio-status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  find-device:
+    description:
+      en: Find Device
+    optional-actions:
+    - find-device-action
+    optional-events: []
+    optional-properties:
+    - find-action-value
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fire-smoke:
+    description:
+      en: Fire Smoke
+    optional-actions: []
+    optional-events:
+    - fire-smoke-event
+    optional-properties:
+    - fire-smoke-switch
+    - fire-smoke-alarm-switch
+    - current-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fish-tank:
+    description:
+      en: Fish Tank
+    optional-actions:
+    - pet-food-out
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - fault
+    - automatic-feeding
+    - target-feeding-measure
+    - water-pump
+    - pump-flux
+    - heating
+    - temperature
+    - target-temperature
+    - feeding-measure
+    - water-pump-status
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - water-pump
+  flowerpot:
+    description:
+      en: Flowerpot
+    optional-actions: []
+    optional-events:
+    - low-water-level
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - watering
+    required-actions: []
+    required-events: []
+    required-properties: []
+  focus-mode:
+    description:
+      en: Focus Mode
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - focus-time
+    - rest-time
+    - recycle-number
+    required-actions: []
+    required-events: []
+    required-properties: []
+  food-management:
+    description:
+      en: Food Management
+    optional-actions: []
+    optional-events:
+    - food-reminder
+    optional-properties:
+    - food-reminder-type
+    required-actions: []
+    required-events: []
+    required-properties: []
+  foot-bath:
+    description:
+      en: Foot Bath
+    optional-actions:
+    - set-customize-params
+    optional-events:
+    - usage-record
+    optional-properties:
+    - status
+    - mode
+    - fault
+    - target-time
+    - left-time
+    - target-temperature
+    - temperature
+    - heat-level
+    - foot-massage
+    - massage-strength
+    - fold-status
+    - motor-control
+    - constant-temperature-heating
+    - power-supply-mode
+    - water-level-status
+    - has-foot-bath-time
+    - sterilization-foot-bath
+    - air-bag-massage
+    - air-bag-massage-level
+    - heat-end-reminder
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  foot-warmer:
+    description:
+      en: Foot Warmer
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - heat-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  formula-dispenser:
+    description:
+      en: Formula Dispenser
+    optional-actions:
+    - make-milk
+    optional-events:
+    - brewing-complete
+    optional-properties:
+    - 'on'
+    - target-temperature
+    - reservation-left-time
+    - status
+    - fault
+    - out-water-volume
+    - out-formula-volume
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fragrance-liquid-management:
+    description:
+      en: Fragrance Liquid Management
+    optional-actions: []
+    optional-events:
+    - low-fragrance-liquid-level
+    - fragrance-stick-insert
+    optional-properties:
+    - fragrance-liquid-left-level
+    - fragrance-liquid-name
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fridge:
+    description:
+      en: Fridge
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - eco
+    - door-not-close-remind
+    - door-not-close-name
+    - peak-and-valley-electricity
+    - noise-reduction
+    - ice-maker-is-install
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  fridge-chamber:
+    description:
+      en: Fridge Chamber
+    optional-actions: []
+    optional-events:
+    - mode-finish
+    optional-properties:
+    - temperature
+    - target-temperature
+    - 'on'
+    - mode
+    - quick-frozen-temperature
+    - deep-cold-temperature
+    - ion-clean
+    - quick-frozen
+    - deep-cold
+    - quick-cooling
+    - quick-cooling-temperature
+    - ion-clean-progress
+    - cold-fermentation-mode
+    - cold-brew-mode
+    - left-time
+    - holiday-mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fridge-food-clip:
+    description:
+      en: Fridge Food Clip
+    optional-actions:
+    - clip-has-lost
+    optional-events: []
+    optional-properties:
+    - food-type
+    - food-name
+    - storage-position
+    - shelf-life
+    - storage-time-point
+    - remain-time-point
+    required-actions: []
+    required-events: []
+    required-properties:
+    - clip-id
+    - clip-status
+    - food-status
+  fridger-dev-mode:
+    description:
+      en: Fridger Dev Mode
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - powerful-cooling
+    - powerful-noise-reduction
+    required-actions: []
+    required-events: []
+    required-properties: []
+  fruit-vegetable-purifier:
+    description:
+      en: Fruit Vegetable Purifier
+    optional-actions: []
+    optional-events:
+    - wash-end
+    optional-properties:
+    - wash-time
+    - left-time
+    - target-water-level
+    required-actions:
+    - start-wash
+    - pause
+    required-events: []
+    required-properties:
+    - status
+    - fault
+    - wash-mode
+  garbage-bag:
+    description:
+      en: Garbage Bag
+    optional-actions:
+    - reset-garbage-bag
+    optional-events: []
+    optional-properties:
+    - garbage-bag-left-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  garbage-can:
+    description:
+      en: Garbage Can
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - target-lid-state
+    - current-lid-state
+    required-actions:
+    - package
+    required-events: []
+    required-properties: []
+  garbage-disposal:
+    description:
+      en: Garbage Disposal
+    optional-actions:
+    - toggle
+    optional-events: []
+    optional-properties:
+    - mode
+    - motor-reverse
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - status
+    - fault
+  gas-sensor:
+    description:
+      en: Gas Sensor
+    optional-actions: []
+    optional-events:
+    - device-forcibly-removed
+    - high-concentration-of-gas-detected
+    optional-properties:
+    - status
+    - fault
+    - gas-concentration
+    - gas-sensor-left-time
+    - mute
+    required-actions: []
+    required-events: []
+    required-properties: []
+  gateway:
+    description:
+      en: Gateway
+    optional-actions: []
+    optional-events:
+    - network-changed
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - guard-mode
+    - access-mode
+    - wifi-ssid
+    - ip-address
+    - current-time
+    - dhcp-server-mac-adress
+    required-actions: []
+    required-events: []
+    required-properties: []
+  germicidal-lamp:
+    description:
+      en: Germicidal Lamp
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - uv
+    - target-time
+    - left-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  gesture:
+    description:
+      en: Gesture
+    optional-actions: []
+    optional-events:
+    - detected-hand-gesture-event
+    optional-properties:
+    - hand-gesture-name
+    - hand-gesture-detection-switch
+    - gesture-sensitivity
+    required-actions: []
+    required-events: []
+    required-properties: []
+  gimbal:
+    description:
+      en: Gimbal
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  guest-wifi:
+    description:
+      en: Guest WiFi
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - encrypted-strength
+    - signal-strength
+    - wifi-channel
+    - wifi-bandwidth
+    - speed-control
+    - max-upload-speed
+    - max-download-speed
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - wifi-ssid
+    - wifi-encrypted-password
+  hair-drier:
+    description:
+      en: Hair Drier
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - hair-style
+    - fan-level
+    - temperature
+    - wind-speed
+    - heat-level
+    - status
+    - fraction
+    - single-used-time
+    - gatt-history
+    - fault
+    - rotating-speed
+    required-actions: []
+    required-events: []
+    required-properties: []
+  hard-disk-memory-management:
+    description:
+      en: Hard Disk Memory Management
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - smart-status-short-conclusion
+    - smart-status
+    - temperature
+    required-actions: []
+    required-events: []
+    required-properties: []
+  head-up-display:
+    description:
+      en: Head Up Display
+    optional-actions: []
+    optional-events:
+    - location-update
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - driving-status
+    - longitude
+    - latitude
+    - current-address
+    required-actions: []
+    required-events: []
+    required-properties: []
+  health-pot:
+    description:
+      en: Health Pot
+    optional-actions:
+    - set-recipe
+    optional-events:
+    - cooking-finished
+    optional-properties:
+    - 'on'
+    - left-time
+    - auto-keep-warm
+    - temperature
+    - cook-mode
+    - mode
+    - tea-basket-status
+    - motor-control
+    - keep-warm-temperature
+    - target-temperature
+    - cook-time
+    - recipe-command
+    - reservation-left-time
+    - recipe-id
+    - keep-warm-time
+    - recipe-type
+    - pot-lift-memory
+    - curstate-left-time
+    - curstate
+    - working-level
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  heater:
+    description:
+      en: Heater
+    optional-actions:
+    - toggle
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - target-temperature
+    - temperature
+    - heat-level
+    - working-time
+    - heating
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  height-meter:
+    description:
+      en: Height Meter
+    optional-actions: []
+    optional-events:
+    - measure-complete
+    optional-properties:
+    - current-time
+    - height
+    required-actions: []
+    required-events: []
+    required-properties: []
+  hood:
+    description:
+      en: Hood
+    optional-actions:
+    - start-air-refresh
+    - stop-air-refresh
+    optional-events:
+    - clean-remind
+    - holiday-start
+    - working-remind
+    - auto-ventilation-open
+    - auto-ventilation-close
+    - auto-ventilation-invalid
+    - oil-cup-clean-remind
+    optional-properties:
+    - status
+    - mode
+    - off-delay
+    - off-delay-time
+    - countdown-time
+    - stove-link-status
+    - power-on-with-light
+    - power-off-with-light
+    - clean-remind-on
+    - clean-remind-time
+    - cruise-switch
+    - holiday-mode
+    - holiday-ventilate-cycle
+    - holiday-start-time
+    - holiday-duration
+    - gestures
+    - working-remind-time
+    - pm-trig-push-value
+    - pm-auto-ventilation-time
+    - pm-trig-fresh-value
+    - auto-ventilation-on
+    - off-auto-purification
+    - off-auto-purification-time
+    - co-out-auto-ventilation
+    - ch4-out-auto-ventilation
+    - air-refresh-left-time
+    - air-refresh-status
+    - holiday-duration-mode
+    - holiday-duration-time-period
+    - air-refresh-interval
+    - purify-switch
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  hood-smart-dry-wash:
+    description:
+      en: Hood Smart Dry Wash
+    optional-actions:
+    - stop-dry-cleaning
+    - execute-dry-cleaning
+    optional-events:
+    - dry-cleaning-timing-remind
+    optional-properties:
+    - dry-cleaning-timing-on
+    - dry-cleaning-status
+    - dry-cleaning-guide
+    - dry-cleaning-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  howling-suppression:
+    description:
+      en: Howling Suppression
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ht-sensor-historical-sync:
+    description:
+      en: Ht Sensor Historical Sync
+    optional-actions:
+    - trigger-historical-data-sync
+    optional-events:
+    - historical-data-report-completed
+    - historical-data-report
+    optional-properties:
+    - index-value
+    - current-time
+    - highest-temperature
+    - lowest-temperature
+    - highest-relative-humidity
+    - lowest-relative-humidity
+    - highest-co2-density
+    - lowest-co2-density
+    required-actions: []
+    required-events: []
+    required-properties: []
+  humidifier:
+    description:
+      en: Humidifier
+    optional-actions:
+    - toggle
+    optional-events:
+    - low-water-level
+    optional-properties:
+    - mode
+    - status
+    - fan-level
+    - target-humidity
+    - water-level
+    - heater
+    - target-temperature
+    - overwet-protect
+    - automatic-air-drying
+    - air-dry-remain-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+  ice-maker:
+    description:
+      en: Ice Maker
+    optional-actions:
+    - loop-toggle-mode
+    - start-clean
+    - toggle
+    - reserve
+    - stop-reserve
+    optional-events:
+    - full-ice-box
+    - low-water-level
+    - clean-complete
+    - ice-removal-reminder
+    optional-properties:
+    - 'on'
+    - mode
+    - status
+    - fault
+    - temperature
+    - ice-maker-forbid-status
+    - ice-maker-status
+    - ice-maker-order
+    - ice-maker-size
+    - ice-maker-order-switch
+    required-actions: []
+    required-events: []
+    required-properties: []
+  identify:
+    description:
+      en: Identify
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions:
+    - identify
+    required-events: []
+    required-properties: []
+  idm:
+    description:
+      en: IDM
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - idm-cast-switch
+    - trigger-idm-cast-event
+    - idm-cast-deivce
+    - idm-hashid
+    - enable-time-period
+    required-actions: []
+    required-events: []
+    required-properties: []
+  illumination-sensor:
+    description:
+      en: Illumination Sensor
+    optional-actions: []
+    optional-events:
+    - device-be-reset
+    optional-properties:
+    - fault
+    - status
+    required-actions: []
+    required-events: []
+    required-properties:
+    - illumination
+  image-recognition:
+    description:
+      en: Image Recognition
+    optional-actions: []
+    optional-events:
+    - someone-left
+    - someone-appeared
+    - goods-appeared
+    - goods-taken-away
+    - pet-left
+    - pet-appeared
+    optional-properties:
+    - identity-id
+    - pets-type
+    - goods-type
+    required-actions: []
+    required-events: []
+    required-properties: []
+  indicator-light:
+    description:
+      en: Indicator Light
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - brightness
+    - color
+    - color-temperature
+    - flow
+    - saturability
+    - auto-lights-off
+    - light-strip
+    required-actions: []
+    required-events: []
+    required-properties: []
+  induction-cooker:
+    description:
+      en: Induction Cooker
+    optional-actions: []
+    optional-events:
+    - cooking-finished
+    optional-properties:
+    - 'on'
+    - cook-mode
+    - left-time
+    - working-time
+    - heat-level
+    - operation-param
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    - pause
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  insect-killer:
+    description:
+      en: Insect Killer
+    optional-actions: []
+    optional-events:
+    - insect-catch-record
+    optional-properties:
+    - common-params
+    required-actions: []
+    required-events: []
+    required-properties: []
+  insecticide:
+    description:
+      en: Insecticide
+    optional-actions:
+    - reset-life
+    - delivery
+    optional-events: []
+    optional-properties:
+    - insecticide-left-level
+    - insecticide-self-delivery
+    required-actions: []
+    required-events: []
+    required-properties: []
+  integrated-stove:
+    description:
+      en: Integrated Stove
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  intelligent-speaker:
+    description:
+      en: Intelligent Speaker
+    optional-actions:
+    - wake-up
+    - play-radio
+    - play-text
+    - execute-text-directive
+    - play-music
+    - stop-tts
+    optional-events:
+    - wake-up-by-voice
+    - dialogue-end
+    optional-properties:
+    - text-content
+    - silent-execution
+    - sleep-mode
+    - audio-id
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ir-aircondition-control:
+    description:
+      en: IR Aircondition Control
+    optional-actions:
+    - turn-on
+    - turn-off
+    - fan-speed-up
+    - fan-speed-down
+    - temperature-up
+    - temperature-down
+    optional-events: []
+    optional-properties:
+    - ir-mode
+    - ir-temperature
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ir-box-control:
+    description:
+      en: IR TV Box Control
+    optional-actions:
+    - turn-on
+    - turn-off
+    - volume-up
+    - volume-down
+    - mute-on
+    - mute-off
+    - set-channel-number
+    - play
+    - pause
+    - stop
+    - toggle-caption
+    - channel-down
+    - channel-up
+    optional-events: []
+    optional-properties:
+    - channel-number
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ir-fan-control:
+    description:
+      en: IR Fan Control
+    optional-actions:
+    - turn-on
+    - turn-off
+    - fan-speed-up
+    - fan-speed-down
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ir-stb-control:
+    description:
+      en: IR STB Control
+    optional-actions:
+    - volume-up
+    - volume-down
+    - channel-up
+    - channel-down
+    - set-channel-number
+    - set-channel-name
+    - turn-on
+    - turn-off
+    - mute-on
+    - mute-off
+    - play
+    - pause
+    - stop
+    - toggle-caption
+    optional-events: []
+    optional-properties:
+    - channel-name
+    - channel-number
+    required-actions: []
+    required-events: []
+    required-properties: []
+  ir-tv-control:
+    description:
+      en: IR TV Control
+    optional-actions:
+    - volume-up
+    - volume-down
+    - channel-up
+    - channel-down
+    - turn-on
+    - turn-off
+    - mute-on
+    - mute-off
+    - set-channel-number
+    - set-channel-name
+    - play
+    - pause
+    - stop
+    - toggle-caption
+    optional-events: []
+    optional-properties:
+    - channel-number
+    - channel-name
+    required-actions: []
+    required-events: []
+    required-properties: []
+  juicer:
+    description:
+      en: Juicer
+    optional-actions:
+    - pause
+    - start-recipe-cook
+    optional-events:
+    - cooking-cancel
+    - cooking-pause
+    - cooking-start
+    - cooking-finished
+    - keep-warm-finished
+    - clean-complete
+    optional-properties:
+    - 'on'
+    - left-time
+    - temperature
+    - cook-mode
+    - mode
+    - target-temperature
+    - recipe-id
+    - recipe-type
+    - recipe-command
+    - reservation-left-time
+    - target-time
+    - left-times
+    - timeout-time
+    - auto-keep-warm
+    - keep-warm-time
+    - keep-warm-left-time
+    - working-level
+    - tank-status
+    - pot-lift-memory
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    - resume-cook
+    - set-recipe
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  jump-rope:
+    description:
+      en: Jump Rope
+    optional-actions: []
+    optional-events:
+    - workout-finished
+    optional-properties:
+    - exercise-time
+    - jump-count
+    - status
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties:
+    - workout-status
+    - fault
+  kettle:
+    description:
+      en: Kettle
+    optional-actions:
+    - start-cook
+    - cancel-cooking
+    optional-events:
+    - out-water-event
+    optional-properties:
+    - 'on'
+    - mode
+    - fault
+    - target-temperature
+    - temperature
+    - auto-keep-warm
+    - keep-warm-temperature
+    - dechlorination
+    - rapid-cooling
+    - boiling-point
+    - dechlorination-progress
+    - out-water-time
+    - pure-water-keep-warm
+    - mode-id
+    - reservation-left-time
+    - eco
+    - water-level
+    - instillation
+    - weak-alkalinization
+    - clean-prograss
+    - out-water-volume
+    - boil
+    - out-water-temperature
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+  key-call:
+    description:
+      en: Key Call
+    optional-actions: []
+    optional-events:
+    - key-call-start
+    - phone-call-start
+    - camera-hang-up
+    optional-properties:
+    - key-call-switch
+    - key-call-status
+    - key-call-userid
+    required-actions: []
+    required-events: []
+    required-properties: []
+  keyboard:
+    description:
+      en: Keyboard
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  kitchen-scale:
+    description:
+      en: Kitchen Scale
+    optional-actions:
+    - clear
+    optional-events: []
+    optional-properties:
+    - cooking-weight
+    - unit
+    required-actions: []
+    required-events: []
+    required-properties: []
+  kitchen-stove:
+    description:
+      en: Kitchen Stove
+    optional-actions:
+    - unbind
+    - bind
+    - start-cook
+    - cancel-cooking
+    - pause
+    optional-events:
+    - working-remind
+    - off-on-time
+    - cooking-finished
+    optional-properties:
+    - 'on'
+    - fault
+    - mode
+    - current-heat-level
+    - working-time
+    - left-time
+    - stove-hood-linkage
+    - working-remind-time
+    - off-delay
+    - off-delay-time
+    - reservation-left-time
+    - target-temperature
+    - cook-mode
+    - target-time
+    - heat-level
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+  laptop:
+    description:
+      en: Laptop
+    optional-actions:
+    - turn-on
+    - turn-off
+    - sleep-mode-on
+    optional-events: []
+    optional-properties:
+    - status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  led-matrix:
+    description:
+      en: Led Matrix
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  leg-rest-control:
+    description:
+      en: Leg Rest Control
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties:
+    - leg-rest-angle
+  lens:
+    description:
+      en: Lens
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - lens-color-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  light:
+    description:
+      en: Light
+    optional-actions:
+    - toggle
+    - get-awake-config
+    - set-awake-config
+    - get-asleep-config
+    - set-asleep-config
+    - toggle-light-mode
+    - brightness-up
+    - brightness-down
+    - set-night-light
+    - set-color-temperature
+    - set-brightness
+    - color-temperature-down
+    - color-temperature-up
+    optional-events: []
+    optional-properties:
+    - mode
+    - brightness
+    - color
+    - color-temperature
+    - flow
+    - saturability
+    - flex-switch
+    - default-power-on-state
+    - wake-up-mode
+    - sleep-aid-mode
+    - gradual-duration
+    - gradual-end-point-brightness
+    - gradual-start-point-brightness
+    - current-color-mode
+    - multi-light-work-mode
+    - light-on-gradient-time
+    - light-off-gradient-time
+    - flow-speed-level
+    - working-time
+    - night-light-switch
+    - current-night-light-switch
+    - enable-time-period
+    - night-brightness
+    - sound-light-rhythm
+    - color-temperature-delta
+    - brightness-delta
+    - light-on-times
+    - light-source
+    - wake-up-duration
+    - wake-up-brightness
+    - wake-up-color-temperature
+    - wake-up-light-mode
+    - sleep-aid-duration
+    - auto-lighting
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  light-bath-heater:
+    description:
+      en: Light Bath Heater
+    optional-actions: []
+    optional-events:
+    - overtime
+    - delay-off-end
+    - venting-overtime
+    optional-properties:
+    - fault
+    - mode
+    - status
+    - room-size
+    - remote-delay-off-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  location:
+    description:
+      en: Location
+    optional-actions: []
+    optional-events:
+    - arrive
+    - leave
+    - distance-from
+    optional-properties:
+    - 'on'
+    - longitude
+    - latitude
+    - distance
+    required-actions: []
+    required-events: []
+    required-properties: []
+  lock:
+    description:
+      en: Lock
+    optional-actions:
+    - ble-unlock
+    - ble-awake-dev
+    - remote-unlocking
+    - start-homekit-adv
+    - wifi-wake-up
+    - homekit-reset
+    - set-anti-lock
+    - set-child-lock
+    optional-events:
+    - exception-occurred
+    - lock-event
+    - missed-departure
+    - return-overdue
+    optional-properties:
+    - abnormal-condition
+    - operation-method
+    - operation-id
+    - current-time
+    - operation-position
+    - lock-action
+    - anti-lock
+    - button-function
+    - two-step-verification
+    - away-home-mode
+    - child-lock
+    - face-unlock-sensitivity
+    - face-unlock-sleep-time
+    - door-lock-local-settings
+    - turn-on-the-anti-lock-setting
+    - reset-with-verification-required-setting
+    - face-recognition-unlocking-switch
+    - palm-vein-recognition-unlocking-switch
+    - triggering-method
+    - door-lock-local-setting-status
+    - low-power-device-wifi-status
+    - uwb-unlock-sleep-time
+    - uwb-switch
+    - homekit-switch
+    - vocal-type
+    - fisheye-data-sync
+    - main-cam-blocked
+    - parcel-detection
+    - pet-leave
+    - child-leave
+    - visitor-identify
+    - door-open-direction
+    - indoor-camera-mask-hard
+    - indoor-camera-mask-soft
+    - auto-screen-on
+    - uwb-mac-sync
+    - door-open-reminder-freq
+    - sound-option
+    - wifi-wake-reason
+    - homekit-bind-status-sync
+    - uwb-forbidden-area-setting
+    - non-departure-time-list
+    - non-return-time-list
+    - link-anti-lock
+    - door-open-reminder-freq-switch
+    required-actions: []
+    required-events: []
+    required-properties: []
+  lock-history:
+    description:
+      en: Lock History
+    optional-actions:
+    - history-notify-action
+    optional-events:
+    - history-notify-complete
+    optional-properties:
+    - lock-history-data
+    - abnormal-data
+    - door-data
+    - doorbell-data
+    - history-time
+    - last-history-time
+    - user-key-add
+    - user-key-delete
+    - user-add
+    - user-delete
+    - lock-history-string
+    - abnormal-data-string
+    - door-data-string
+    - doorbell-data-string
+    - user-key-add-string
+    - user-key-delete-string
+    - user-add-string
+    - user-delete-string
+    required-actions: []
+    required-events: []
+    required-properties: []
+  lock-manage:
+    description:
+      en: Lock Manage
+    optional-actions:
+    - add-lock-user
+    - delete-lock-user
+    - sync-lock-user
+    - add-unlock-method
+    - cancel-unlock-method
+    - delete-unlock-method
+    - sync-unlock-method
+    - alloc-lock-user
+    - sync-unlock-method-with-version
+    - sync-lock-user-with-version
+    optional-events:
+    - update-lock-user
+    - update-unlock-method
+    - add-credential-event
+    - add-user-complete
+    - delete-user-complete
+    - add-user-key-complete
+    - delete-user-key-complete
+    - sync-user-key-complete
+    - sync-user-complete
+    optional-properties:
+    - user-ids
+    - user-type
+    - error-code
+    - current-time
+    - credential
+    - operation-method
+    - operation-id
+    - credential-state
+    - credential-step-current
+    - credential-step-all
+    - user-deadbolt-permission
+    - unlock-method-info-string
+    - sync-version
+    - lock-user-info-string
+    required-actions: []
+    required-events: []
+    required-properties: []
+  lock-version:
+    description:
+      en: Lock Version
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - front-panel-version
+    - rear-panel-version
+    - fingerprint-board-version
+    - camera-version
+    - wifi-version
+    - voice-version
+    - hardware-version
+    - face-palm-vein-version
+    - uwb-version
+    required-actions: []
+    required-events: []
+    required-properties: []
+  lock-volume-management:
+    description:
+      en: Lock Volume Management
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - door-open-reminder-time
+    - door-open-reminder-volume
+    - door-ajar-reminder-time
+    - door-ajar-reminder-volume
+    - door-lock-broken-reminder-time
+    - door-lock-broken-reminder-volume
+    - language
+    - door-operation-volume
+    - reminder-volume
+    - door-closing-reminder-volume
+    - low-battery-reminder-switch
+    - set-function-reminder
+    - door-not-closed-reminder
+    required-actions: []
+    required-events: []
+    required-properties: []
+  magnet-sensor:
+    description:
+      en: Magnet Sensor
+    optional-actions: []
+    optional-events:
+    - close
+    - open
+    - door-not-closed
+    - device-forcibly-removed
+    - device-be-reset
+    optional-properties:
+    - 'on'
+    - fault
+    - mode
+    - status
+    - contact-state
+    - not-closed-duration
+    - light-detection-switch
+    - light-detection-threshold
+    - illumination
+    required-actions: []
+    required-events: []
+    required-properties: []
+  massage:
+    description:
+      en: Massage
+    optional-actions:
+    - resume
+    - pause
+    optional-events: []
+    optional-properties:
+    - massage-strength
+    - massage-part
+    - massage-manipulation
+    - left-time
+    - heating
+    - heat-level
+    - all-airbag-switch
+    - arm-airbag-switch
+    - shoulder-airbag-switch
+    - leg-airbag-switch
+    - foot-roller-switch
+    required-actions:
+    - stop-massage
+    required-events: []
+    required-properties:
+    - 'on'
+    - mode
+    - status
+    - fault
+  massager:
+    description:
+      en: Massager
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mode
+    - massage-manipulation
+    - heating
+    - heat-level
+    - temperature
+    - target-time
+    - status
+    - massage-switch
+    - massage-level
+    - redlight
+    - redlight-level
+    - standby-time
+    - left-time
+    - fault
+    - fluid-conduction
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+    - massage-strength
+  mattress:
+    description:
+      en: Mattress
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - hardness
+    - status
+    - fault
+    - air-valve-control
+    required-actions: []
+    required-events: []
+    required-properties: []
+  member-management:
+    description:
+      en: Member Management
+    optional-actions: []
+    optional-events:
+    - member-list-change
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  memory-card-management:
+    description:
+      en: Memory Card Management
+    optional-actions:
+    - format
+    - pop-up
+    - delete-video
+    optional-events: []
+    optional-properties:
+    - status
+    - storage-total-space
+    - storage-free-space
+    - storage-used-space
+    - dialog-ejected
+    - remaining-recording-duration
+    - delete-info
+    - storage-begin-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  memory-management:
+    description:
+      en: Memory Management
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - usage-rate
+    - temperature
+    required-actions: []
+    required-events: []
+    required-properties: []
+  message-router:
+    description:
+      en: Message Router
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions:
+    - post
+    required-events: []
+    required-properties:
+    - request
+    - response
+  microphone:
+    description:
+      en: Microphone
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - volume
+    required-actions: []
+    required-events: []
+    required-properties:
+    - mute
+  microwave-oven:
+    description:
+      en: Microwave Oven
+    optional-actions:
+    - pause
+    - set-recipe
+    - delete-recipe
+    - resume-cook
+    optional-events:
+    - cooking-finished
+    optional-properties:
+    - 'on'
+    - cook-mode
+    - left-time
+    - heat-level
+    - target-time
+    - cook-step
+    - furnace-light-mode
+    - menu-order
+    - recipe-order
+    - recipe-name
+    - sync-finished
+    - cooking-weight
+    - target-cooking-measure
+    - recipe-type
+    - recipe-command
+    - recipe-id
+    - timeout-time
+    - setting-data
+    - firepower-preferences
+    - mode-preferences
+    - set-factory-reset-flag
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  mirror:
+    description:
+      en: Mirror
+    optional-actions:
+    - turn-on
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    - mode
+    required-actions:
+    - turn-off
+    required-events: []
+    required-properties: []
+  mobile-data:
+    description:
+      en: Mobile Data
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    required-actions: []
+    required-events: []
+    required-properties: []
+  mobile-network:
+    description:
+      en: Mobile Network
+    optional-actions:
+    - speedtest-start
+    - speedtest-stop
+    optional-events:
+    - speedtest-completed
+    optional-properties:
+    - network-signal
+    - network-data-used
+    - network-data-history
+    - network-data-protect
+    - network-info
+    - network-roam-status
+    - network-roam-switch
+    - sim1-imei
+    - sim2-imei
+    - sim1-iccid
+    - sim2-iccid
+    - sim1-operator
+    - sim2-operator
+    - current-sim
+    - live-limit
+    - max-live-time
+    - speedtest-status
+    - speedtest-result
+    - sim1-type
+    - sim1-free
+    - sim1-exist
+    - sim2-type
+    - sim2-free
+    - sim2-exist
+    - auto-switch-enable
+    - sim-imei
+    required-actions: []
+    required-events: []
+    required-properties: []
+  mop:
+    description:
+      en: Mop
+    optional-actions:
+    - reset-mop-life
+    optional-events: []
+    optional-properties:
+    - mop-life-level
+    - mop-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  mopping-machine:
+    description:
+      en: Mopping Machine
+    optional-actions:
+    - start-mop
+    - stop-self-clean
+    - start-self-clean
+    - stop-sweeping
+    - fill-hot-water
+    optional-events:
+    - low-water-level
+    optional-properties:
+    - 'on'
+    - mode
+    - fan-level
+    - target-water-level
+    - water-level
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  mosquito-dispeller:
+    description:
+      en: Mosquito Dispeller
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  motion-data:
+    description:
+      en: Motion Data
+    optional-actions:
+    - start-sport
+    - end-sport
+    - pause-sport
+    - continue-sport
+    optional-events:
+    - sport-state-change
+    - vitality-goal-achieve
+    optional-properties:
+    - current-step-count
+    - current-calorie-consumption
+    - current-distance
+    - sport-state
+    - sport-type
+    - vitality-goal-state
+    - sport-active-calories
+    required-actions: []
+    required-events: []
+    required-properties: []
+  motion-detection:
+    description:
+      en: Motion Detection
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - motion-detection
+    - alarm-interval
+    - detection-sensitivity
+    - motion-detection-start-time
+    - motion-detection-end-time
+    - record-delay
+    - max-record-time
+    - device-warn-time
+    - motion-detection-repetition
+    required-actions: []
+    required-events: []
+    required-properties: []
+  motion-sensor:
+    description:
+      en: Motion Sensor
+    optional-actions: []
+    optional-events:
+    - motion-detected
+    - device-be-reset
+    optional-properties:
+    - 'on'
+    - fault
+    - mode
+    - status
+    - illumination
+    - no-motion-duration
+    - motion-state
+    - custom-detect-interval
+    - custom-no-motion-time
+    - detection-sensitivity
+    required-actions: []
+    required-events: []
+    required-properties: []
+  motor-controller:
+    description:
+      en: Motor Controller
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - target-position
+    - current-position
+    - motor-reverse
+    required-actions: []
+    required-events: []
+    required-properties:
+    - motor-control
+    - fault
+  moxibustion:
+    description:
+      en: Moxibustion
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mode
+    - fault
+    - status
+    - target-time
+    - left-time
+    - target-temperature
+    - temperature
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  multifunction-cooking-pot:
+    description:
+      en: Multifunction Cooking Pot
+    optional-actions:
+    - cancel-cooking
+    - pause
+    - start-recipe-cook
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - fault
+    - heat-level
+    - target-temperature
+    - temperature
+    - target-time
+    - recipe-command
+    required-actions:
+    - start-cook
+    required-events:
+    - cooking-finished
+    required-properties:
+    - status
+    - mode
+    - left-time
+  nas:
+    description:
+      en: NAS
+    optional-actions:
+    - upload-log
+    - reset-device
+    optional-events:
+    - device-be-deleted
+    - device-be-reset
+    optional-properties:
+    - status
+    - nas-direct-storage
+    - usage-rate
+    - reset-method
+    - upload-speed
+    - download-speed
+    required-actions: []
+    required-events: []
+    required-properties: []
+  nas-memory-management:
+    description:
+      en: NAS Memory Management
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - storage-total-space
+    - storage-used-space
+    - storage-free-space
+    required-actions: []
+    required-events: []
+    required-properties: []
+  nebulizer:
+    description:
+      en: Nebulizer
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - working-level
+    - left-time
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties: []
+  nfc:
+    description:
+      en: NFC
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    required-actions: []
+    required-events: []
+    required-properties: []
+  night-light:
+    description:
+      en: Night Light
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - brightness
+    - color-temperature
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  no-disturb:
+    description:
+      en: No Disturb
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - no-disturb
+    - enable-time-period
+    - current-no-disturb
+    required-actions: []
+    required-events: []
+    required-properties: []
+  noodle-press:
+    description:
+      en: Noodle Press
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  occupancy-sensor:
+    description:
+      en: Occupancy Sensor
+    optional-actions: []
+    optional-events:
+    - device-be-reset
+    optional-properties:
+    - no-one-determine-time
+    - has-someone-duration
+    - no-one-duration
+    - illumination
+    - detection-distance
+    - no-one-detection-sensitivity
+    - has-someone-detection-sensitivity
+    - area-type
+    - area-scene
+    - area-name
+    - continuous-detection-distance
+    - enable-switch
+    required-actions: []
+    required-events: []
+    required-properties:
+    - occupancy-status
+  oral-irrigator:
+    description:
+      en: Oral Irrigator
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - single-used-time
+    - gatt-history
+    - hydraulic-pressure
+    required-actions: []
+    required-events: []
+    required-properties: []
+  oven:
+    description:
+      en: Oven
+    optional-actions:
+    - pause
+    - start-cook
+    - increase-steam
+    - set-recipe
+    - delete-recipe
+    - resume-cook
+    - start-recipe-cook
+    optional-events:
+    - low-water-level
+    - cooking-finished
+    - preheat-complete
+    - cooking-pause
+    - cooking-cancel
+    - cooking-start
+    - powerful-descaling-finished
+    - clean-remind
+    - descaling-remind
+    - sterilization-complete-remind
+    - descaling-finished
+    - clean-complete
+    optional-properties:
+    - 'on'
+    - cook-mode
+    - left-time
+    - working-time
+    - target-temperature
+    - temperature
+    - heat-level
+    - water-level
+    - cook-time
+    - steam-level
+    - microwave-level
+    - target-time
+    - timeout-time
+    - reservation-left-time
+    - recipe-type
+    - preheat
+    - cook-step
+    - menu-order
+    - recipe-order
+    - recipe-name
+    - sync-finished
+    - door-state
+    - water-box-exist
+    - water-box-status
+    - furnace-light-mode
+    - steam
+    - steam-start-time
+    - steam-time
+    - recipe-command
+    - recipe-id
+    - picture-data
+    - continuous-cooking-time
+    - set-factory-reset-flag
+    - target-humidity
+    - operation-param
+    required-actions:
+    - cancel-cooking
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  p2p-stream:
+    description:
+      en: PP Stream
+    optional-actions:
+    - start-p2p-stream
+    - stop-stream
+    - upload-video
+    optional-events: []
+    optional-properties:
+    - talk-mode
+    - audio-codec
+    - audio-bit-width
+    - video-codec
+    - audio-smp-rate
+    - audio-channel
+    - talk-codec
+    - distortion-crt-osdx
+    - distortion-crt-osdy
+    - resolution-types
+    required-actions: []
+    required-events: []
+    required-properties: []
+  panel-service:
+    description:
+      en: Panel Service
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - air-management
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pet-collar:
+    description:
+      en: Pet Collar
+    optional-actions: []
+    optional-events:
+    - pet-activity
+    optional-properties:
+    - find-pet
+    - pet-day-steps
+    - pet-day-calories
+    - pet-day-activity-time
+    - pet-day-jumps
+    - pet-activity-status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pet-drinking-fountain:
+    description:
+      en: Pet Drinking Fountain
+    optional-actions: []
+    optional-events:
+    - out-water-event
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - day-out-water-times
+    - out-water
+    - out-water-interval
+    - out-water-param
+    - gatt-history
+    - water-shortage-status
+    - current-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  pet-dryer-machine:
+    description:
+      en: Pet Dryer Machine
+    optional-actions:
+    - open-door
+    - start-drying
+    - pause
+    - stop-dry
+    optional-events:
+    - dry-complete
+    optional-properties:
+    - 'on'
+    - mode
+    - status
+    - relative-humidity
+    - working-time
+    - left-time
+    - target-temperature
+    - temperature
+    - fan-level
+    - fault
+    - inner-light-switch
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pet-feeder:
+    description:
+      en: Pet Feeder
+    optional-actions:
+    - weigh-manual-calibrate
+    optional-events:
+    - food-out-complete
+    - day-food-left
+    - day-eaten-food
+    - low-food-intake-remind
+    - pet-eat
+    - pet-appeared
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - feeding-measure
+    - pet-food-left-level
+    - target-feeding-measure
+    - feeding-type
+    - eaten-food-measure
+    - current-time
+    - enable-time-period
+    - time-watermark
+    - local-storage
+    - food-heap-value
+    required-actions:
+    - pet-food-out
+    required-events: []
+    required-properties:
+    - fault
+  phone-holder:
+    description:
+      en: Phone Holder
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - foreign-body-status
+    - charge-switch
+    - forget-reminder
+    required-actions: []
+    required-events: []
+    required-properties: []
+  photography-video:
+    description:
+      en: Photography Video
+    optional-actions:
+    - take-photo
+    - toggle-record
+    - start-special-event-record
+    optional-events: []
+    optional-properties:
+    - record-state
+    required-actions: []
+    required-events: []
+    required-properties: []
+  physical-controls-locked:
+    description:
+      en: Physical Control Locked
+    optional-actions: []
+    optional-events:
+    - child-lock-trigger
+    optional-properties:
+    - physical-controls-locked
+    - current-physical-control-lock
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pickup-light:
+    description:
+      en: Pickup Light
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pillow:
+    description:
+      en: Pillow
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - working-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  plant-monitor:
+    description:
+      en: Plant Monitor
+    optional-actions: []
+    optional-events:
+    - low-water-level
+    optional-properties:
+    - status
+    - fault
+    - temperature
+    - relative-humidity
+    - soil-ec
+    - illumination
+    - water-level-status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  play-control:
+    description:
+      en: Play Control
+    optional-actions:
+    - seek
+    - play
+    - pause
+    - stop
+    - previous
+    - next
+    optional-events:
+    - play-duration
+    optional-properties:
+    - playing-state
+    - seek-time
+    - play-loop-mode
+    - from
+    - usage-time
+    - song-cover
+    - song-title
+    - artist-name
+    - playing-history
+    - speed-types
+    - resolution-types
+    - play-content
+    - playing-history-content
+    - playing-state-media
+    required-actions: []
+    required-events: []
+    required-properties: []
+  portable-hotspot:
+    description:
+      en: Portable Hotspot
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    required-actions: []
+    required-events: []
+    required-properties: []
+  power-consumption:
+    description:
+      en: Power Consumption
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - power-consumption
+    - electric-current
+    - voltage
+    - leakage-current
+    - surge-power
+    - electric-power
+    - power-consumption-accumulation-way
+    - long-endurance-mode-on
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pre-water-purifier:
+    description:
+      en: Pre Water Purifier
+    optional-actions:
+    - open-valve
+    - close-valve
+    - start-clean
+    - stop-cleaning
+    - start-leakage-test
+    - stop-leakage-test
+    - start-matching
+    optional-events:
+    - clean-complete
+    - leakage-test-completed
+    - water-production-completed
+    optional-properties:
+    - 'on'
+    - fault
+    - status
+    - temperature
+    - hydraulic-pressure
+    - water-flow
+    - water-consumption
+    - cleaning-once-time
+    - auto-clean
+    - auto-clean-interval
+    - leakage-test-result
+    required-actions: []
+    required-events: []
+    required-properties: []
+  pressure-cooker:
+    description:
+      en: Pressure Cooker
+    optional-actions:
+    - set-recipe
+    - start-recipe-cook
+    - resume-cook
+    optional-events:
+    - cooking-finished
+    optional-properties:
+    - 'on'
+    - left-time
+    - auto-keep-warm
+    - temperature
+    - keep-warm-time
+    - target-time
+    - recipe-id
+    - reservation-left-time
+    - reservation-complete-time
+    - texture
+    - recipe-type
+    - recipe-command
+    - pan-status
+    - operation-param
+    - set-factory-reset-flag
+    required-actions:
+    - start-cook
+    - cancel-cooking
+    required-events: []
+    required-properties:
+    - status
+    - fault
+    - cook-mode
+  pressure-sensor:
+    description:
+      en: Pressure Sensor
+    optional-actions: []
+    optional-events:
+    - device-be-reset
+    optional-properties:
+    - detection-sensitivity
+    - pressure-present-state
+    - pressure-present-duration
+    - pressure-not-present-duration
+    - pressure-present-time-set
+    - pressure-not-present-time-set
+    - pressure-present-confirmation-time
+    - pressure-not-present-confirmation-time
+    - threshold-set
+    - delta-threshold-set
+    required-actions: []
+    required-events: []
+    required-properties: []
+  printer:
+    description:
+      en: Printer
+    optional-actions: []
+    optional-events:
+    - lack-of-paper
+    - cover-not-closed
+    optional-properties:
+    - 'on'
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+  product-appearance:
+    description:
+      en: Product Appearance
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - appearance-color
+    required-actions: []
+    required-events: []
+    required-properties: []
+  projector:
+    description:
+      en: Projector
+    optional-actions:
+    - turn-on
+    - channel-up
+    - channel-down
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - fault
+    - brightness
+    - channel-control
+    - input-control
+    - auto-focus
+    - manual-focus
+    - keystone-correction
+    - displacement-scaling
+    - four-point-calibration
+    required-actions:
+    - turn-off
+    required-events: []
+    required-properties: []
+  ptc-bath-heater:
+    description:
+      en: PTC Bath Heater
+    optional-actions:
+    - stop-working
+    optional-events:
+    - overtime
+    - delay-off-end
+    - venting-overtime
+    optional-properties:
+    - fault
+    - mode
+    - target-temperature
+    - temperature
+    - heating
+    - blow
+    - ventilation
+    - dryer
+    - heat-level
+    - off-delay
+    - off-delay-time
+    - remote-delay-off-time
+    - room-size
+    - left-time
+    - soft-wind
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+  pump:
+    description:
+      en: Pump
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - working-level
+    - target-temperature
+    - temperature
+    - mode
+    - hydraulic-pressure
+    required-actions: []
+    required-events: []
+    required-properties: []
+  rain-sensor:
+    description:
+      en: Rain Sensor
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - rain-status
+    - rain-detection-switch
+    - rain-confirm-time
+    - no-rain-confirm-time
+    - detection-sensitivity
+    - rainfall-value
+    required-actions: []
+    required-events: []
+    required-properties: []
+  receiver:
+    description:
+      en: Receiver
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - ringtone
+    - no-disturb
+    - enable-time-period
+    required-actions: []
+    required-events: []
+    required-properties: []
+  recommended-standard:
+    description:
+      en: Recommended Standard
+    optional-actions: []
+    optional-events:
+    - forced-automatic-shutdown-completed
+    optional-properties:
+    - remote-controllable
+    - forced-automatic-shutdown
+    required-actions: []
+    required-events: []
+    required-properties: []
+  region-privacy:
+    description:
+      en: Region Privacy
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - region-privacy-switch
+    - region-privacy-hide
+    - region-privacy-area
+    - area-count
+    - area-shape
+    - area-support-concave
+    - area-color
+    required-actions: []
+    required-events: []
+    required-properties: []
+  remote-control-management:
+    description:
+      en: Remote Control Management
+    optional-actions:
+    - delete-remote-control
+    optional-events:
+    - remote-control-identify
+    optional-properties:
+    - remote-control-addable
+    - status
+    - remote-control-list
+    - stop-btn-funtion
+    required-actions: []
+    required-events: []
+    required-properties: []
+  repeater:
+    description:
+      en: Repeater
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - download-speed
+    - upload-speed
+    - connected-device-number
+  repellent:
+    description:
+      en: Repellent
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - repellent-left-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  rinse-management:
+    description:
+      en: Rinse Management
+    optional-actions: []
+    optional-events:
+    - low-rinse-level
+    optional-properties:
+    - rinse-depletion-reminder
+    - rinse-self-delivery
+    - rinse-self-delivery-level
+    - rinse-left-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  robot:
+    description:
+      en: Robot
+    optional-actions:
+    - stop-working
+    - turn-off
+    - start-patrol
+    - move-to-room
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - room-ids
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  roller:
+    description:
+      en: Roller
+    optional-actions:
+    - reset-roller-life
+    - start-wash-roller
+    - stop-wash-roller
+    optional-events: []
+    optional-properties:
+    - roller-life-level
+    - roller-left-time
+    - roller-outswing
+    - auto-wash-roller
+    required-actions: []
+    required-events: []
+    required-properties: []
+  rotate-sensor:
+    description:
+      en: Rotate Sensor
+    optional-actions: []
+    optional-events:
+    - button-event
+    - rotate
+    - device-be-reset
+    optional-properties:
+    - rotate
+    - press-rotate
+    - control-object
+    - set-control-object
+    - mode
+    - button-type
+    - event-type
+    - rotate-type
+    - rotate-sensitivity
+    required-actions: []
+    required-events: []
+    required-properties: []
+  router:
+    description:
+      en: Router
+    optional-actions:
+    - reboot
+    optional-events:
+    - device-connect
+    - device-disconnect
+    - device-long-time-inactive
+    - wire-loop-detect
+    optional-properties:
+    - status
+    - fault
+    - ppp-username
+    - ppp-encrypted-password
+    - static-ip-address
+    - subnet-mask
+    - gateway-ip-address
+    - dns-ip-address
+    - dns-auto-mode
+    - access-mode
+    - rssi
+    - wifi-band-combine
+    - online-time
+    - prevent-squatter-wifi
+    - connect-device-ids
+    - multi-freq-in-one
+    - bump-connect
+    - device-inactive-time
+    - device-inactive-config
+    - download-speed
+    - upload-speed
+    - connected-device-number
+    - network-connection-type
+    - ip-address
+    - port-id
+    - mode
+    - fan-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  rowing-machine:
+    description:
+      en: Rowing Machine
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    - current-calorie-consumption
+    - mode
+    - target-calorie-consumption
+    - target-distance
+    - target-time
+    - current-stroke-count
+    - exercise-distance
+    - exercise-time
+    - stroke-rate
+    - instantaneous-pace
+    required-actions: []
+    required-events:
+    - workout-finished
+    required-properties:
+    - workout-status
+  safe-box:
+    description:
+      en: Safe Box
+    optional-actions: []
+    optional-events:
+    - exception-occurred
+    - lock-event
+    optional-properties:
+    - abnormal-condition
+    - operation-method
+    - operation-id
+    - current-time
+    - lock-action
+    - operation-position
+    required-actions: []
+    required-events: []
+    required-properties: []
+  safety-seat:
+    description:
+      en: Safety Seat
+    optional-actions: []
+    optional-events:
+    - site-long-time
+    optional-properties:
+    - ride-status
+    - safety-belt
+    - install-warn
+    - birthday
+    - install-site
+    - fault
+    - left-isofix
+    - right-isofix
+    - support-leg
+    - seat-direction
+    - ride-time
+    - heat-level
+    - fan-level
+    - temperature
+    - relative-humidity
+    required-actions: []
+    required-events: []
+    required-properties: []
+  scale:
+    description:
+      en: Scale
+    optional-actions: []
+    optional-events:
+    - device-be-reset
+    optional-properties:
+    - current-time
+    - 'on'
+    - status
+    - fault
+    - impedance
+    - mode
+    - measured-person-id
+    - heart-rate
+    - heart-rate-detection
+    - unit
+    - weight-impedance-pulse
+    required-actions: []
+    required-events:
+    - measure-complete
+    required-properties:
+    - body-weight
+  scraper-management:
+    description:
+      en: Scraper Management
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - scraper-left-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  screen:
+    description:
+      en: Screen
+    optional-actions:
+    - lock
+    - screen-saver-preview
+    - screen-saver-set
+    optional-events:
+    - locked
+    - screen-usage
+    optional-properties:
+    - 'on'
+    - brightness
+    - display-state
+    - auto-screen-off
+    - auto-screen-brightness
+    - auto-screen-off-time
+    - usage-time
+    - screen-sync
+    - screen-saver
+    - screen-saver-state
+    - screen-family-information
+    required-actions: []
+    required-events: []
+    required-properties: []
+  seat:
+    description:
+      en: Seat
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - heating
+    - heat-level
+    required-actions: []
+    required-events: []
+    required-properties: []
+  self-check:
+    description:
+      en: Self Check
+    optional-actions:
+    - start-check
+    - stop-check
+    - sync-manual-check
+    - one-key-repair
+    optional-events:
+    - self-check-complete
+    optional-properties:
+    - self-check-items
+    - self-check-results
+    - manual-check-results
+    - self-check-current
+    - packet-loss-rate
+    - rssi
+    required-actions: []
+    required-events: []
+    required-properties: []
+  sensor-clean-alert:
+    description:
+      en: Sensor Clean Alert
+    optional-actions:
+    - reset-sensor-clean-alert-life
+    optional-events: []
+    optional-properties:
+    - sensor-clean-alert-life-level
+    - sensor-clean-alert-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  shaver:
+    description:
+      en: Shaver
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - mode
+    - left-times
+    - left-time
+    - single-used-time
+    - rotating-speed
+    - fraction
+    - auto-off
+    - clean-mode
+    - gatt-history
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties: []
+  shower:
+    description:
+      en: Shower
+    optional-actions: []
+    optional-events:
+    - purge-long-time
+    - pre-purge-complete
+    optional-properties:
+    - fault
+    - overhead-shower
+    - handheld-shower
+    - pre-purge-time-limit
+    - water-temperature
+    - shower-control
+    - default-pre-purge-shower
+    required-actions: []
+    required-events: []
+    required-properties: []
+  single-use-battery:
+    description:
+      en: Single Use Battery
+    optional-actions: []
+    optional-events:
+    - low-battery
+    - battery-run-out
+    optional-properties:
+    - voltage
+    - usage-progress
+    - current-time
+    - battery-state
+    required-actions: []
+    required-events: []
+    required-properties:
+    - battery-level
+  sleep:
+    description:
+      en: Sleep
+    optional-actions: []
+    optional-events:
+    - sleep-state-change
+    optional-properties:
+    - sleep-state
+    required-actions: []
+    required-events: []
+    required-properties: []
+  sleep-monitor:
+    description:
+      en: Sleep Monitor
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - snore-state
+    required-actions: []
+    required-events: []
+    required-properties:
+    - sleep-state
+  smart-care:
+    description:
+      en: Smart Care
+    optional-actions: []
+    optional-events:
+    - key-area-human
+    - baby-woke-up
+    - long-time-no-human
+    optional-properties:
+    - smart-care-switch
+    - smart-care-area
+    - smart-care-mode
+    - enable-time-period
+    - long-time-no-human-param
+    required-actions: []
+    required-events: []
+    required-properties: []
+  smart-stove:
+    description:
+      en: Smart Stove
+    optional-actions:
+    - start-cook
+    - cancel-cooking
+    - start-recipe-cook
+    - set-recipe
+    optional-events:
+    - cooking-finished
+    - off-on-time
+    optional-properties:
+    - status
+    - fault
+    - stove-fire-level
+    - off-delay
+    - off-delay-time
+    - working-time
+    - target-time
+    - left-time
+    - target-temperature
+    - temperature
+    - recipe-command
+    - cook-mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  smoke-sensor:
+    description:
+      en: Smoke Sensor
+    optional-actions: []
+    optional-events:
+    - high-concentration-of-smoke-detected
+    - click
+    - notification
+    - alarm-for-one-minute
+    - device-be-reset
+    optional-properties:
+    - status
+    - fault
+    - smoke-concentration
+    - dust-deposition-degree
+    - forcibly-removed-alarm-switch
+    - left-time
+    - temperature
+    - mute
+    - relative-humidity
+    - detection-sensitivity
+    - event-type
+    - temp-change-duration
+    - smoke-duration
+    required-actions: []
+    required-events: []
+    required-properties: []
+  soap-dispenser:
+    description:
+      en: Soap Dispenser
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - power-supply-type
+    required-actions: []
+    required-events: []
+    required-properties:
+    - status
+    - fault
+  sofa:
+    description:
+      en: Sofa
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - heating
+    - heat-level
+    - motor-control
+    required-actions: []
+    required-events: []
+    required-properties:
+    - mode
+  sound-and-light-warning:
+    description:
+      en: Sound And Light Warning
+    optional-actions:
+    - warning-sound-play
+    optional-events:
+    - sound-and-light-warning
+    optional-properties:
+    - light-warning-mode
+    - warning-sound-get
+    - warning-sound-set
+    - warning-sound-download
+    - warning-sound-delete
+    - trigger-event
+    - sound-test
+    required-actions: []
+    required-events: []
+    required-properties:
+    - warning-repetition
+    - enable-time-period
+    - warning-light-switch
+    - warning-audio-switch
+    - warning-alarm-config
+  sound-and-touch:
+    description:
+      en: Sound And Touch
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - media-volume
+    - ringtone-volume
+    - alarm-volume
+    - ai-volume
+    - dial-pad-tones
+    - output-channel
+    - mute
+    - no-disturb
+    - haptic-feedback
+    required-actions: []
+    required-events: []
+    required-properties: []
+  sound-light-rhythm:
+    description:
+      en: Sound Light Rhythm
+    optional-actions:
+    - toggle
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - sound-source
+    - light-information
+    required-actions: []
+    required-events: []
+    required-properties: []
+  sound-recognition:
+    description:
+      en: Sound Recognition
+    optional-actions: []
+    optional-events:
+    - sound-recognition
+    optional-properties:
+    - voice-type
+    - noise-decibel
+    - noise-detection
+    - sound-detection
+    required-actions: []
+    required-events: []
+    required-properties: []
+  speaker:
+    description:
+      en: Speaker
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - mute
+    - volume
+    required-actions: []
+    required-events: []
+    required-properties: []
+  specialized-detergent-management:
+    description:
+      en: Specialized Detergent Management
+    optional-actions: []
+    optional-events:
+    - low-specialized-detergent-level
+    optional-properties:
+    - specialized-detergent-left-level
+    - specialized-detergent-self-delivery
+    - specialized-detergent-self-delivery-level
+    - specialized-detergent-self-delivery-notify
+    required-actions: []
+    required-events: []
+    required-properties: []
+  sphygmomanometer:
+    description:
+      en: Sphygmomanometer
+    optional-actions: []
+    optional-events:
+    - exception-occurred
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - blood-pressure-level
+    - arrhythmia
+    - current-time
+    - measured-person-id
+    - abnormal-condition
+    - current-heart-rate
+    - blood-pressure-flags-ble
+    required-actions: []
+    required-events:
+    - measure-complete
+    required-properties:
+    - systolic-pressure
+    - diastolic-pressure
+  split-tv:
+    description:
+      en: Split TV
+    optional-actions:
+    - turn-on
+    - channel-up
+    - channel-down
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - fault
+    - channel-control
+    - input-control
+    - brightness
+    required-actions:
+    - turn-off
+    required-events: []
+    required-properties: []
+  stationary-bicycle:
+    description:
+      en: Stationary Bicycle
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - fault
+    - mode
+    - current-calorie-consumption
+    - exercise-time
+    - exercise-distance
+    - cadence
+    - resistance-level
+    required-actions: []
+    required-events:
+    - workout-finished
+    required-properties:
+    - workout-status
+  sterilization:
+    description:
+      en: Sterilization
+    optional-actions: []
+    optional-events:
+    - sterilization-complete-remind
+    - sterilization-interrupted
+    optional-properties:
+    - 'on'
+    - timer-on
+    - cycle
+    - start-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  sterilizer:
+    description:
+      en: Sterilizer
+    optional-actions:
+    - start-work
+    - stop-working
+    - pause
+    - resume
+    - reserve
+    - stop-reserve
+    optional-events:
+    - working-finished
+    optional-properties:
+    - 'on'
+    - status
+    - target-time
+    - working-time
+    - left-time
+    - reservation-complete-time
+    - reservation-left-time
+    - target-temperature
+    - door-state
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+    - mode
+  sterilizer-module:
+    description:
+      en: Sterilizer Module
+    optional-actions:
+    - reset-sterilizer-module-life
+    optional-events: []
+    optional-properties:
+    - sterilizer-module-life-level
+    - sterilizer-module-left-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  story-machine:
+    description:
+      en: Story Machine
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties: []
+  stream-management:
+    description:
+      en: Stream Management
+    optional-actions:
+    - auto-cruise
+    - arrive-designated-place
+    - click-find-pet
+    - enter-exit-video-page
+    - get-video-status
+    - set-video-password
+    - verify-video-password
+    - forgot-password
+    optional-events: []
+    optional-properties:
+    - map-cruise-position
+    - flash-light
+    - pet-snaps
+    - video-recording-warnings
+    - visible-to-shared-users
+    - 'on'
+    - common-params
+    - current-physical-control-lock
+    required-actions: []
+    required-events: []
+    required-properties: []
+  submersion-sensor:
+    description:
+      en: Submersion Sensor
+    optional-actions: []
+    optional-events:
+    - submersion-detected
+    - no-submersion
+    - device-be-reset
+    - submersion-sensor-event
+    optional-properties:
+    - status
+    - fault
+    - no-submersion-cf-tim
+    - submersion-cf-time
+    - alarm-switch
+    - alarm-interval
+    - submersion-state-top
+    - event-type
+    required-actions: []
+    required-events: []
+    required-properties:
+    - submersion-state
+  switch:
+    description:
+      en: Switch
+    optional-actions:
+    - toggle
+    optional-events: []
+    optional-properties:
+    - name
+    - status
+    - mode
+    - fault
+    - temperature
+    - working-time
+    - default-power-on-state
+    - anti-flicker
+    - wiring-method
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  switch-sensor:
+    description:
+      en: Switch Sensor
+    optional-actions: []
+    optional-events:
+    - click
+    - double-click
+    - long-press
+    - rotate
+    - long-press-rotate
+    - device-be-reset
+    optional-properties:
+    - fault
+    - mode
+    - status
+    - 'on'
+    - rotation-amplitude
+    - button-type
+    required-actions: []
+    required-events: []
+    required-properties: []
+  switch-sensor-for-ble:
+    description:
+      en: Switch Sensor For BLE
+    optional-actions: []
+    optional-events:
+    - double-click
+    - click
+    - long-press
+    - device-be-reset
+    - rotate
+    optional-properties:
+    - button-type
+    - mode
+    - rotation-amplitude
+    required-actions: []
+    required-events: []
+    required-properties: []
+  system:
+    description:
+      en: System
+    optional-actions:
+    - turn-off
+    optional-events: []
+    optional-properties:
+    - airplane-mode
+    - no-disturb
+    - car-mode
+    - wired-earphones
+    - flash-light
+    required-actions: []
+    required-events: []
+    required-properties: []
+  table:
+    description:
+      en: Table
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - motor-control
+  task-management:
+    description:
+      en: Task Management
+    optional-actions:
+    - start-download
+    - pause-download
+    optional-events: []
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  tds-sensor:
+    description:
+      en: Total Dissolved Solids Sensor
+    optional-actions: []
+    optional-events:
+    - tds-period-notify
+    optional-properties:
+    - tds-in
+    - tds-out
+    required-actions: []
+    required-events: []
+    required-properties: []
+  teabar:
+    description:
+      en: Tea Bar
+    optional-actions:
+    - start-out-water
+    - clean-device
+    - start-cook
+    - cancel-cooking
+    - stop-cleaning
+    - stop-out-water
+    optional-events:
+    - low-water-level
+    - cooking-finished
+    optional-properties:
+    - status
+    - fault
+    - out-water-cup
+    - whether-have-water
+    - clean-status
+    - clean-prograss
+    - boiling-point
+    - left-time
+    - auto-keep-warm
+    - temperature
+    - cook-mode
+    - keep-warm-temperature
+    - target-temperature
+    - cook-time
+    - reservation-left-time
+    - recipe-id
+    - keep-warm-time
+    - pot-lift-memory
+    - dechlorination
+    - cook-temperature
+    - out-water-temperature
+    - recipe-name
+    required-actions: []
+    required-events: []
+    required-properties: []
+  television:
+    description:
+      en: Television
+    optional-actions:
+    - turn-on
+    - channel-up
+    - channel-down
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    - mode
+    - brightness
+    - input-control
+    - channel-control
+    - sleep-mode
+    - ai-light-effect
+    required-actions:
+    - turn-off
+    required-events: []
+    required-properties: []
+  temperature-humidity-sensor:
+    description:
+      en: Temperature Humidity Sensor
+    optional-actions: []
+    optional-events:
+    - device-be-reset
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - long-broadcast-mode
+    - long-endurance-mode-on
+    required-actions: []
+    required-events: []
+    required-properties: []
+  thermostat:
+    description:
+      en: Thermostat
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - mode
+    - target-temperature
+    - fan-level
+    - temperature
+    - outdoor-silent
+    required-actions: []
+    required-events: []
+    required-properties: []
+  time-management:
+    description:
+      en: Time Management
+    optional-actions:
+    - time-correction
+    optional-events: []
+    optional-properties:
+    - time-zone-offset
+    - hour-system
+    - current-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  timelapse:
+    description:
+      en: Timelapse
+    optional-actions:
+    - start-timelapse
+    - end-timelapse
+    optional-events:
+    - timelapse-finish
+    optional-properties:
+    - status
+    - capture-duration
+    - output-duration
+    - capture-start-time
+    - remaining-capture-time
+    - countdown-to-start
+    - timelapse-storage-status
+    - end-status
+    - output-actual-duration
+    required-actions: []
+    required-events: []
+    required-properties: []
+  timer:
+    description:
+      en: Timer
+    optional-actions: []
+    optional-events:
+    - countdown-time-end
+    - positive-time-end
+    optional-properties: []
+    required-actions: []
+    required-events: []
+    required-properties: []
+  toilet:
+    description:
+      en: Toilet
+    optional-actions:
+    - stop-working
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - seating-state
+    - target-temperature
+    - washing-strength
+    - nozzle-position
+    - deodorization
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  toothbrush:
+    description:
+      en: Toothbrush
+    optional-actions: []
+    optional-events:
+    - exception-occurred
+    - toothbrush-update-remind
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - target-time
+    - abnormal-condition
+    - current-time
+    required-actions: []
+    required-events: []
+    required-properties:
+    - mode
+  towel-rack:
+    description:
+      en: Towel Rack
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - uv
+    - target-temperature
+    - temperature
+    - mode
+    required-actions: []
+    required-events: []
+    required-properties: []
+  treadmill:
+    description:
+      en: Treadmill
+    optional-actions:
+    - stop-working
+    optional-events: []
+    optional-properties:
+    - status
+    - mode
+    - incline
+    - target-distance
+    - current-distance
+    - left-distance
+    - target-time
+    - working-time
+    - left-time
+    - target-calorie-consumption
+    - current-calorie-consumption
+    - left-calorie-consumption
+    - target-step-count
+    - current-step-count
+    - left-step-count
+    required-actions:
+    - start-work
+    - pause
+    required-events: []
+    required-properties:
+    - 'on'
+    - fault
+    - speed-level
+  tv-box:
+    description:
+      en: TV Box
+    optional-actions:
+    - turn-on
+    - channel-up
+    - channel-down
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    - mode
+    - channel-control
+    required-actions:
+    - turn-off
+    required-events: []
+    required-properties: []
+  tv-cabinet:
+    description:
+      en: TV Cabinet
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - status
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - 'on'
+  usage-report:
+    description:
+      en: Usage Report
+    optional-actions: []
+    optional-events:
+    - usage-record
+    optional-properties:
+    - water-consumption
+    - gas-consumption
+    - used-time
+    - temperature
+    - total-extraction-amount
+    - mode-record
+    required-actions: []
+    required-events: []
+    required-properties: []
+  usege-report:
+    description:
+      en: Usege Report
+    optional-actions: []
+    optional-events:
+    - usage-record
+    optional-properties:
+    - water-consumption
+    - gas-consumption
+    - usage-time
+    - usage-target-tempeature
+    required-actions: []
+    required-events: []
+    required-properties: []
+  vacuum:
+    description:
+      en: Robot Cleaner
+    optional-actions:
+    - stop-and-gocharge
+    - start-only-sweep
+    - start-mop
+    - start-sweep-mop
+    - pause-sweeping
+    - continue-sweep
+    - start-custom-sweep
+    - get-zone-configs
+    - get-room-configs
+    - set-zone
+    - set-room-clean-configs
+    - split-room
+    - merge-rooms
+    - start-vacuum-room-sweep
+    - start-build-map
+    - start-dust-arrest
+    - start-mop-wash
+    - start-dry
+    - start-eject
+    - start-call-clean
+    - add-order-clean
+    - modify-order-clean
+    - delete-order-clean
+    - remote-control
+    - try-listen
+    - enter-remote
+    - exit-remote
+    - get-system-info
+    - stop-mop-wash
+    - stop-dry
+    - continue-build-map
+    - stop-build-map-and-gocharge
+    - pause-build-map
+    - back-mop-wash
+    - start-zone-sweep
+    - add-user-sweep-setting
+    - del-user-sweep-setting
+    - modify-user-sweep-setting
+    - user-define-sweep-set
+    - start-user-define-sweep
+    - start-cut-hair
+    - stop-cut-hair
+    - start-water-self-check
+    - cancel-water-self-check
+    - set-room-name
+    - start-room-sweep
+    - get-vacuum-route
+    - close-abnormal-card
+    - start-sweep-before-mopping
+    - start-furniture-cleaning
+    - stop-working
+    - final-cleaning
+    - skip-cleaning
+    - start-base-station-cleaning
+    - empty-base-station-water-tank
+    - empty-host-water-tank
+    - spot-cleaning
+    - ai-recognition-feedback
+    - operate-ai-recognize-obj
+    - get-ai-picture-obj
+    - common-object-clean
+    - start-self-cleaning-of-the-station
+    - stop-self-cleaning-of-the-station
+    - temporary-cleaning
+    - map-rotate
+    - sweep
+    optional-events:
+    - build-map-complete
+    - sweep-complete
+    - dust-arrest-complete
+    - mop-wash-complete
+    - dry-complete
+    - eject-complete
+    - call-clean-complete
+    optional-properties:
+    - vacuum-frameware-version
+    - status
+    - fault
+    - sweep-mop-type
+    - sweep-type
+    - cleaning-area
+    - cleaning-time
+    - clean-times
+    - mode
+    - mop-water-output-level
+    - mop-status
+    - zone-ids
+    - restricted-sweep-areas
+    - restricted-walls
+    - vacuum-room-ids
+    - room-information
+    - last-clean-time
+    - base-station-working-status
+    - order-clean
+    - carpet-boost
+    - carpet-avoidance
+    - carpet-display
+    - sweep-break-switch
+    - common-params
+    - sleep-status
+    - location-status
+    - map-complete-dialog
+    - enable-mop-wash
+    - frequency-mop-wash
+    - water-output-for-washing-mop
+    - drying-time
+    - auto-dust-arrest
+    - dust-arrest-frequency
+    - auto-mop-dry
+    - auto-water-change
+    - use-detergent
+    - ai-cleaning
+    - exit-remote-dialog
+    - button-type
+    - current-cleaning-config
+    - hot-water-mop-wash
+    - user-define-sweep-cfg
+    - user-define-sweep-id
+    - mop-auto-lift
+    - sweep-ai-detection
+    - dirt-detection
+    - object-detection
+    - room-detection
+    - floor-material-detection
+    - defecation-detection
+    - liquid-dirt-detection
+    - solid-dirt-detection
+    - water-check-list
+    - water-check-status
+    - edge-swing-tail-sweep
+    - mop-wash-left-time
+    - sweep-ai-object
+    - sweep-furniture
+    - carpet-object
+    - suction-level
+    - map-ids
+    - dust-arrest-left-time
+    - dry-left-time
+    - room-name
+    - points
+    - restricted-mop-areas
+    - room-ids
+    - uv
+    - speed-level
+    - fan-level
+    - 'on'
+    - mop-water-output-level-no-tank
+    - detergent-self-delivery
+    - frequency-mop-wash-no-tank
+    - auto-water-change-installed
+    - cut-hair-config
+    - frequency-cut-hair-config
+    - vacuum-route
+    - fault-ids
+    - action-result
+    - edge-sweep-frequency
+    - ai-managed-cleaning
+    - plugin-info-remind
+    - detergent-depletion-reminder
+    - notice
+    - carpet-crossing
+    - carpet-discriminate
+    - carpet-cleaning-method
+    - sweep-route
+    - obstacle-avoidance-strategy
+    - carpet-deep-cleaning
+    - map-locked
+    - frequency-mop-wash-by-time
+    - mop-outer-swing
+    - auto-dust-arrest-power-level
+    - worry-free-clean-mode
+    - sweep-carpet-first
+    - mop-outer-swing-frequency
+    - wash-mop-water-temperature
+    - repeat-wash-mop
+    - real-scene-capture
+    - auto-night-fill-light
+    - statistical-clean-area
+    - statistical-cleaning-times
+    - statistical-cleaning-duration
+    - cleaning-progress
+    - drying-progress
+    - ai-wake-up
+    - brush-outswing
+    - water-tank-status
+    - sewage-tank-status
+    - sweep-mop-status
+    - base-station-water-tank-status
+    - host-water-tank-status
+    - sill
+    - furniture-for-automation
+    - map-hidden-zone
+    - flag
+    - cmd
+    - sweep-params
+    - mop-temperature
+    - water-tank-level
+    - vibration-mop-switch
+    - hot-spray-switch
+    required-actions:
+    - start-sweep
+    - stop-sweeping
+    required-events: []
+    required-properties: []
+  vacuum-cleaner:
+    description:
+      en: Vacuum Cleaner
+    optional-actions:
+    - start-dust-arrest
+    - stop-dust-arrest
+    optional-events:
+    - dust-arrest-complete
+    - clean-complete
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - auto-dust-arrest
+    - dust-percent-param
+    - clean-time-param
+    - start-time-param
+    required-actions: []
+    required-events: []
+    required-properties: []
+  vacuum-map:
+    description:
+      en: Vacuum Map
+    optional-actions:
+    - clear-map
+    - delete-map
+    - set-map
+    - save-map
+    - auto-room-partition
+    - set-map-name
+    - update-properties-data
+    - manually-back-up-map
+    - restore-map
+    optional-events:
+    - map-notify
+    - trajectory-notify
+    optional-properties:
+    - map-obj-name
+    - trajectory-obj-name
+    - clean-record
+    - vacuum-position
+    - map-management
+    - current-map-id
+    - carpet-obj-name
+    - common-params
+    - map-3d-info
+    - map-upload-stop
+    - map-switch-method
+    - map-upload-stop-action-result
+    - backup-map-list
+    - restore-map-result
+    - query-id
+    - cloud-clean-record
+    required-actions: []
+    required-events: []
+    required-properties: []
+  vacuum-standard-map:
+    description:
+      en: Vacuum Standard Map
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - map-room-info
+    - map-object-info
+    - map-carpet-info
+    required-actions: []
+    required-events: []
+    required-properties: []
+  vibration:
+    description:
+      en: Vibration
+    optional-actions:
+    - vibration
+    - end-vibration
+    optional-events: []
+    optional-properties:
+    - vibration-type
+    - vibration-text
+    - vibration-icon
+    - vibration-time
+    - vibration-on
+    - vibration-perform
+    - vibration-priority
+    required-actions: []
+    required-events: []
+    required-properties: []
+  vibration-sensor:
+    description:
+      en: Vibration Sensor
+    optional-actions: []
+    optional-events:
+    - tilt
+    - fall
+    - vibration
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - detection-sensitivity
+    required-actions: []
+    required-events: []
+    required-properties: []
+  video-doorbell:
+    description:
+      en: Video Doorbell
+    optional-actions:
+    - remote-call
+    - light-up-screen
+    - wake-up
+    optional-events:
+    - doorbell-ring
+    - doorbell-forcibly-removed
+    - someone-passed-by
+    - someone-at-the-door
+    optional-properties:
+    - 'on'
+    - status
+    - night-shot
+    - time-watermark
+    - wdr-mode
+    - eco
+    - ringtone
+    - image-distortion-correction
+    - cloud-video-id
+    - current-time
+    - local-storage
+    - forcibly-removed-alarm-switch
+    - auto-screen-on
+    - live-video-streaming
+    - live-video-valid-time
+    - live-video-enable-time-period
+    - remove-sleep-switch
+    - human-type
+    required-actions: []
+    required-events: []
+    required-properties: []
+  virtual-fence:
+    description:
+      en: Virtual Fence
+    optional-actions: []
+    optional-events:
+    - people-fence-in
+    - people-fence-out
+    optional-properties:
+    - virtual-fence-switch
+    - virtual-fence-area
+    - people-fence-in
+    - people-fence-out
+    - area-count
+    - area-shape
+    - area-support-concave
+    - area-display-switch
+    required-actions: []
+    required-events: []
+    required-properties: []
+  virtual-remote:
+    description:
+      en: Virtual Remote
+    optional-actions: []
+    optional-events: []
+    optional-properties: []
+    required-actions:
+    - press-button
+    - long-press-button
+    required-events: []
+    required-properties:
+    - button-type
+  virtual-service:
+    description:
+      en: Virtual Service
+    optional-actions:
+    - emit-virtual-event
+    optional-events:
+    - virtual-event
+    optional-properties:
+    - virtual-param
+    required-actions: []
+    required-events: []
+    required-properties: []
+  vital-signs:
+    description:
+      en: Vital Signs
+    optional-actions:
+    - measure-heatrate
+    - end-measure-heatrate
+    - measure-spo2
+    - end-measure-spo2
+    optional-events:
+    - abnormal-vital-signs
+    optional-properties:
+    - abnormal-vital-signs-type
+    - heartrate-measure-step
+    - heartrate-measure-time
+    - realtime-heartrate
+    - realtime-spo2
+    - spo2-measure-step
+    - spo2-measure-time
+    required-actions: []
+    required-events: []
+    required-properties: []
+  voice-management:
+    description:
+      en: Voice Management
+    optional-actions:
+    - download-voice
+    - get-download-status
+    optional-events: []
+    optional-properties:
+    - target-voice
+    - cur-voice
+    - download-status
+    - download-progress
+    - voice-url
+    - voice-mdfive
+    - common-params
+    required-actions: []
+    required-events: []
+    required-properties: []
+  walking-pad:
+    description:
+      en: Walking Pad
+    optional-actions:
+    - pause
+    - stop-working
+    optional-events: []
+    optional-properties:
+    - mode
+    - incline
+    - target-distance
+    - current-distance
+    - left-distance
+    - target-time
+    - working-time
+    - left-time
+    - current-step-count
+    - current-calorie-consumption
+    required-actions:
+    - start-work
+    required-events: []
+    required-properties:
+    - 'on'
+    - status
+    - fault
+    - speed-level
+  wash-dry-linkage:
+    description:
+      en: Wash Dry Linkage
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - device-bind
+    - wash-dry-linkage-on
+    required-actions: []
+    required-events: []
+    required-properties: []
+  washer:
+    description:
+      en: Washer
+    optional-actions:
+    - stop-washing
+    - start-wash
+    - pause
+    - make-cabin-openable
+    - adjust-target-temperature-level
+    - adjust-spin-speed-level
+    - adjust-drying-time-level
+    - adjust-rinsh-times-level
+    - set-customize-params
+    - stop-shake-disperse
+    - start-shake-disperse
+    optional-events:
+    - wash-end
+    optional-properties:
+    - left-time
+    - target-temperature
+    - temperature
+    - target-water-level
+    - dryer
+    - drying-level
+    - drying-time
+    - door-state
+    - soak-time
+    - wash-time
+    - rinsh-time
+    - rinsh-times
+    - spin-time
+    - spin-speed
+    - water-consumption
+    - power-consumption
+    - 'on'
+    - mode
+    - sleep-mode
+    - run-status
+    - uv
+    - pre-wash
+    - has-washed-times
+    - status
+    - level-adjustment-number
+    - fault
+    - reservation-wash-status
+    - reservation-left-time
+    - steam-sterilization
+    - stains-type
+    - run-status-list
+    - auto-shake-disperse
+    - soft-wash
+    - dirty-level
+    - curstate-washing
+    - curstate-rinsh
+    - curstate-dry
+    - curstate-left-time
+    - cur-drum-temperature
+    - cur-spin-speed
+    - shake-time
+    - steam-time
+    - high-water-switch
+    - self-delivery-auto-turnoff
+    - filter-need-cleaning
+    - child-protected-enabled
+    - child-protected-status
+    - shake-disperse-notify
+    - laundry-beads
+    - ironing
+    - one-click-wash
+    - drying-degree
+    - ai-mode
+    - has-dried-times
+    - blue-oxygen
+    - quick-wash-level
+    - dry-only
+    - cold-wash-time
+    - wash-level
+    - clothing-care
+    - blue-oxygen-level
+    - care-fresh-air
+    required-actions: []
+    required-events: []
+    required-properties: []
+  watch:
+    description:
+      en: Watch
+    optional-actions: []
+    optional-events:
+    - enter-target-area
+    - leave-target-area
+    - location-update
+    optional-properties:
+    - 'on'
+    - status
+    - fault
+    - longitude
+    - latitude
+    - current-address
+    - current-time
+    - area-id
+    required-actions: []
+    required-events: []
+    required-properties: []
+  watch-winder:
+    description:
+      en: Watch Winder
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    required-actions: []
+    required-events: []
+    required-properties: []
+  water-dispenser:
+    description:
+      en: Water Dispenser
+    optional-actions:
+    - start-out-water
+    - set-default-mode
+    - set-drink-reminder
+    - start-sterilization
+    - stop-sterilization
+    - set-recipe
+    - delete-recipe
+    - clean-device
+    optional-events:
+    - sterilization-complete-remind
+    - low-water-level
+    - drink-notify
+    - sterilization-remind
+    optional-properties:
+    - fault
+    - 'on'
+    - status
+    - mode
+    - temperature
+    - target-temperature
+    - uv
+    - out-water-volume
+    - out-water-cup
+    - cup-setting
+    - tap-default-mode
+    - local-mode-config
+    - progress
+    - sterilization-remind-cycle
+    - cloud-timing-id
+    - interval-reminder-switch
+    - interval-reminder-time
+    - recipe-order
+    - ice-on
+    - whether-have-water
+    - store-timeout
+    - winter-mode
+    - clean-status
+    - clean-prograss
+    - reset-status
+    - boiling-point
+    - out-water-time
+    - default-last-cup
+    - default-last-temperature
+    - out-water-setting
+    - auto-water-line-empty
+    required-actions: []
+    required-events: []
+    required-properties: []
+  water-faucet:
+    description:
+      en: Water Faucet
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - target-temperature
+    - temperature
+    - out-water-flow
+    required-actions: []
+    required-events: []
+    required-properties: []
+  water-heater:
+    description:
+      en: Water Heater
+    optional-actions:
+    - forced-regeneration
+    - set-soft-water
+    optional-events:
+    - preheat-complete
+    - wash-overtime
+    - using-water
+    - stop-using-water
+    - timed-preheat-start
+    - intelligent-preheat-complete
+    - intelligent-preheat-start
+    - staggered-start
+    - staggered-complete
+    - regeneration-started
+    - regeneration-interrupted
+    - regeneration-stop
+    - low-supplies-softener-closed
+    optional-properties:
+    - mode
+    - status
+    - 'on'
+    - water-level
+    - left-time
+    - water-consumption
+    - power-consumption
+    - hot-water-recirculation
+    - bath-keep-warm
+    - input-water-temperature
+    - water-flow
+    - preheat-time
+    - high-altitude-mode
+    - preheat-timer
+    - eco
+    - water-control-preheat
+    - rapid-preheat
+    - intelligent-preheat
+    - anti-icing-status
+    - enhanced-anti-icing
+    - boost-mode
+    - boost-level
+    - boost
+    - eco-study-status
+    - ventilation
+    - ventilation-time
+    - water-pump-volt
+    - in-cloud-timer
+    - cloud-preheater
+    - local-mode-config
+    - heating-temperature
+    - heating-target-temperature
+    - frequency-level
+    - staggered-timer
+    - water-out-power-off
+    - water-out-power-off-status
+    - water-shortage-status
+    - soft-water-volume
+    - soft-water-on
+    - factory-hardness-modified
+    - incoming-water-hardness
+    - inner-loop
+    - limit-temp-eco
+    - eco-mode-option
+    - cyclical-mode
+    - soft-water-status
+    - temperature
+    - regeneration-state
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+    - target-temperature
+  water-purifier:
+    description:
+      en: Water Purifier
+    optional-actions:
+    - stop-production
+    optional-events:
+    - auto-clean-complete
+    - out-water-event
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - temperature
+    - no-production-water-time
+    - pipeline-connection
+    - no-old-water-mode
+    - low-water-pressure
+    - holiday-mode
+    - anti-icing-remind
+    - anti-icing-auto-clean
+    - winter-mode
+    - eco
+    - enable-time-period
+    - washing
+    - auto-clean-interval
+    - clean-prograss
+    - operation-param
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+  water-softener:
+    description:
+      en: Water Softener
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - water-hardness
+    required-actions:
+    - resin-regeneration
+    required-events: []
+    required-properties:
+    - fault
+  water-softener-management:
+    description:
+      en: Water Softener Management
+    optional-actions: []
+    optional-events:
+    - low-water-softener-level
+    optional-properties:
+    - water-softener-left-level
+    - water-softener-self-delivery-level
+    - water-softener-self-delivery
+    required-actions: []
+    required-events: []
+    required-properties: []
+  water-use-details:
+    description:
+      en: Water Use Details
+    optional-actions: []
+    optional-events:
+    - water-production-completed
+    optional-properties:
+    - water-production-time
+    - pure-water-output
+    - tap-water-usage
+    - living-water-output
+    - temperature
+    - statistical-tds-out
+    - accumulated-water-input
+    - accumulated-pure-water-output
+    - accumulated-water-production-time
+    - water-monthly-report
+    - water-type
+    - hot-water-output
+    required-actions: []
+    required-events: []
+    required-properties: []
+  wear-car-interconnect:
+    description:
+      en: Wear Car Interconnect
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - navigation-vibration-on
+    - fatigue-drive-vibration-on
+    - drive-heartrate-on
+    - car-ht-capability
+    - drive-spo2-on
+    required-actions: []
+    required-events: []
+    required-properties: []
+  weather-sensor:
+    description:
+      en: Weather Sensor
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - atmospheric-pressure
+    - uv-index
+    - 'on'
+    - status
+    - mode
+    - fault
+    required-actions: []
+    required-events: []
+    required-properties:
+    - temperature
+    - relative-humidity
+  white-light:
+    description:
+      en: White Light
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - brightness
+    - mode
+    - enable-time-period
+    - night-light-switch
+    required-actions: []
+    required-events: []
+    required-properties: []
+  wifi:
+    description:
+      en: WiFi Managerment
+    optional-actions:
+    - optimize-network
+    optional-events:
+    - optimize-network-finished
+    optional-properties:
+    - 'on'
+    - wifi-ssid-hidden
+    - encrypted-strength
+    - signal-strength
+    - wifi-channel
+    - wifi-bandwidth
+    - easy-connect-switch
+    - wifi-information
+    - wifi-ssid
+    - wifi-encrypted-password
+    required-actions: []
+    required-events: []
+    required-properties: []
+  window-opener:
+    description:
+      en: Window Opener
+    optional-actions:
+    - motor-calibrate
+    optional-events:
+    - curtain-manually-closed
+    - curtain-manually-opened
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - target-position
+    - current-position
+    - speed-level
+    required-actions: []
+    required-events: []
+    required-properties:
+    - fault
+    - motor-control
+  wine-tank:
+    description:
+      en: Wine Tank
+    optional-actions: []
+    optional-events: []
+    optional-properties:
+    - 'on'
+    - status
+    - mode
+    - fault
+    - heating
+    - target-temperature
+    - temperature
+    - current-liquid-volume
+    required-actions: []
+    required-events: []
+    required-properties: []
+  wlan:
+    description:
+      en: Wlan
+    optional-actions:
+    - connect
+    - disconnect
+    optional-events:
+    - device-connect
+    - device-disconnect
+    - connect-fail
+    optional-properties:
+    - 'on'
+    - wifi-ssid
+    - abnormal-condition
+    required-actions: []
+    required-events: []
+    required-properties: []
+ts: 1781602472

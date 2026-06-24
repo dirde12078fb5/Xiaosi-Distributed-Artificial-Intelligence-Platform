@@ -1,0 +1,13 @@
+# CodeQL TypeScript 扫描范围：openclaw 插件 + web 面板源码。
+# 只选范围和忽略项，不写自定义 QL——查询套件由 workflow 指定。
+name: miloco-codeql-ts
+
+paths:
+  - plugins/openclaw/src
+  - web/src
+
+paths-ignore:
+  - "**/node_modules/**"
+  - "**/dist/**"
+  - "**/*.test.ts"
+  - "**/*.test.tsx"

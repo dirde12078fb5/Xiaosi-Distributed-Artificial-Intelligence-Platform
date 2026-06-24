@@ -1,0 +1,499 @@
+<!--
+  Xiaomi OAuth 回调展示页。
+  部署到 https://mico.api.mijia.tech/login_redirect ，作为小米账号授权 redirect_uri。
+  授权完成后小米会带上 ?code=...&state=... 跳回此页，将两个参数编码为 base64(JSON)
+  供用户一键复制，由 miloco-cli account authorize <token> 完成换 token。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">小米账号授权完成</title>
+    <link rel="icon"
+        href="https://cdn.web-global.fds.api.mi-img.com/mcfe--mi-account/static/favicon_new.ico">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #f5f6f8;
+            --card: #ffffff;
+            --text: #1d1d1f;
+            --muted: #86868b;
+            --border: #ececef;
+            --code-bg: #fafafa;
+            --code-fg: #ff5c00;
+            --brand: #ff5c00;
+            --brand-hover: #e65300;
+            --success: #34c759;
+            --error: #d70015;
+            --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 12px 32px rgba(20, 20, 30, .06);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f1014;
+                --card: #1c1d22;
+                --text: #f5f5f7;
+                --muted: #98989d;
+                --border: #2c2c30;
+                --code-bg: #15161a;
+                --code-fg: #ff8a3d;
+                --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 18px 40px rgba(0, 0, 0, .45);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+                "Microsoft YaHei", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            background: var(--card);
+            width: 100%;
+            max-width: 540px;
+            padding: 44px 40px 36px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            margin: 0 0 14px;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: .2px;
+        }
+
+        .subtitle {
+            margin: 0 0 20px;
+            font-size: 14px;
+            color: var(--muted);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--muted);
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            margin: 0 0 8px;
+        }
+
+        .payload-box {
+            position: relative;
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 24px;
+        }
+
+        .payload {
+            display: block;
+            color: var(--code-fg);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            font-size: 14px;
+            line-height: 1.55;
+            white-space: nowrap;
+            overflow-x: auto;
+            user-select: all;
+            scrollbar-width: none;
+        }
+        .payload::-webkit-scrollbar { display: none; }
+
+        .copy-btn {
+            width: 100%;
+            height: 48px;
+            border: none;
+            border-radius: 12px;
+            background: var(--brand);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color .15s ease, transform .05s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--brand-hover);
+        }
+
+        .copy-btn:active {
+            transform: scale(.99);
+        }
+
+        .copy-btn[data-state="copied"] {
+            background: var(--success);
+        }
+
+        .copy-btn:disabled {
+            opacity: .45;
+            cursor: not-allowed;
+        }
+
+        .steps {
+            margin: 24px 0 0;
+            padding: 16px 18px;
+            background: var(--code-bg);
+            border-radius: 10px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 2.2;
+        }
+
+        .steps b {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .steps code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 12.5px;
+            padding: 1px 6px;
+            border-radius: 4px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .error {
+            color: var(--error);
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin: 16px 0 0;
+            text-align: center;
+        }
+
+        .error-detail {
+            margin: 16px 0 0;
+            padding: 14px 16px;
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .error-detail b {
+            color: var(--error);
+            font-weight: 500;
+        }
+
+        @media (max-width: 420px) {
+            .card {
+                padding: 32px 22px 28px;
+                border-radius: 16px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <div class="logo" aria-hidden="true">
+            <svg width="56" height="56" viewBox="0 0 193 193" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FF6900"
+                    d="M172.47 20.12C154.31 2.02 128.19 0 96.27 0 64.31 0 38.16 2.05 20 20.19 1.84 38.33 0 64.44 0 96.36c0 31.93 1.84 58.06 20 76.2 18.16 18.15 44.31 19.98 76.27 19.98 31.96 0 58.11-1.83 76.27-19.98 18.16-18.15 20-44.27 20-76.2 0-31.96-1.87-58.11-20.07-76.24z" />
+                <path fill="#FFFFFF"
+                    d="M89.18 131.95c0 .65-.54 1.18-1.21 1.18H71.56c-.67 0-1.22-.53-1.22-1.18V89.01c0-.65.55-1.19 1.22-1.19h16.42c.66 0 1.21.54 1.21 1.19v42.94zM121.33 131.95c0 .65-.55 1.18-1.21 1.18h-15.63c-.67 0-1.22-.53-1.22-1.18v-37.05c-.02-6.47-.39-13.12-3.73-16.46-2.87-2.88-8.22-3.54-13.79-3.68H57.42c-.67 0-1.21.54-1.21 1.18v56.01c0 .65-.55 1.18-1.22 1.18H39.36c-.67 0-1.21-.53-1.21-1.18V60.6c0-.65.54-1.19 1.21-1.19h45.12c11.79 0 24.12.54 30.2 6.63 6.11 6.12 6.65 18.42 6.65 30.23v35.68zM153.53 131.95c0 .65-.55 1.18-1.21 1.18h-15.64c-.67 0-1.21-.53-1.21-1.18V60.6c0-.65.54-1.19 1.21-1.19h15.64c.66 0 1.21.54 1.21 1.19v71.35z" />
+            </svg>
+        </div>
+        <h1 class="title" id="title"></h1>
+        <p class="subtitle" id="subtitle"></p>
+
+        <p class="label" id="label" hidden></p>
+        <div class="payload-box" id="payloadBox" hidden>
+            <code class="payload" id="payload"></code>
+        </div>
+        <button class="copy-btn" id="copyBtn" type="button" hidden></button>
+
+        <div class="steps" id="steps" hidden></div>
+
+        <div class="error-detail" id="errorDetail" hidden></div>
+        <p class="error" id="error" hidden></p>
+    </main>
+
+    <script>
+        (function () {
+            var translations = {
+                'zh-CN': {
+                    pageTitle: '小米账号授权完成',
+                    successTitle: '授权成功',
+                    successSubtitle: '授权已完成，请复制下方授权码',
+                    label: '授权码',
+                    copyBtn: '复制授权信息',
+                    copied: '已复制 ✓',
+                    copyFailed: '自动复制失败，请手动选中授权信息后复制。',
+                    stepsTerminal: '<b>在终端操作的：</b>回到终端，将授权码粘贴到等待输入的提示处。',
+                    stepsAI: '<b>由 AI 助手发起的：</b>将授权码发送给助手，由它继续完成绑定。',
+                    errorTitle: '授权失败',
+                    errorSubtitle: '小米账号授权未完成，请重新发起绑定。',
+                    errorCodeLabel: '错误码：',
+                    noParamsTitle: '授权未完成',
+                    noParamsError: '未收到有效的授权参数，请重新发起绑定。',
+                    oauthErrors: {
+                        'access_denied': '用户拒绝了授权请求',
+                        'invalid_request': '授权请求参数无效',
+                        'unauthorized_client': '应用未被允许发起此授权请求',
+                        'unsupported_response_type': '不支持的授权类型',
+                        'invalid_scope': '请求的权限范围无效',
+                        'server_error': '小米服务器内部错误',
+                        'temporarily_unavailable': '小米服务暂时不可用'
+                    }
+                },
+                'zh-TW': {
+                    pageTitle: '小米帳號授權完成',
+                    successTitle: '授權成功',
+                    successSubtitle: '授權已完成，請複製下方授權碼',
+                    label: '授權碼',
+                    copyBtn: '複製授權資訊',
+                    copied: '已複製 ✓',
+                    copyFailed: '自動複製失敗，請手動選取授權資訊後複製。',
+                    stepsTerminal: '<b>在終端操作的：</b>回到終端，將授權碼貼到等待輸入的提示處。',
+                    stepsAI: '<b>由 AI 助手發起的：</b>將授權碼發送給助手，由它繼續完成綁定。',
+                    errorTitle: '授權失敗',
+                    errorSubtitle: '小米帳號授權未完成，請重新發起綁定。',
+                    errorCodeLabel: '錯誤碼：',
+                    noParamsTitle: '授權未完成',
+                    noParamsError: '未收到有效的授權參數，請重新發起綁定。',
+                    oauthErrors: {
+                        'access_denied': '用戶拒絕了授權請求',
+                        'invalid_request': '授權請求參數無效',
+                        'unauthorized_client': '應用未被允許發起此授權請求',
+                        'unsupported_response_type': '不支援的授權類型',
+                        'invalid_scope': '請求的權限範圍無效',
+                        'server_error': '小米服務器內部錯誤',
+                        'temporarily_unavailable': '小米服務暫時不可用'
+                    }
+                },
+                'en': {
+                    pageTitle: 'Xiaomi Account Authorization Complete',
+                    successTitle: 'Authorization Successful',
+                    successSubtitle: 'Authorization complete. Please copy the authorization code below.',
+                    label: 'Authorization Code',
+                    copyBtn: 'Copy Authorization Code',
+                    copied: 'Copied ✓',
+                    copyFailed: 'Auto-copy failed. Please select the authorization code manually and copy it.',
+                    stepsTerminal: '<b>Terminal users:</b> Return to the terminal and paste the code at the waiting prompt.',
+                    stepsAI: '<b>AI assistant users:</b> Send the code to the assistant to complete the binding.',
+                    errorTitle: 'Authorization Failed',
+                    errorSubtitle: 'Xiaomi account authorization was not completed. Please initiate binding again.',
+                    errorCodeLabel: 'Error code: ',
+                    noParamsTitle: 'Authorization Incomplete',
+                    noParamsError: 'No valid authorization parameters received. Please initiate binding again.',
+                    oauthErrors: {
+                        'access_denied': 'User denied the authorization request',
+                        'invalid_request': 'Invalid authorization request parameters',
+                        'unauthorized_client': 'The application is not allowed to initiate this authorization request',
+                        'unsupported_response_type': 'Unsupported authorization type',
+                        'invalid_scope': 'Invalid permission scope requested',
+                        'server_error': 'Xiaomi server internal error',
+                        'temporarily_unavailable': 'Xiaomi service temporarily unavailable'
+                    }
+                },
+                'ja': {
+                    pageTitle: 'Xiaomiアカウント認証完了',
+                    successTitle: '認証成功',
+                    successSubtitle: '認証が完了しました。下の認証コードをコピーしてください。',
+                    label: '認証コード',
+                    copyBtn: '認証コードをコピー',
+                    copied: 'コピー済み ✓',
+                    copyFailed: '自動コピーに失敗しました。認証コードを手動で選択してコピーしてください。',
+                    stepsTerminal: '<b>ターミナル操作の場合：</b>ターミナルに戻り、入力待ちのプロンプトに認証コードを貼り付けてください。',
+                    stepsAI: '<b>AIアシスタント経由の場合：</b>認証コードをアシスタントに送信して、バインドを完了させてください。',
+                    errorTitle: '認証失敗',
+                    errorSubtitle: 'Xiaomiアカウントの認証が完了しませんでした。バインドを再開始してください。',
+                    errorCodeLabel: 'エラーコード：',
+                    noParamsTitle: '認証未完了',
+                    noParamsError: '有効な認証パラメータが受信されませんでした。バインドを再開始してください。',
+                    oauthErrors: {
+                        'access_denied': 'ユーザーが認証リクエストを拒否しました',
+                        'invalid_request': '認証リクエストのパラメータが無効です',
+                        'unauthorized_client': 'アプリケーションはこの認証リクエストを開始できません',
+                        'unsupported_response_type': 'サポートされていない認証タイプです',
+                        'invalid_scope': '要求された権限範囲が無効です',
+                        'server_error': 'Xiaomiサーバーの内部エラー',
+                        'temporarily_unavailable': 'Xiaomiサービスは一時的に利用できません'
+                    }
+                },
+                'ko': {
+                    pageTitle: 'Xiaomi 계정 인증 완료',
+                    successTitle: '인증 성공',
+                    successSubtitle: '인증이 완료되었습니다. 아래 인증 코드를 복사하세요.',
+                    label: '인증 코드',
+                    copyBtn: '인증 코드 복사',
+                    copied: '복사됨 ✓',
+                    copyFailed: '자동 복사에 실패했습니다. 인증 코드를 수동으로 선택하여 복사하세요.',
+                    stepsTerminal: '<b>터미널 사용자:</b> 터미널로 돌아가 입력 대기 중인 프롬프트에 인증 코드를 붙여넣으세요.',
+                    stepsAI: '<b>AI 어시스턴트 경유:</b> 인증 코드를 어시스턴트에 전송하여 바인딩을 완료하세요.',
+                    errorTitle: '인증 실패',
+                    errorSubtitle: 'Xiaomi 계정 인증이 완료되지 않았습니다. 바인딩을 다시 시작해주세요.',
+                    errorCodeLabel: '오류 코드: ',
+                    noParamsTitle: '인증 미완료',
+                    noParamsError: '유효한 인증 매개변수가 수신되지 않았습니다. 바인딩을 다시 시작해주세요.',
+                    oauthErrors: {
+                        'access_denied': '사용자가 인증 요청을 거부했습니다',
+                        'invalid_request': '인증 요청 매개변수가 유효하지 않습니다',
+                        'unauthorized_client': '앱이 이 인증 요청을 시작할 수 없습니다',
+                        'unsupported_response_type': '지원되지 않는 인증 유형입니다',
+                        'invalid_scope': '요청한 권한 범위가 유효하지 않습니다',
+                        'server_error': 'Xiaomi 서버 내부 오류',
+                        'temporarily_unavailable': 'Xiaomi 서비스를 일시적으로 사용할 수 없습니다'
+                    }
+                }
+            };
+
+            function getLang() {
+                var l = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if (l.startsWith('zh-tw') || l.startsWith('zh-hant')) return 'zh-TW';
+                if (l.startsWith('zh')) return 'zh-CN';
+                if (l.startsWith('ja')) return 'ja';
+                if (l.startsWith('ko')) return 'ko';
+                if (l.startsWith('en')) return 'en';
+                return 'zh-CN';
+            }
+
+            var t = translations[getLang()] || translations['zh-CN'];
+
+            var params = new URLSearchParams(window.location.search);
+            var code = params.get('code');
+            var state = params.get('state');
+            var oauthError = params.get('error');
+            var oauthErrorDesc = params.get('error_description');
+
+            var titleEl = document.getElementById('title');
+            var subtitleEl = document.getElementById('subtitle');
+            var labelEl = document.getElementById('label');
+            var payloadBoxEl = document.getElementById('payloadBox');
+            var payloadEl = document.getElementById('payload');
+            var errorDetailEl = document.getElementById('errorDetail');
+            var errorEl = document.getElementById('error');
+            var btn = document.getElementById('copyBtn');
+            var stepsEl = document.getElementById('steps');
+
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+
+            function esc(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            // 小米返回了明确的 error 参数
+            if (oauthError) {
+                var friendlyMsg = (t.oauthErrors && t.oauthErrors[oauthError]) || oauthError;
+                titleEl.textContent = t.errorTitle;
+                subtitleEl.textContent = t.errorSubtitle;
+
+                var detail = '<b>' + esc(friendlyMsg) + '</b>';
+                if (oauthErrorDesc) {
+                    detail += '<br>' + esc(oauthErrorDesc);
+                }
+                detail += '<br><span style="opacity:.6;font-size:12px">' + esc(t.errorCodeLabel) + esc(oauthError) + '</span>';
+                errorDetailEl.innerHTML = detail;
+                errorDetailEl.hidden = false;
+                return;
+            }
+
+            // 缺少 code / state
+            if (!code || !state) {
+                titleEl.textContent = t.noParamsTitle;
+                subtitleEl.textContent = '';
+                errorEl.hidden = false;
+                errorEl.textContent = t.noParamsError;
+                return;
+            }
+
+            // 成功
+            titleEl.textContent = t.successTitle;
+            subtitleEl.textContent = t.successSubtitle;
+            labelEl.textContent = t.label;
+            btn.textContent = t.copyBtn;
+            stepsEl.innerHTML = t.stepsTerminal + '<br>' + t.stepsAI;
+            labelEl.hidden = false;
+            payloadBoxEl.hidden = false;
+            btn.hidden = false;
+            stepsEl.hidden = false;
+
+            var payload = btoa(unescape(encodeURIComponent(JSON.stringify({code: code, state: state}))));
+            payloadEl.textContent = payload;
+
+            function flash(text) {
+                btn.dataset.state = 'copied';
+                btn.textContent = text;
+                setTimeout(function () {
+                    btn.dataset.state = '';
+                    btn.textContent = t.copyBtn;
+                }, 1800);
+            }
+
+            function fallbackCopy() {
+                var range = document.createRange();
+                range.selectNode(payloadEl);
+                var sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+                try {
+                    document.execCommand('copy');
+                    flash(t.copied);
+                } catch (e) {
+                    errorEl.hidden = false;
+                    errorEl.textContent = t.copyFailed;
+                }
+                sel.removeAllRanges();
+            }
+
+            btn.addEventListener('click', function () {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(payload)
+                        .then(function () { flash(t.copied); })
+                        .catch(fallbackCopy);
+                } else {
+                    fallbackCopy();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

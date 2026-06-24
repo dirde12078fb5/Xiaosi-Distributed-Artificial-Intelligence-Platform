@@ -1,0 +1,39 @@
+# 文档检查：knowledge/ 与 README 变更时跑 Prettier 格式校验 + markdownlint。
+#
+# 首次启用前先在本地跑一次基线格式化（prettier --write），否则存量文档会被判不合规。
+name: Docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "knowledge/**"
+      - "README.md"
+  pull_request:
+    paths:
+      - "knowledge/**"
+      - "README.md"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Prettier 格式校验
+        run: npx --yes prettier@3 --check "knowledge/**/*.md" "README.md"
+
+      - name: markdownlint（关掉对中文/含 ASCII 图文档过严的规则）
+        # MD013 行长 / MD033 内联 HTML / MD041 首行须标题 / MD040 代码块须标语言 / MD034 裸 URL
+        run: npx --yes markdownlint-cli@0.41 --disable MD013 MD033 MD041 MD040 MD034 -- "knowledge/**/*.md" "README.md"

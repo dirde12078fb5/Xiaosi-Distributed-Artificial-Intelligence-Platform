@@ -1,0 +1,9 @@
+{
+  "api": {
+    "invalidJson": "Server did not return valid JSON",
+    "bizError": "Business error (code {{code}})",
+    "extractFail": "Couldn't extract, HTTP {{status}}",
+    "fetchSamplesFail": "Couldn't fetch existing sample count, HTTP {{status}}",
+    "saveFail": "Couldn't save, HTTP {{status}}"
+  }
+}
