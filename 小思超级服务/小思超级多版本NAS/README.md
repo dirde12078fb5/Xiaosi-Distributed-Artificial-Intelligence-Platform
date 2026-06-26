@@ -2,11 +2,78 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.7+-blue.svg" alt="Python">
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-green.svg" alt="Platform">
+  <img src="https://img.shields.io/badge/Node.js-22+-green.svg" alt="Node.js">
+  <img src="https://img.shields.io/badge/Go-1.21+-00ADD8.svg" alt="Go">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-lightgrey.svg" alt="Platform">
   <img src="https://img.shields.io/badge/Languages-28-orange.svg" alt="Languages">
 </p>
 
 一款功能强大的跨平台NAS管理服务，支持多语言界面和局域网文件推送。
+
+**提供多种编程语言版本，任选其一即可使用：**
+- 🐍 **Python版本** - 零依赖，开箱即用
+- 🟢 **Node.js版本** - Express框架，适合前端开发者
+- 🐹 **Go版本** - 高性能编译版
+
+---
+
+## 快速开始
+
+### 选择你的语言版本
+
+| 版本 | 目录 | 默认端口 | 启动方式 |
+|------|------|----------|----------|
+| Python | 根目录 `nas_server.py` | 8080 | `python nas_server.py` |
+| Node.js | `nodejs/server.js` | 8081 | `cd nodejs && npm start` |
+| Go | `cmd/server/main.go` | 8080 | `go run cmd/server/main.go` |
+
+### Python版本（推荐，无需安装依赖）
+
+**Windows:**
+```bash
+# 双击运行
+start.bat
+
+# 或命令行运行
+python nas_server.py
+```
+
+**Linux / macOS:**
+```bash
+chmod +x start.sh
+./start.sh
+
+# 或
+python3 nas_server.py
+```
+
+### Node.js版本
+
+```bash
+cd nodejs
+
+# 安装依赖（首次运行）
+npm install
+
+# 启动
+npm start
+```
+
+**Windows:** 双击 `nodejs/start.bat`
+
+### Go版本
+
+```bash
+go mod tidy
+go run cmd/server/main.go
+```
+
+### 访问服务
+
+- Python/Go版本：**http://localhost:8080**
+- Node.js版本：**http://localhost:8081**
+
+界面语言可在右上角切换。
 
 ---
 
@@ -34,40 +101,6 @@
 - 局域网设备扫描发现
 - 支持多网卡/多网段环境
 - 设备唯一标识，避免重复
-
----
-
-## 快速开始
-
-### 环境要求
-- Python 3.7 或更高版本
-- Windows / Linux / macOS
-
-### 安装运行
-
-**Windows:**
-```bash
-# 双击运行
-start.bat
-
-# 或命令行运行
-python nas_server.py
-```
-
-**Linux / macOS:**
-```bash
-chmod +x start.sh
-./start.sh
-
-# 或
-python3 nas_server.py
-```
-
-### 访问服务
-
-启动后访问：**http://localhost:8080**
-
-界面语言可在右上角切换。
 
 ---
 
@@ -140,13 +173,28 @@ python3 nas_server.py
 
 ```
 小思超级多版本NAS/
-├── nas_server.py      # 主程序（Python，无需编译直接运行）
-├── start.bat          # Windows启动脚本
-├── start.sh           # Linux/macOS启动脚本
+├── nas_server.py      # Python版本主程序（推荐，开箱即用）
+├── start.bat          # Windows启动脚本（Python版）
+├── start.sh           # Linux/macOS启动脚本（Python版）
 ├── config.json        # 配置文件
 ├── README.md          # 本文档
 ├── LICENSE            # MIT许可证
-└── nas_data/         # 数据目录（自动创建）
+├── GITCODE_PUSH_GUIDE.md # Gitcode推送指南
+│
+├── nodejs/            # Node.js版本（Express框架）
+│   ├── server.js      #   主程序
+│   ├── formdata.js    #   FormData工具
+│   ├── package.json   #   依赖配置
+│   ├── start.bat      #   Windows启动
+│   └── start.sh       #   Linux/macOS启动
+│
+├── cmd/               # Go版本
+│   └── server/main.go #   主程序
+├── internal/          # Go内部包
+├── go.mod             # Go模块配置
+├── go.sum             # Go依赖锁定
+│
+└── nas_data/          # 数据目录（自动创建）
     └── received/      # 接收的文件存放目录
 ```
 
