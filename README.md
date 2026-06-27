@@ -341,7 +341,7 @@ python 内网通服.py && python 外网通服.py
 
 
 <span style="font-size:48px;">第五代GEN 架构</span>2027年元旦
-![屏幕录制-2026-06-13-195243.gif](https://raw.gitcode.com/user-images/assets/9293520/f4ebc651-3209-4de5-813f-db53229b05fc/屏幕录制-2026-06-13-195243.gif '屏幕录制-2026-06-13-195243.gif')
+![852zd-kflc2.gif](https://raw.gitcode.com/user-images/assets/9293520/9f7e0039-895b-4d7e-b14b-d06c97995a79/852zd-kflc2.gif '852zd-kflc2.gif')
 
 ---
 # 软件下载
