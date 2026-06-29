@@ -366,4 +366,5 @@ git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intell
 ----
 Made with ❤️ by Xiao Si Ai
 
-Made in Xiaosi Distributed Artificial Intelligence
+Made in Xiaosi Distributed Artificial Intelligence#   X i a o s i - D i s t r i b u t e d - A r t i f i c i a l - I n t e l l i g e n c e - P l a t f o r m  
+ 
