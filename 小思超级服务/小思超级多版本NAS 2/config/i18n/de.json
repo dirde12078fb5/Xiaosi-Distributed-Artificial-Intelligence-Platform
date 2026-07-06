@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS-Dienst",
+  "welcome": "Willkommen beim Xiaosi Super NAS-Dienst",
+  "api": {
+    "storage": {
+      "volumes": "Speichervolumen",
+      "create_volume": "Volumen erstellen",
+      "delete_volume": "Volumen löschen",
+      "volume_name": "Volumenname",
+      "volume_path": "Volumenpfad",
+      "quota": "Kontingent (GB)"
+    },
+    "users": {
+      "users": "Benutzer",
+      "create_user": "Benutzer erstellen",
+      "delete_user": "Benutzer löschen",
+      "username": "Benutzername",
+      "password": "Passwort"
+    },
+    "smb": {
+      "shares": "SMB-Freigaben",
+      "create_share": "Freigabe erstellen",
+      "delete_share": "Freigabe löschen",
+      "share_name": "Freigabename",
+      "share_path": "Freigabepfad"
+    },
+    "ip": {
+      "local_ip": "Lokale IP-Adressen",
+      "scan_devices": "LAN-Geräte scannen"
+    },
+    "push": {
+      "push_folder": "Ordner pushen",
+      "push_targets": "Push-Ziele",
+      "add_target": "Ziel hinzufügen",
+      "push_status": "Push-Status",
+      "receive_file": "Datei empfangen"
+    }
+  },
+  "status": {
+    "success": "Vorgang erfolgreich",
+    "error": "Vorgang fehlgeschlagen",
+    "not_found": "Ressource nicht gefunden",
+    "invalid_params": "Ungültige Parameter"
+  },
+  "menu": {
+    "home": "Startseite",
+    "storage": "Speicher",
+    "users": "Benutzer",
+    "smb": "SMB-Freigaben",
+    "push": "Datei-Push",
+    "settings": "Einstellungen"
+  }
+}

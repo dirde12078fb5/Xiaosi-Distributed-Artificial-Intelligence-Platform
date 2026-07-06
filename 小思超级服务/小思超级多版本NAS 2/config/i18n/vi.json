@@ -1,0 +1,53 @@
+{
+  "app_name": "Dịch vụ NAS Siêu Xiaosi",
+  "welcome": "Chào mừng đến với Dịch vụ NAS Siêu Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Volumes Lưu trữ",
+      "create_volume": "Tạo Volume",
+      "delete_volume": "Xóa Volume",
+      "volume_name": "Tên Volume",
+      "volume_path": "Đường dẫn Volume",
+      "quota": "Giới hạn (GB)"
+    },
+    "users": {
+      "users": "Người dùng",
+      "create_user": "Tạo người dùng",
+      "delete_user": "Xóa người dùng",
+      "username": "Tên người dùng",
+      "password": "Mật khẩu"
+    },
+    "smb": {
+      "shares": "Chia sẻ SMB",
+      "create_share": "Tạo chia sẻ",
+      "delete_share": "Xóa chia sẻ",
+      "share_name": "Tên chia sẻ",
+      "share_path": "Đường dẫn chia sẻ"
+    },
+    "ip": {
+      "local_ip": "Địa chỉ IP cục bộ",
+      "scan_devices": "Quét thiết bị LAN"
+    },
+    "push": {
+      "push_folder": "Đẩy thư mục",
+      "push_targets": "Đích đẩy",
+      "add_target": "Thêm đích",
+      "push_status": "Trạng thái đẩy",
+      "receive_file": "Nhận tệp"
+    }
+  },
+  "status": {
+    "success": "Thao tác thành công",
+    "error": "Thao tác thất bại",
+    "not_found": "Không tìm thấy tài nguyên",
+    "invalid_params": "Tham số không hợp lệ"
+  },
+  "menu": {
+    "home": "Trang chủ",
+    "storage": "Lưu trữ",
+    "users": "Người dùng",
+    "smb": "Chia sẻ SMB",
+    "push": "Đẩy tệp",
+    "settings": "Cài đặt"
+  }
+}

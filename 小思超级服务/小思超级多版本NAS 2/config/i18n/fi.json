@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS Service",
+  "welcome": "Tervetuloa Xiaosi Super NAS Service",
+  "api": {
+    "storage": {
+      "volumes": "Tallennus Volumes",
+      "create_volume": "Luo Volume",
+      "delete_volume": "Poista Volume",
+      "volume_name": "Volume nimi",
+      "volume_path": "Volume polku",
+      "quota": "Kiintiö (GB)"
+    },
+    "users": {
+      "users": "Käyttäjät",
+      "create_user": "Luo käyttäjä",
+      "delete_user": "Poista käyttäjä",
+      "username": "Käyttäjänimi",
+      "password": "Salasana"
+    },
+    "smb": {
+      "shares": "SMB Shares",
+      "create_share": "Luo Share",
+      "delete_share": "Poista Share",
+      "share_name": "Share nimi",
+      "share_path": "Share polku"
+    },
+    "ip": {
+      "local_ip": "Paikalliset IP Osoitteet",
+      "scan_devices": "Skannaa LAN laitteet"
+    },
+    "push": {
+      "push_folder": "Push Folder",
+      "push_targets": "Push targets",
+      "add_target": "Lisää target",
+      "push_status": "Push status",
+      "receive_file": "Vastaanota tiedosto"
+    }
+  },
+  "status": {
+    "success": "Operation successful",
+    "error": "Operation failed",
+    "not_found": "Resource not found",
+    "invalid_params": "Invalid parameters"
+  },
+  "menu": {
+    "home": "Etusivu",
+    "storage": "Tallennus",
+    "users": "Käyttäjät",
+    "smb": "SMB Shares",
+    "push": "Tiedosto push",
+    "settings": "Asetukset"
+  }
+}

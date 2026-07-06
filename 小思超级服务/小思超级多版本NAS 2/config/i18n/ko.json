@@ -1,0 +1,53 @@
+{
+  "app_name": "샤오쓰 슈퍼 NAS 서비스",
+  "welcome": "샤오쓰 슈퍼 NAS 서비스에 오신 것을 환영합니다",
+  "api": {
+    "storage": {
+      "volumes": "스토리지 볼륨",
+      "create_volume": "볼륨 생성",
+      "delete_volume": "볼륨 삭제",
+      "volume_name": "볼륨 이름",
+      "volume_path": "볼륨 경로",
+      "quota": "용량 제한(GB)"
+    },
+    "users": {
+      "users": "사용자 목록",
+      "create_user": "사용자 생성",
+      "delete_user": "사용자 삭제",
+      "username": "사용자 이름",
+      "password": "비밀번호"
+    },
+    "smb": {
+      "shares": "SMB 공유",
+      "create_share": "공유 생성",
+      "delete_share": "공유 삭제",
+      "share_name": "공유 이름",
+      "share_path": "공유 경로"
+    },
+    "ip": {
+      "local_ip": "로컬 IP 주소",
+      "scan_devices": "LAN 장치 스캔"
+    },
+    "push": {
+      "push_folder": "폴더 푸시",
+      "push_targets": "푸시 대상",
+      "add_target": "대상 추가",
+      "push_status": "푸시 상태",
+      "receive_file": "파일 수신"
+    }
+  },
+  "status": {
+    "success": "작업 성공",
+    "error": "작업 실패",
+    "not_found": "리소스를 찾을 수 없음",
+    "invalid_params": "잘못된 매개변수"
+  },
+  "menu": {
+    "home": "홈",
+    "storage": "스토리지",
+    "users": "사용자",
+    "smb": "SMB 공유",
+    "push": "파일 푸시",
+    "settings": "설정"
+  }
+}

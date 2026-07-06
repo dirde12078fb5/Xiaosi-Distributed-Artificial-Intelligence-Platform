@@ -1,0 +1,53 @@
+{
+  "app_name": "خدمة NAS السوبر Xiaosi",
+  "welcome": "مرحبا بكم في خدمة NAS السوبر Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "مجلدات التخزين",
+      "create_volume": "إنشاء مجلد",
+      "delete_volume": "حذف مجلد",
+      "volume_name": "اسم المجلد",
+      "volume_path": "مسار المجلد",
+      "quota": "الحصة (GB)"
+    },
+    "users": {
+      "users": "المستخدمين",
+      "create_user": "إنشاء مستخدم",
+      "delete_user": "حذف مستخدم",
+      "username": "اسم المستخدم",
+      "password": "كلمة المرور"
+    },
+    "smb": {
+      "shares": "مشاركات SMB",
+      "create_share": "إنشاء مشاركة",
+      "delete_share": "حذف مشاركة",
+      "share_name": "اسم المشاركة",
+      "share_path": "مسار المشاركة"
+    },
+    "ip": {
+      "local_ip": "عناوين IP المحلية",
+      "scan_devices": "فحص أجهزة LAN"
+    },
+    "push": {
+      "push_folder": "دفع المجلد",
+      "push_targets": "أهداف الدفع",
+      "add_target": "إضافة هدف",
+      "push_status": "حالة الدفع",
+      "receive_file": "استلام ملف"
+    }
+  },
+  "status": {
+    "success": "عملية ناجحة",
+    "error": "عملية فاشلة",
+    "not_found": "المورد غير موجود",
+    "invalid_params": "معاملات غير صالحة"
+  },
+  "menu": {
+    "home": "الرئيسية",
+    "storage": "التخزين",
+    "users": "المستخدمين",
+    "smb": "مشاركات SMB",
+    "push": "دفع الملفات",
+    "settings": "الإعدادات"
+  }
+}

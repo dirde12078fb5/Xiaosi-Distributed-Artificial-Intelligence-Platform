@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi सुपर NAS सेवा",
+  "welcome": "Xiaosi सुपर NAS सेवा में आपका स्वागत है",
+  "api": {
+    "storage": {
+      "volumes": "स्टोरेज वॉल्यूम",
+      "create_volume": "वॉल्यूम बनाएं",
+      "delete_volume": "वॉल्यूम हटाएं",
+      "volume_name": "वॉल्यूम नाम",
+      "volume_path": "वॉल्यूम पथ",
+      "quota": "कोटा (GB)"
+    },
+    "users": {
+      "users": "उपयोगकर्ता",
+      "create_user": "उपयोगकर्ता बनाएं",
+      "delete_user": "उपयोगकर्ता हटाएं",
+      "username": "उपयोगकर्ता नाम",
+      "password": "पासवर्ड"
+    },
+    "smb": {
+      "shares": "SMB शेयर",
+      "create_share": "शेयर बनाएं",
+      "delete_share": "शेयर हटाएं",
+      "share_name": "शेयर नाम",
+      "share_path": "शेयर पथ"
+    },
+    "ip": {
+      "local_ip": "स्थानीय IP पते",
+      "scan_devices": "LAN डिवाइस स्कैन"
+    },
+    "push": {
+      "push_folder": "फोल्डर पुश",
+      "push_targets": "पुश लक्ष्य",
+      "add_target": "लक्ष्य जोड़ें",
+      "push_status": "पुश स्थिति",
+      "receive_file": "फाइल प्राप्त करें"
+    }
+  },
+  "status": {
+    "success": "ऑपरेशन सफल",
+    "error": "ऑपरेशन विफल",
+    "not_found": "संसाधन नहीं मिला",
+    "invalid_params": "अवैध पैरामीटर"
+  },
+  "menu": {
+    "home": "होम",
+    "storage": "स्टोरेज",
+    "users": "उपयोगकर्ता",
+    "smb": "SMB शेयर",
+    "push": "फाइल पुश",
+    "settings": "सेटिंग्स"
+  }
+}

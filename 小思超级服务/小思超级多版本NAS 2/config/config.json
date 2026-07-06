@@ -1,0 +1,18 @@
+{
+    "port": 8094,
+    "host": "0.0.0.0",
+    "storage_path": "./storage",
+    "max_connections": 100,
+    "timeout": 30,
+    "log_level": "info",
+    "languages": [
+        "zh", "en", "ja", "ko", "de", "fr", "es", "pt", "ru", "it",
+        "nl", "pl", "tr", "ar", "th", "vi", "id", "ms", "hi", "bn",
+        "ur", "fa", "he", "sv", "no", "da", "fi", "cs"
+    ],
+    "features": {
+        "file_management": true,
+        "multi_language": true,
+        "api_documentation": true
+    }
+}

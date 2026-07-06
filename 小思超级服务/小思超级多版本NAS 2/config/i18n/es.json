@@ -1,0 +1,53 @@
+{
+  "app_name": "Servicio Super NAS Xiaosi",
+  "welcome": "Bienvenido al Servicio Super NAS Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Volúmenes de almacenamiento",
+      "create_volume": "Crear volumen",
+      "delete_volume": "Eliminar volumen",
+      "volume_name": "Nombre del volumen",
+      "volume_path": "Ruta del volumen",
+      "quota": "Cuota (GB)"
+    },
+    "users": {
+      "users": "Usuarios",
+      "create_user": "Crear usuario",
+      "delete_user": "Eliminar usuario",
+      "username": "Nombre de usuario",
+      "password": "Contraseña"
+    },
+    "smb": {
+      "shares": "Compartidos SMB",
+      "create_share": "Crear compartido",
+      "delete_share": "Eliminar compartido",
+      "share_name": "Nombre del compartido",
+      "share_path": "Ruta del compartido"
+    },
+    "ip": {
+      "local_ip": "Direcciones IP locales",
+      "scan_devices": "Escanear dispositivos LAN"
+    },
+    "push": {
+      "push_folder": "Empujar carpeta",
+      "push_targets": "Objetivos de empuje",
+      "add_target": "Agregar objetivo",
+      "push_status": "Estado de empuje",
+      "receive_file": "Recibir archivo"
+    }
+  },
+  "status": {
+    "success": "Operación exitosa",
+    "error": "Operación fallida",
+    "not_found": "Recurso no encontrado",
+    "invalid_params": "Parámetros inválidos"
+  },
+  "menu": {
+    "home": "Inicio",
+    "storage": "Almacenamiento",
+    "users": "Usuarios",
+    "smb": "Compartidos SMB",
+    "push": "Empuje de archivos",
+    "settings": "Configuración"
+  }
+}

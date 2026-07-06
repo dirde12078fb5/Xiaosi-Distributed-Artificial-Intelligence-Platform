@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS Service",
+  "welcome": "Välkommen till Xiaosi Super NAS Service",
+  "api": {
+    "storage": {
+      "volumes": "Lagrings Volumes",
+      "create_volume": "Skapa Volume",
+      "delete_volume": "Ta bort Volume",
+      "volume_name": "Volume namn",
+      "volume_path": "Volume sökväg",
+      "quota": "Kvot (GB)"
+    },
+    "users": {
+      "users": "Användare",
+      "create_user": "Skapa användare",
+      "delete_user": "Ta bort användare",
+      "username": "Användarnamn",
+      "password": "Lösenord"
+    },
+    "smb": {
+      "shares": "SMB Shares",
+      "create_share": "Skapa Share",
+      "delete_share": "Ta bort Share",
+      "share_name": "Share namn",
+      "share_path": "Share sökväg"
+    },
+    "ip": {
+      "local_ip": "Lokala IP Adresser",
+      "scan_devices": "Skanna LAN enheter"
+    },
+    "push": {
+      "push_folder": "Push Folder",
+      "push_targets": "Push targets",
+      "add_target": "Lägg till target",
+      "push_status": "Push status",
+      "receive_file": "Ta emot fil"
+    }
+  },
+  "status": {
+    "success": "Operation successful",
+    "error": "Operation failed",
+    "not_found": "Resource not found",
+    "invalid_params": "Invalid parameters"
+  },
+  "menu": {
+    "home": "Hem",
+    "storage": "Lagring",
+    "users": "Användare",
+    "smb": "SMB Shares",
+    "push": "Fil push",
+    "settings": "Inställningar"
+  }
+}

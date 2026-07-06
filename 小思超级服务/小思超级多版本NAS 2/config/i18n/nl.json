@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS Service",
+  "welcome": "Welkom bij Xiaosi Super NAS Service",
+  "api": {
+    "storage": {
+      "volumes": "Opslag Volumes",
+      "create_volume": "Volume maken",
+      "delete_volume": "Volume verwijderen",
+      "volume_name": "Volume naam",
+      "volume_path": "Volume pad",
+      "quota": "Quota (GB)"
+    },
+    "users": {
+      "users": "Gebruikers",
+      "create_user": "Gebruiker maken",
+      "delete_user": "Gebruiker verwijderen",
+      "username": "Gebruikersnaam",
+      "password": "Wachtwoord"
+    },
+    "smb": {
+      "shares": "SMB Shares",
+      "create_share": "Share maken",
+      "delete_share": "Share verwijderen",
+      "share_name": "Share naam",
+      "share_path": "Share pad"
+    },
+    "ip": {
+      "local_ip": "Lokale IP Adressen",
+      "scan_devices": "LAN apparaten scannen"
+    },
+    "push": {
+      "push_folder": "Folder pushen",
+      "push_targets": "Push targets",
+      "add_target": "Target toevoegen",
+      "push_status": "Push status",
+      "receive_file": "Bestand ontvangen"
+    }
+  },
+  "status": {
+    "success": "Operatie succesvol",
+    "error": "Operatie mislukt",
+    "not_found": "Resource niet gevonden",
+    "invalid_params": "Ongeldige parameters"
+  },
+  "menu": {
+    "home": "Home",
+    "storage": "Opslag",
+    "users": "Gebruikers",
+    "smb": "SMB Shares",
+    "push": "Bestanden pushen",
+    "settings": "Instellingen"
+  }
+}

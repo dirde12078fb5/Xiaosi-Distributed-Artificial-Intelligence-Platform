@@ -1,0 +1,16 @@
+name: xiaosi_nas_server
+version: 2.0.0
+description: 小思超级多版本NAS服务 - Dart实现 (第二代)
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  shelf: ^1.4.0
+  shelf_router: ^1.1.0
+
+dev_dependencies:
+  lints: ^2.0.0
+
+executables:
+  server: bin/server.dart

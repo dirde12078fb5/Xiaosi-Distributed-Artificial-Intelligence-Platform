@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Süper NAS Hizmeti",
+  "welcome": "Xiaosi Süper NAS Hizmetine Hoş Geldiniz",
+  "api": {
+    "storage": {
+      "volumes": "Depolama Volumes",
+      "create_volume": "Volume Oluştur",
+      "delete_volume": "Volume Sil",
+      "volume_name": "Volume Adı",
+      "volume_path": "Volume Yolu",
+      "quota": "Kota (GB)"
+    },
+    "users": {
+      "users": "Kullanıcılar",
+      "create_user": "Kullanıcı Oluştur",
+      "delete_user": "Kullanıcı Sil",
+      "username": "Kullanıcı Adı",
+      "password": "Parola"
+    },
+    "smb": {
+      "shares": "SMB Paylaşımları",
+      "create_share": "Paylaşım Oluştur",
+      "delete_share": "Paylaşım Sil",
+      "share_name": "Paylaşım Adı",
+      "share_path": "Paylaşım Yolu"
+    },
+    "ip": {
+      "local_ip": "Yerel IP Adresleri",
+      "scan_devices": "LAN Cihazları Tarama"
+    },
+    "push": {
+      "push_folder": "Dosya Gönder",
+      "push_targets": "Gönderme Hedefleri",
+      "add_target": "Hedef Ekle",
+      "push_status": "Gönderme Durumu",
+      "receive_file": "Dosya Al"
+    }
+  },
+  "status": {
+    "success": "İşlem Başarılı",
+    "error": "İşlem Başarısız",
+    "not_found": "Kaynak Bulunamadı",
+    "invalid_params": "Geçersiz Parametreler"
+  },
+  "menu": {
+    "home": "Ana Sayfa",
+    "storage": "Depolama",
+    "users": "Kullanıcılar",
+    "smb": "SMB Paylaşımları",
+    "push": "Dosya Gönderme",
+    "settings": "Ayarlar"
+  }
+}
