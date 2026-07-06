@@ -363,6 +363,12 @@ git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intell
 邀请链接: https://gitcode.com/invite/link/cdd051b1807242f69dfc
 过期时间: 2027-02-01
 
+---
+开发者们也欢迎加入：
+邀请人: 小思分布式人工智能平台@dirde12078fb5，邀请您成为 AtomGit 小思分布式人工智能平台 项目开发者
+邀请链接: https://gitcode.com/invite/link/d53b72e65ce9453ab9d3
+过期时间: 2027-06-30
+
 ----
 Made with ❤️ by Xiao Si Ai
 
