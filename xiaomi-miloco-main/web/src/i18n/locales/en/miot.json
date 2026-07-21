@@ -1,6 +1,0 @@
-{
-  "miot": {
-    "opFail": "Couldn't complete the operation ({{op}})",
-    "unassigned": "Unassigned"
-  }
-}

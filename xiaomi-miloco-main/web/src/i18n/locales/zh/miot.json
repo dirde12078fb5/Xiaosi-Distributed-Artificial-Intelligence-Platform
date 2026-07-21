@@ -1,6 +1,0 @@
-{
-  "miot": {
-    "opFail": "操作失败（{{op}}）",
-    "unassigned": "未分配"
-  }
-}
