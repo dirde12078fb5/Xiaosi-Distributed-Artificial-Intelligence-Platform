@@ -1,4 +1,4 @@
-![xiao-si.gif](https://raw.gitcode.com/user-images/assets/9293520/cfb16c5e-3b9e-4673-8be2-ebf715eaecc1/xiao-si.gif 'xiao-si.gif')
+![7月23日.gif](https://raw.gitcode.com/user-images/assets/9293520/1388b96f-1785-4ea7-943a-9302716842dc/7月23日.gif '7月23日.gif')
 
 **<span style="font-size:48px;">小思分布式人工智能平台</span>**
   
@@ -347,7 +347,7 @@ python 内网通服.py && python 外网通服.py
 # 软件下载
 
 [![docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png](https://raw.gitcode.com/user-images/assets/9293520/720ebf73-27c5-4720-93d8-a67094fdc239/docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png 'docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png')
-](https://pan.quark.cn/s/af19527f82eb)提取码：qYWD，
+](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases)
 
 快传群：点击链接即可加入「小思分布式人工智能」夸克网盘群 https://pan.quark.cn/g/8968af6533
 
