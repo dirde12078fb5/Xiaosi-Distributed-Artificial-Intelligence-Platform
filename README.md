@@ -1,6 +1,8 @@
 ![7月23日.gif](https://raw.gitcode.com/user-images/assets/9293520/1388b96f-1785-4ea7-943a-9302716842dc/7月23日.gif '7月23日.gif')
 
-**<span style="font-size:48px;">小思分布式人工智能平台</span>**
+[![AtomGit G-Star](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/star/new_badge.svg)](您的项目链接)
+
+**<span style="font-size:36px;">小思分布式人工智能平台</span>**
   
 
 <div align="center">
@@ -24,7 +26,8 @@
 [![TRAE Latest](https://img.shields.io/badge/TRAE-Latest-42b983?style=rounded)](https://www.trae.cn/)
 [![CodeBuddy Latest](https://img.shields.io/badge/CodeBuddy-Latest-5C5CE0?style=rounded)](https://www.codebuddy.ai/home)
 [![jose 6.2.1](https://img.shields.io/badge/jose-6.2.1-FF7F50?style=rounded)](https://github.com/panva/jose)
-
+[![AtomGit Download](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/download/badge.svg)](您的项目链接)
+  
 </div>
 
 ## Stargazers over time
