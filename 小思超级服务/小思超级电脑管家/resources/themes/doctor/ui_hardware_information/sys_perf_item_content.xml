@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Window>
-	<VBox margin="5,0,5,0" valign="center" halign="center" width="stretch" height="stretch">
-		<DrawControl class="sys_perf_draw_ctrl" name="usage_draw"/>
-	</VBox>
-</Window>

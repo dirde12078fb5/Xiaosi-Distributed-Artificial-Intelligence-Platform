@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Window>
-	<ListContainerElement class="listitem" name="list_item" width="125" height="auto" mouse="false">
-		<HBox margin="0,0,0,0" padding="0,0,0,0" mouse="false">
-			<Button class="proc_info_header" name="proc_info_title_gpu_header" width="125"/>
-		</HBox>
-	</ListContainerElement>
-</Window>

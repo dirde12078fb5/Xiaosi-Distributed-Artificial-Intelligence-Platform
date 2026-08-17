@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Window>
-    <Box margin="0,0,0,0" valign="center" halign="center" width="stretch" height="stretch">
-        <VBox width="stretch" height="stretch" bkcolor="white">
-            <HListBox name="tab_list" width="auto" height="auto"/>
-            <Box name="tab_content" width="stretch" height="stretch" bkcolor="tab_background_color"/>
-        </VBox>
-    </Box>
-</Window>
