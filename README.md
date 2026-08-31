@@ -230,6 +230,37 @@ go run cmd/server/main.go
 
 ---
 
+## 📋 版本历史与功能对照
+
+> 各版本详细发布记录与下载见 Release 页面：
+> https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases
+
+### 版本线一览
+
+| 系列 | 版本 | 定位 | 支持平台 |
+|---|---|---|---|
+| 数字系列 | 11 系列 | 标准版，稳定够用 | Windows 10/11、Windows Server 2019/2022 |
+| ULTRA 系列 | 11 ULTRA X3D | 旗舰版，功能最全 | 上述 + Linux、macOS、iOS |
+| NEXT 系列 | NEXT 1 2025 | 非正式版本，安装包一体性 | Windows 11 / Windows 11 专业版 |
+
+### 各版本功能对照
+
+| 功能 | 基础版 | Pro Max X3D | Ultra X3D | NEXT |
+|---|:---:|:---:|:---:|:---:|
+| 一站式工具箱 | ✅ | ✅ | ✅ | ✅ |
+| 多线程下载 | 基础 | 线程池并发 | 断点续传 | ✅ |
+| 硬件检测（CPU/GPU） | 基础 | 深度 | 深度+ | ✅ |
+| 系统监控仪表盘 | ✅ | ✅ | ✅ | ✅ |
+| 监控日志缓存 | — | ✅ | ✅ | ✅ |
+| UI 美化 | 基础 | ✅ | ✅ | ✅ |
+| 跨平台（Linux/macOS） | — | ✅ | ✅ | — |
+| iOS 远程访问 | — | — | ✅ | — |
+| 一体化安装包 | — | — | — | ✅ |
+
+> 选型建议：日常 Windows 使用选 **基础版**；要跨平台 + 多线程选 **Pro Max X3D**；要 iOS 远程 + 全功能选 **Ultra X3D**；追求一体化安装包选 **NEXT**。
+
+---
+
 ## 📸 软件展示
 
 ![输入图片说明](image.png)
