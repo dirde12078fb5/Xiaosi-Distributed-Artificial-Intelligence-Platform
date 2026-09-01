@@ -267,7 +267,10 @@ go run cmd/server/main.go
 
 ![852zd-kflc2.gif](https://raw.gitcode.com/user-images/assets/9293520/9f7e0039-895b-4d7e-b14b-d06c97995a79/852zd-kflc2.gif '852zd-kflc2.gif')
 
-![输入图片说明](image.png)
+<span style="font-size:32px;">搭载第五代 GEN 架构</span>
+<span style="font-size:32px;">第十二代©小思分布式人工智能多功能平台</span>
+
+![屏幕截图 2026-09-02 000200.png](https://raw.gitcode.com/user-images/assets/9293520/054f1b57-d8b4-43cc-9e90-6bc88b63263a/屏幕截图_2026-09-02_000200.png '屏幕截图 2026-09-02 000200.png')
 
 <span style="font-size:32px;">小思超级电脑管家</span>（2026 年 10 月发布）
 
@@ -277,7 +280,12 @@ go run cmd/server/main.go
 
 ## 📥 软件下载
 
+[![Windows 下载](https://raw.gitcode.com/user-images/assets/9293520/720ebf73-27c5-4720-93d8-a67094fdc239/docs_content_public_assets_download-buttons_download-buttons.windows.dark.zh-Hans.png)](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/releases)
+
+
 [![Linux 下载](https://raw.gitcode.com/user-images/assets/9293520/9eba84b9-e9fe-487a-93ca-54a5f0e76064/docs_content_public_assets_download-buttons_download-buttons.linux.dark.zh-Hans.png)](https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform.git)
+
+---
 
 ```bash
 git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform.git
