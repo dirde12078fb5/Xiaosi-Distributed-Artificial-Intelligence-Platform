@@ -263,15 +263,15 @@ go run cmd/server/main.go
 
 ## 📸 软件展示
 
+<span style="font-size:32px;">第五代 GEN 架构</span>（即将发布）
+
+![852zd-kflc2.gif](https://raw.gitcode.com/user-images/assets/9293520/9f7e0039-895b-4d7e-b14b-d06c97995a79/852zd-kflc2.gif '852zd-kflc2.gif')
+
 ![输入图片说明](image.png)
 
 <span style="font-size:32px;">小思超级电脑管家</span>（2026 年 10 月发布）
 
 ![屏幕录制-2026-06-13-194220-Trim.gif](https://raw.gitcode.com/user-images/assets/9293520/c4654bcd-a2ae-49d2-808c-a80c00f5e919/屏幕录制-2026-06-13-194220-Trim.gif '屏幕录制-2026-06-13-194220-Trim.gif')
-
-<span style="font-size:32px;">第五代 GEN 架构</span>（2027 年元旦）
-
-![852zd-kflc2.gif](https://raw.gitcode.com/user-images/assets/9293520/9f7e0039-895b-4d7e-b14b-d06c97995a79/852zd-kflc2.gif '852zd-kflc2.gif')
 
 ---
 
