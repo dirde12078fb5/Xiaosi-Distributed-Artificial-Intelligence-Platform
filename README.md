@@ -1,4 +1,4 @@
-**<span style="font-size:48px;">![7月23日.gif](https://raw.gitcode.com/user-images/assets/9293520/1388b96f-1785-4ea7-943a-9302716842dc/7月23日.gif '7月23日.gif')</span>**
+![7月23日_横向拉长.gif](https://raw.gitcode.com/user-images/assets/9293520/38ca697b-1f19-412c-9570-ec826855614e/7月23日_横向拉长.gif '7月23日_横向拉长.gif')
 
 <div align="center">
 
