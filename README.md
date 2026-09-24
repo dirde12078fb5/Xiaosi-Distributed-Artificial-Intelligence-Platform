@@ -263,11 +263,11 @@ go run cmd/server/main.go
 
 ## 📸 软件展示
 
-<span style="font-size:32px;">第五代 GEN 架构</span>（即将发布）
+<span style="font-size:32px;">第五代 GEN 架构</span>（已发布，技术以应用在4.26.4.24版本中）
 
 ![852zd-kflc2.gif](https://raw.gitcode.com/user-images/assets/9293520/9f7e0039-895b-4d7e-b14b-d06c97995a79/852zd-kflc2.gif '852zd-kflc2.gif')
 
-<span style="font-size:32px;">搭载第五代 GEN 架构</span>
+<span style="font-size:32px;">首发搭载第五代 GEN 架构</span>
 <span style="font-size:32px;">第十二代©小思分布式人工智能多功能平台</span>
 
 ![屏幕截图 2026-09-02 000200.png](https://raw.gitcode.com/user-images/assets/9293520/054f1b57-d8b4-43cc-9e90-6bc88b63263a/屏幕截图_2026-09-02_000200.png '屏幕截图 2026-09-02 000200.png')
