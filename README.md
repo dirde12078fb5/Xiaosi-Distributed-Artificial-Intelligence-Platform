@@ -272,7 +272,7 @@ go run cmd/server/main.go
 
 ![屏幕截图 2026-09-02 000200.png](https://raw.gitcode.com/user-images/assets/9293520/054f1b57-d8b4-43cc-9e90-6bc88b63263a/屏幕截图_2026-09-02_000200.png '屏幕截图 2026-09-02 000200.png')
 
-<span style="font-size:32px;">小思超级电脑管家</span>（2026 年 10 月发布）
+<span style="font-size:32px;">小思超级电脑管家</span>（2026 年 10 月已发布）
 
 ![屏幕录制-2026-06-13-194220-Trim.gif](https://raw.gitcode.com/user-images/assets/9293520/c4654bcd-a2ae-49d2-808c-a80c00f5e919/屏幕录制-2026-06-13-194220-Trim.gif '屏幕录制-2026-06-13-194220-Trim.gif')
 
@@ -316,6 +316,8 @@ git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intell
 
 <div align="center">
 
-Made with ❤️ by Xiao Si Ai ｜ Made in Xiaosi Distributed Artificial Intelligence
+社会贡献及版权证书
+  ![屏幕截图 2026-10-13 212553.png](https://raw.gitcode.com/user-images/assets/9293520/ce1a5477-94c3-4e26-a53a-dc77a98ea5d6/屏幕截图_2026-10-13_212553.png '屏幕截图 2026-10-13 212553.png')
+  
 
 </div>
