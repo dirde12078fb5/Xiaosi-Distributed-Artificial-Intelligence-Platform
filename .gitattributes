@@ -1,3 +1,6 @@
 ComfyUI_windows_portable_nvidia.7z filter=lfs diff=lfs merge=lfs -text
 软件本体/*.exe filter=lfs diff=lfs merge=lfs -text
 DLSS/*.exe filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.iso filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.exe filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.tar.xz filter=lfs diff=lfs merge=lfs -text
