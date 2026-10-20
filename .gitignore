@@ -1,0 +1,29 @@
+# 大型二进制安装包与可执行文件（体积过大，不纳入版本控制）
+软件本体/
+DLSS/
+
+# 依赖与构建产物
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
+*.egg-info/
+
+# 运行时数据与日志
+*.log
+logs/
+*.tmp
+*.cache
+
+# 环境与配置
+.env
+.venv/
+venv/
+config.local.json
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
