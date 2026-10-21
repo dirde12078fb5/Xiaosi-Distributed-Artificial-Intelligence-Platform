@@ -4,3 +4,11 @@ DLSS/*.exe filter=lfs diff=lfs merge=lfs -text
 镜像/**/*.iso filter=lfs diff=lfs merge=lfs -text
 镜像/**/*.exe filter=lfs diff=lfs merge=lfs -text
 镜像/**/*.tar.xz filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.dmg filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.xz filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.ova filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.qcow2 filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.vhd filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.vhdx filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.7z filter=lfs diff=lfs merge=lfs -text
+镜像/**/*.7z.* filter=lfs diff=lfs merge=lfs -text
