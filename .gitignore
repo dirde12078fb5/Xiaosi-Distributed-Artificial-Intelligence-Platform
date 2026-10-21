@@ -23,3 +23,19 @@ config.local.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 系统镜像与大体积二进制：仅本地保留，不再通过网络传输入库
+# 原因：gitcode LFS 单文件上限约 2.5GB、仓库 LFS 配额 2.0GiB
+镜像/**/*.iso
+镜像/**/*.img
+镜像/**/*.exe
+镜像/**/*.tar.xz
+镜像/**/*.xz
+镜像/**/*.dmg
+镜像/**/*.ova
+镜像/**/*.qcow2
+镜像/**/*.vhd
+镜像/**/*.vhdx
+镜像/**/*.7z
+镜像/**/*.7z.*
+镜像/**/*.aria2
