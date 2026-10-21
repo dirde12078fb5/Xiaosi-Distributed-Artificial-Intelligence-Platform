@@ -1,0 +1,24 @@
+{
+  "name": "xiaosi-nas-server",
+  "version": "2.0.0",
+  "description": "小思超级多版本NAS服务 - Node.js实现",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "nas",
+    "storage",
+    "smb",
+    "xiaosi"
+  ],
+  "author": "Xiaosi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

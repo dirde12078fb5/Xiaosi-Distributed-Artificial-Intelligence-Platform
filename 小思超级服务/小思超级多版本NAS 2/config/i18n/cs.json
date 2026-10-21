@@ -1,0 +1,53 @@
+{
+  "app_name": "Služba Super NAS Xiaosi",
+  "welcome": "Vítejte ve službě Super NAS Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Světové svazky",
+      "create_volume": "Vytvořit svazek",
+      "delete_volume": "Smazat svazek",
+      "volume_name": "Název svazku",
+      "volume_path": "Cesta svazku",
+      "quota": "Kvóta (GB)"
+    },
+    "users": {
+      "users": "Uživatelé",
+      "create_user": "Vytvořit uživatele",
+      "delete_user": "Smazat uživatele",
+      "username": "Uživatelské jméno",
+      "password": "Heslo"
+    },
+    "smb": {
+      "shares": "SMB sdílení",
+      "create_share": "Vytvořit sdílení",
+      "delete_share": "Smazat sdílení",
+      "share_name": "Název sdílení",
+      "share_path": "Cesta sdílení"
+    },
+    "ip": {
+      "local_ip": "Lokální IP adresy",
+      "scan_devices": "Skenovat zařízení LAN"
+    },
+    "push": {
+      "push_folder": "Odeslat složku",
+      "push_targets": "Cíle odesílání",
+      "add_target": "Přidat cíl",
+      "push_status": "Stav odesílání",
+      "receive_file": "Přijmout soubor"
+    }
+  },
+  "status": {
+    "success": "Operace úspěšná",
+    "error": "Operace selhala",
+    "not_found": "Zdroj nenalezen",
+    "invalid_params": "Neplatné parametry"
+  },
+  "menu": {
+    "home": "Domů",
+    "storage": "Úložiště",
+    "users": "Uživatelé",
+    "smb": "SMB sdílení",
+    "push": "Odesílání souborů",
+    "settings": "Nastavení"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "app_name": "שירות NAS סופר Xiaosi",
+  "welcome": "ברוכים הבאים לשירות NAS סופר Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "נפחי אחסון",
+      "create_volume": "יצירת נפח",
+      "delete_volume": "מחיקת נפח",
+      "volume_name": "שם הנפח",
+      "volume_path": "נתיב הנפח",
+      "quota": "מכסה (GB)"
+    },
+    "users": {
+      "users": "משתמשים",
+      "create_user": "יצירת משתמש",
+      "delete_user": "מחיקת משתמש",
+      "username": "שם משתמש",
+      "password": "סיסמה"
+    },
+    "smb": {
+      "shares": "שיתופי SMB",
+      "create_share": "יצירת שיתוף",
+      "delete_share": "מחיקת שיתוף",
+      "share_name": "שם השיתוף",
+      "share_path": "נתיב השיתוף"
+    },
+    "ip": {
+      "local_ip": "כתובות IP מקומיות",
+      "scan_devices": "סריקת מכשירי LAN"
+    },
+    "push": {
+      "push_folder": "דחיפת תיקייה",
+      "push_targets": "יעדי דחיפה",
+      "add_target": "הוספת יעד",
+      "push_status": "סטטוס דחיפה",
+      "receive_file": "קבלת קובץ"
+    }
+  },
+  "status": {
+    "success": "פעולה הצליחה",
+    "error": "פעולה נכשלה",
+    "not_found": "משאב לא נמצא",
+    "invalid_params": "פרמטרים לא תקינים"
+  },
+  "menu": {
+    "home": "בית",
+    "storage": "אחסון",
+    "users": "משתמשים",
+    "smb": "שיתופי SMB",
+    "push": "דחיפת קבצים",
+    "settings": "הגדרות"
+  }
+}

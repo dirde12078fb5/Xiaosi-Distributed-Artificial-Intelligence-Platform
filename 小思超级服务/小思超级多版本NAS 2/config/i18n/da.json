@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS Service",
+  "welcome": "Velkommen til Xiaosi Super NAS Service",
+  "api": {
+    "storage": {
+      "volumes": "Lager Volumes",
+      "create_volume": "Opret Volume",
+      "delete_volume": "Slet Volume",
+      "volume_name": "Volume navn",
+      "volume_path": "Volume sti",
+      "quota": "Kvote (GB)"
+    },
+    "users": {
+      "users": "Brugere",
+      "create_user": "Opret bruger",
+      "delete_user": "Slet bruger",
+      "username": "Brugernavn",
+      "password": "Adgangskode"
+    },
+    "smb": {
+      "shares": "SMB Shares",
+      "create_share": "Opret Share",
+      "delete_share": "Slet Share",
+      "share_name": "Share navn",
+      "share_path": "Share sti"
+    },
+    "ip": {
+      "local_ip": "Lokale IP Adresser",
+      "scan_devices": "Scan LAN enheder"
+    },
+    "push": {
+      "push_folder": "Push Folder",
+      "push_targets": "Push targets",
+      "add_target": "Tilføj target",
+      "push_status": "Push status",
+      "receive_file": "Modtag fil"
+    }
+  },
+  "status": {
+    "success": "Operation successful",
+    "error": "Operation failed",
+    "not_found": "Resource not found",
+    "invalid_params": "Invalid parameters"
+  },
+  "menu": {
+    "home": "Hjem",
+    "storage": "Lager",
+    "users": "Brugere",
+    "smb": "SMB Shares",
+    "push": "Fil push",
+    "settings": "Indstillinger"
+  }
+}

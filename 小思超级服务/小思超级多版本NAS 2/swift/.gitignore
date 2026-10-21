@@ -1,0 +1,49 @@
+# Swift build artifacts
+.build/
+Packages/
+Package.resolved
+*.xcodeproj
+DerivedData/
+
+# SwiftPM
+.swiftpm/
+
+# Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+nas-server
+
+# Libraries
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# Test results
+*.test-result
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data directories (keep structure but ignore contents)
+nas_data/**/*
+!nas_data/.gitkeep

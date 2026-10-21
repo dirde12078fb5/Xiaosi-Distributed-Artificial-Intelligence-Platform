@@ -1,0 +1,53 @@
+{
+  "app_name": "小思スーパーNASサービス",
+  "welcome": "小思スーパーNASサービスへようこそ",
+  "api": {
+    "storage": {
+      "volumes": "ストレージボリューム",
+      "create_volume": "ボリューム作成",
+      "delete_volume": "ボリューム削除",
+      "volume_name": "ボリューム名",
+      "volume_path": "ボリュームパス",
+      "quota": "容量制限(GB)"
+    },
+    "users": {
+      "users": "ユーザー一覧",
+      "create_user": "ユーザー作成",
+      "delete_user": "ユーザー削除",
+      "username": "ユーザー名",
+      "password": "パスワード"
+    },
+    "smb": {
+      "shares": "SMB共有",
+      "create_share": "共有作成",
+      "delete_share": "共有削除",
+      "share_name": "共有名",
+      "share_path": "共有パス"
+    },
+    "ip": {
+      "local_ip": "ローカルIPアドレス",
+      "scan_devices": "LANデバイススキャン"
+    },
+    "push": {
+      "push_folder": "フォルダプッシュ",
+      "push_targets": "プッシュターゲット",
+      "add_target": "ターゲット追加",
+      "push_status": "プッシュ状態",
+      "receive_file": "ファイル受信"
+    }
+  },
+  "status": {
+    "success": "操作成功",
+    "error": "操作失敗",
+    "not_found": "リソースが見つかりません",
+    "invalid_params": "パラメータが無効です"
+  },
+  "menu": {
+    "home": "ホーム",
+    "storage": "ストレージ",
+    "users": "ユーザー",
+    "smb": "SMB共有",
+    "push": "ファイルプッシュ",
+    "settings": "設定"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "app_name": "Usługa Super NAS Xiaosi",
+  "welcome": "Witamy w usłudze Super NAS Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Woluminy pamięci",
+      "create_volume": "Utwórz wolumin",
+      "delete_volume": "Usuń wolumin",
+      "volume_name": "Nazwa woluminu",
+      "volume_path": "Ścieżka woluminu",
+      "quota": "Przydział (GB)"
+    },
+    "users": {
+      "users": "Użytkownicy",
+      "create_user": "Utwórz użytkownika",
+      "delete_user": "Usuń użytkownika",
+      "username": "Nazwa użytkownika",
+      "password": "Hasło"
+    },
+    "smb": {
+      "shares": "Udziały SMB",
+      "create_share": "Utwórz udział",
+      "delete_share": "Usuń udział",
+      "share_name": "Nazwa udziału",
+      "share_path": "Ścieżka udziału"
+    },
+    "ip": {
+      "local_ip": "Lokalne adresy IP",
+      "scan_devices": "Skanuj urządzenia LAN"
+    },
+    "push": {
+      "push_folder": "Wyślij folder",
+      "push_targets": "Cele wysyłania",
+      "add_target": "Dodaj cel",
+      "push_status": "Status wysyłania",
+      "receive_file": "Odbierz plik"
+    }
+  },
+  "status": {
+    "success": "Operacja zakończona pomyślnie",
+    "error": "Operacja nie powiodła się",
+    "not_found": "Nie znaleziono zasobu",
+    "invalid_params": "Nieprawidłowe parametry"
+  },
+  "menu": {
+    "home": "Strona główna",
+    "storage": "Pamięć",
+    "users": "Użytkownicy",
+    "smb": "Udziały SMB",
+    "push": "Wysyłanie plików",
+    "settings": "Ustawienia"
+  }
+}

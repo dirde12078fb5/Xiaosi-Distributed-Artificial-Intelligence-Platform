@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS Szolgáltatás",
+  "welcome": "Üdvözöljük a Xiaosi Super NAS Szolgáltatásban",
+  "api": {
+    "storage": {
+      "volumes": "Tárolási Volumes",
+      "create_volume": "Volume létrehozása",
+      "delete_volume": "Volume törlése",
+      "volume_name": "Volume neve",
+      "volume_path": "Volume útvonal",
+      "quota": "Kvóta (GB)"
+    },
+    "users": {
+      "users": "Felhasználók",
+      "create_user": "Felhasználó létrehozása",
+      "delete_user": "Felhasználó törlése",
+      "username": "Felhasználónév",
+      "password": "Jelszó"
+    },
+    "smb": {
+      "shares": "SMB Megosztások",
+      "create_share": "Megosztás létrehozása",
+      "delete_share": "Megosztás törlése",
+      "share_name": "Megosztás neve",
+      "share_path": "Megosztás útvonal"
+    },
+    "ip": {
+      "local_ip": "Helyi IP Címek",
+      "scan_devices": "LAN eszközök keresése"
+    },
+    "push": {
+      "push_folder": "Folder küldése",
+      "push_targets": "Küldési célpontok",
+      "add_target": "Célpont hozzáadása",
+      "push_status": "Küldés státusz",
+      "receive_file": "Fájl fogadása"
+    }
+  },
+  "status": {
+    "success": "Művelet sikeres",
+    "error": "Művelet sikertelen",
+    "not_found": "Erőforrás nem található",
+    "invalid_params": "Érvénytelen paraméterek"
+  },
+  "menu": {
+    "home": "Főoldal",
+    "storage": "Tárolás",
+    "users": "Felhasználók",
+    "smb": "SMB Megosztások",
+    "push": "Fájl küldés",
+    "settings": "Beállítások"
+  }
+}

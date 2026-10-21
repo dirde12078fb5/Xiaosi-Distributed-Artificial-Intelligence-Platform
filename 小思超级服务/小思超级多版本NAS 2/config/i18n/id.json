@@ -1,0 +1,53 @@
+{
+  "app_name": "Layanan NAS Super Xiaosi",
+  "welcome": "Selamat datang di Layanan NAS Super Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Volumes Penyimpanan",
+      "create_volume": "Buat Volume",
+      "delete_volume": "Hapus Volume",
+      "volume_name": "Nama Volume",
+      "volume_path": "Jalur Volume",
+      "quota": "Kuota (GB)"
+    },
+    "users": {
+      "users": "Pengguna",
+      "create_user": "Buat Pengguna",
+      "delete_user": "Hapus Pengguna",
+      "username": "Nama Pengguna",
+      "password": "Kata Sandi"
+    },
+    "smb": {
+      "shares": "Berbagi SMB",
+      "create_share": "Buat Berbagi",
+      "delete_share": "Hapus Berbagi",
+      "share_name": "Nama Berbagi",
+      "share_path": "Jalur Berbagi"
+    },
+    "ip": {
+      "local_ip": "Alamat IP Lokal",
+      "scan_devices": "Pindai Perangkat LAN"
+    },
+    "push": {
+      "push_folder": "Push Folder",
+      "push_targets": "Target Push",
+      "add_target": "Tambah Target",
+      "push_status": "Status Push",
+      "receive_file": "Terima File"
+    }
+  },
+  "status": {
+    "success": "Operasi Berhasil",
+    "error": "Operasi Gagal",
+    "not_found": "Sumber Daya Tidak Ditemukan",
+    "invalid_params": "Parameter Tidak Valid"
+  },
+  "menu": {
+    "home": "Beranda",
+    "storage": "Penyimpanan",
+    "users": "Pengguna",
+    "smb": "Berbagi SMB",
+    "push": "Push File",
+    "settings": "Pengaturan"
+  }
+}

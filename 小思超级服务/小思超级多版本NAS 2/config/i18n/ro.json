@@ -1,0 +1,53 @@
+{
+  "app_name": "Serviciu NAS Super Xiaosi",
+  "welcome": "Bine ați venit la Serviciu NAS Super Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Volume de stocare",
+      "create_volume": "Creare Volume",
+      "delete_volume": "Ștergere Volume",
+      "volume_name": "Nume Volume",
+      "volume_path": "Cale Volume",
+      "quota": "Limită (GB)"
+    },
+    "users": {
+      "users": "Utilizatori",
+      "create_user": "Creare utilizator",
+      "delete_user": "Ștergere utilizator",
+      "username": "Nume utilizator",
+      "password": "Parolă"
+    },
+    "smb": {
+      "shares": "Partajări SMB",
+      "create_share": "Creare partajare",
+      "delete_share": "Ștergere partajare",
+      "share_name": "Nume partajare",
+      "share_path": "Cale partajare"
+    },
+    "ip": {
+      "local_ip": "Adrese IP locale",
+      "scan_devices": "Scanare dispozitive LAN"
+    },
+    "push": {
+      "push_folder": "Trimitere folder",
+      "push_targets": "Destinații trimitere",
+      "add_target": "Adăugare destinație",
+      "push_status": "Status trimitere",
+      "receive_file": "Recepție fișier"
+    }
+  },
+  "status": {
+    "success": "Operație reușită",
+    "error": "Operație nereușită",
+    "not_found": "Resursă nu există",
+    "invalid_params": "Parametri invalide"
+  },
+  "menu": {
+    "home": "Acasă",
+    "storage": "Stocare",
+    "users": "Utilizatori",
+    "smb": "Partajări SMB",
+    "push": "Trimitere fișiere",
+    "settings": "Setări"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "app_name": "Servizio Super NAS Xiaosi",
+  "welcome": "Benvenuto nel Servizio Super NAS Xiaosi",
+  "api": {
+    "storage": {
+      "volumes": "Volumi di archiviazione",
+      "create_volume": "Crea volume",
+      "delete_volume": "Elimina volume",
+      "volume_name": "Nome volume",
+      "volume_path": "Percorso volume",
+      "quota": "Quota (GB)"
+    },
+    "users": {
+      "users": "Utenti",
+      "create_user": "Crea utente",
+      "delete_user": "Elimina utente",
+      "username": "Nome utente",
+      "password": "Password"
+    },
+    "smb": {
+      "shares": "Condivisioni SMB",
+      "create_share": "Crea condivisione",
+      "delete_share": "Elimina condivisione",
+      "share_name": "Nome condivisione",
+      "share_path": "Percorso condivisione"
+    },
+    "ip": {
+      "local_ip": "Indirizzi IP locali",
+      "scan_devices": "Scansiona dispositivi LAN"
+    },
+    "push": {
+      "push_folder": "Spingi cartella",
+      "push_targets": "Destinazioni push",
+      "add_target": "Aggiungi destinazione",
+      "push_status": "Stato push",
+      "receive_file": "Ricevi file"
+    }
+  },
+  "status": {
+    "success": "Operazione riuscita",
+    "error": "Operazione fallita",
+    "not_found": "Risorsa non trovata",
+    "invalid_params": "Parametri non validi"
+  },
+  "menu": {
+    "home": "Home",
+    "storage": "Archiviazione",
+    "users": "Utenti",
+    "smb": "Condivisioni SMB",
+    "push": "Push file",
+    "settings": "Impostazioni"
+  }
+}

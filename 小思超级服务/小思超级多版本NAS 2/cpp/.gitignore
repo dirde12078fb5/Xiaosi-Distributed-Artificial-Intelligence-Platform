@@ -1,0 +1,44 @@
+# 构建目录
+build/
+cmake-build-*/
+out/
+
+# 可执行文件
+*.exe
+*.out
+*.app
+nas_server
+nas_server.exe
+
+# 第三方库（可选）
+# third_party/
+
+# 配置文件（可选）
+# config/config.json
+
+# 日志文件
+*.log
+logs/
+
+# 数据目录
+data/
+uploads/
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CMake缓存
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db

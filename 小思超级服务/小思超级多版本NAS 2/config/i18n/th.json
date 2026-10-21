@@ -1,0 +1,53 @@
+{
+  "app_name": "Xiaosi Super NAS Service",
+  "welcome": "ยินดีต้อนรับสู่ Xiaosi Super NAS Service",
+  "api": {
+    "storage": {
+      "volumes": "Volumes จัดเก็บข้อมูล",
+      "create_volume": "สร้าง Volume",
+      "delete_volume": "ลบ Volume",
+      "volume_name": "ชื่อ Volume",
+      "volume_path": "เส้นทาง Volume",
+      "quota": "โควต้า (GB)"
+    },
+    "users": {
+      "users": "ผู้ใช้",
+      "create_user": "สร้างผู้ใช้",
+      "delete_user": "ลบผู้ใช้",
+      "username": "ชื่อผู้ใช้",
+      "password": "รหัสผ่าน"
+    },
+    "smb": {
+      "shares": "การแชร์ SMB",
+      "create_share": "สร้างการแชร์",
+      "delete_share": "ลบการแชร์",
+      "share_name": "ชื่อการแชร์",
+      "share_path": "เส้นทางการแชร์"
+    },
+    "ip": {
+      "local_ip": "IP Addresses ท้องถิ่น",
+      "scan_devices": "สแกนอุปกรณ์ LAN"
+    },
+    "push": {
+      "push_folder": "Push Folder",
+      "push_targets": "Push Targets",
+      "add_target": "เพิ่ม Target",
+      "push_status": "Push Status",
+      "receive_file": "รับไฟล์"
+    }
+  },
+  "status": {
+    "success": "ดำเนินการสำเร็จ",
+    "error": "ดำเนินการไม่สำเร็จ",
+    "not_found": "ไม่พบทรัพยากร",
+    "invalid_params": "พารามิเตอร์ไม่ถูกต้อง"
+  },
+  "menu": {
+    "home": "หน้าหลัก",
+    "storage": "การจัดเก็บ",
+    "users": "ผู้ใช้",
+    "smb": "การแชร์ SMB",
+    "push": "Push ไฟล์",
+    "settings": "การตั้งค่า"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "language": "zh_CN"
+  },
+  "storage": {
+    "volumes": [
+      {
+        "name": "data",
+        "path": "/mnt/data",
+        "quota_gb": 1000
+      }
+    ]
+  },
+  "smb": {
+    "enabled": true,
+    "port": 445,
+    "workgroup": "WORKGROUP"
+  },
+  "i18n": {
+    "default": "zh_CN",
+    "supported": ["zh_CN", "zh_TW", "en_US", "en_GB", "ja_JP", "ko_KR", "fr_FR", "de_DE", "es_ES", "it_IT", "pt_BR", "ru_RU", "ar_SA", "hi_IN", "tr_TR", "th_TH", "vi_VN", "id_ID", "nl_NL", "pl_PL", "sv_SE", "da_DK", "fi_FI", "he_IL", "hu_HU", "cs_CZ", "uk_UA", "ro_RO"]
+  }
+}
