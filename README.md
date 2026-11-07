@@ -319,5 +319,7 @@ git clone https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intell
 社会贡献及版权证书
   ![屏幕截图 2026-10-13 212553.png](https://raw.gitcode.com/user-images/assets/9293520/ce1a5477-94c3-4e26-a53a-dc77a98ea5d6/屏幕截图_2026-10-13_212553.png '屏幕截图 2026-10-13 212553.png')
   
+  ![屏幕截图 2026-11-07 191549.png](https://raw.gitcode.com/user-images/assets/9293520/4dd721cd-0613-45b2-91b8-a124498c0f36/屏幕截图_2026-11-07_191549.png '屏幕截图 2026-11-07 191549.png')
+  
 
 </div>
