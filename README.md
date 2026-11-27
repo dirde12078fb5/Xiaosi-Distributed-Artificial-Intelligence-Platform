@@ -19,16 +19,16 @@
   <p>把散落在桌面各处的开发与运维工具，收进一个不卡顿的桌面平台。</p>
 
   <p>
-    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.14-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.14" /></a>
-    <img src="https://img.shields.io/badge/平台-Windows%20%7C%20Linux%20%7C%20macOS-555?style=flat-square" alt="Windows / Linux / macOS" />
-    <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-3da639?style=flat-square" alt="MIT License" /></a>
-    <a href="#languages"><img src="https://img.shields.io/badge/Languages-22-8b5cf6?style=flat-square" alt="22 种语言" /></a>
+    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.14" /></a>
+    <img src="https://img.shields.io/badge/平台-Windows%20%7C%20Linux%20%7C%20macOS-555?style=for-the-badge" alt="Windows / Linux / macOS" />
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-3da639?style=for-the-badge" alt="MIT License" /></a>
+    <a href="#languages"><img src="https://img.shields.io/badge/Languages-22-8b5cf6?style=for-the-badge" alt="22 种语言" /></a>
   </p>
 
   <p>
     <a href="assets/screenshots/core.png"><img src="assets/screenshots/core.png" width="900" alt="小思分布式人工智能多功能平台 12 Ultra X3D RTX Spark 核心功能界面" /></a>
   </p>
-  <p><sub>小思分布式人工智能多功能平台 12 Ultra X3D RTX Spark（第十二代），首发搭载第五代 GEN 架构。</sub></p>
+  <p>小思分布式人工智能多功能平台 12 Ultra X3D RTX Spark（第十二代），首发搭载第五代 GEN 架构。</p>
 </div>
 
 小思分布式人工智能平台是一个用 Python `tkinter` 构建的桌面平台。桌面工具箱、多线程下载器、硬件检测、系统监控，以及网络、视觉、服务与大模型管理，共用同一个窗口；检测与下载在后台线程执行，界面不会因为扫描硬件而卡住。
@@ -39,54 +39,56 @@
   <tr>
     <td width="50%" valign="top">
       <a href="assets/screenshots/hardware.png"><img src="assets/screenshots/hardware.png" width="100%" alt="硬件检测界面" /></a>
-      <p align="center"><sub>硬件检测：内存、GPU 与 CPU 实时仪表盘。</sub></p>
+      <p align="center">硬件检测：内存、GPU 与 CPU 实时仪表盘。</p>
     </td>
     <td width="50%" valign="top">
       <a href="assets/screenshots/monitor.png"><img src="assets/screenshots/monitor.png" width="100%" alt="实时监控界面" /></a>
-      <p align="center"><sub>实时监控：与 Windows 任务管理器同源采集，每秒刷新。</sub></p>
+      <p align="center">实时监控：与 Windows 任务管理器同源采集，每秒刷新。</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <a href="assets/screenshots/agent.png"><img src="assets/screenshots/agent.png" width="100%" alt="Agent 智能体界面" /></a>
-      <p align="center"><sub>Agent 智能体：本地大模型工作台，支持 LM Studio / Ollama 与 OpenAI 兼容 API。</sub></p>
+      <p align="center">Agent 智能体：本地大模型工作台，支持 LM Studio / Ollama 与 OpenAI 兼容 API。</p>
     </td>
     <td width="50%" valign="top">
       <a href="assets/screenshots/network-pro.png"><img src="assets/screenshots/network-pro.png" width="100%" alt="超级网络 PRO 界面" /></a>
-      <p align="center"><sub>超级网络 PRO：网络信息与 P2P / HTTP / HTTPS 服务管理。</sub></p>
+      <p align="center">超级网络 PRO：网络信息与 P2P / HTTP / HTTPS 服务管理。</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <a href="assets/screenshots/nas.png"><img src="assets/screenshots/nas.png" width="100%" alt="NAS 服务界面" /></a>
-      <p align="center"><sub>NAS 服务：外网接口、HTTP / HTTPS / FTP 与组网管理。</sub></p>
+      <p align="center">NAS 服务：外网接口、HTTP / HTTPS / FTP 与组网管理。</p>
     </td>
     <td width="50%" valign="top">
       <a href="assets/screenshots/files.png"><img src="assets/screenshots/files.png" width="100%" alt="文件管理界面" /></a>
-      <p align="center"><sub>文件管理：本地目录浏览、复制、剪切与重命名。</sub></p>
+      <p align="center">文件管理：本地目录浏览、复制、剪切与重命名。</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <a href="assets/screenshots/security.png"><img src="assets/screenshots/security.png" width="100%" alt="安全中心界面" /></a>
-      <p align="center"><sub>安全中心：系统安全信息与 TCP 监听端口扫描。</sub></p>
+      <p align="center">安全中心：系统安全信息与 TCP 监听端口扫描。</p>
     </td>
     <td width="50%" valign="top">
       <a href="assets/screenshots/dev-tools.png"><img src="assets/screenshots/dev-tools.png" width="100%" alt="开发工具界面" /></a>
-      <p align="center"><sub>开发工具：JSON 格式化、Base64、Hash、正则等快捷工具。</sub></p>
+      <p align="center">开发工具：JSON 格式化、Base64、Hash、正则等快捷工具。</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <a href="assets/screenshots/backup.png"><img src="assets/screenshots/backup.png" width="100%" alt="备份与还原界面" /></a>
-      <p align="center"><sub>备份与还原：目录备份、还原与操作日志。</sub></p>
+      <p align="center">备份与还原：目录备份、还原与操作日志。</p>
     </td>
     <td width="50%" valign="top">
       <a href="assets/screenshots/settings.png"><img src="assets/screenshots/settings.png" width="100%" alt="系统设置界面" /></a>
-      <p align="center"><sub>系统设置：主题配色、CUDA 渲染加速与语言。</sub></p>
+      <p align="center">系统设置：主题配色、CUDA 渲染加速与语言。</p>
     </td>
   </tr>
 </table>
+
+<p align="center">点击任意截图可查看原图。</p>
 
 ## 它解决什么问题
 
@@ -132,7 +134,7 @@
 <p align="center">
   <img src="def.png" width="760" alt="发行版可执行文件" />
 </p>
-<p align="center"><sub>发行版可执行文件。项目文件较大且会持续增大，建议用 7-Zip 解压：<a href="https://7-zip.org/download.html">英文站</a> / <a href="https://sparanoid.com/lab/7z/">中文站</a>。</sub></p>
+<p align="center">发行版可执行文件。项目文件较大且会持续增大，建议用 7-Zip 解压：<a href="https://7-zip.org/download.html">英文站</a> / <a href="https://sparanoid.com/lab/7z/">中文站</a>。</p>
 
 <a id="quick-start" name="quick-start"></a>
 
@@ -363,12 +365,12 @@ python 内网通服.py && python 外网通服.py       # 服务管理
 <p align="center">
   <img src="image.png" width="860" alt="小思分布式人工智能平台分层架构图" />
 </p>
-<p align="center"><sub>第五代 GEN 架构</sub></p>
+<p align="center">第五代 GEN 架构</p>
 
 <p align="center">
   <a href="https://raw.gitcode.com/user-images/assets/9293520/2e30d969-231e-49f6-9ff6-d26ba8c37be4/架构图-120帧-功能全开.gif"><img src="https://raw.gitcode.com/user-images/assets/9293520/2e30d969-231e-49f6-9ff6-d26ba8c37be4/架构图-120帧-功能全开.gif" width="860" alt="架构图（120 帧，功能全开）" /></a>
 </p>
-<p align="center"><sub>架构全景（120 帧，功能全开）。</sub></p>
+<p align="center">架构全景（120 帧，功能全开）。</p>
 
 <a id="versions" name="versions"></a>
 
@@ -429,7 +431,7 @@ python 内网通服.py && python 外网通服.py       # 服务管理
 <p align="center">
   <a href="https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform"><img src="https://gitcode.com/dirde12078fb5/Xiaosi-Distributed-Artificial-Intelligence-Platform/starcharts.svg?variant=light" width="760" alt="Star 趋势" /></a>
 </p>
-<p align="center"><sub>Star 趋势。如果这个项目对你有帮助，欢迎点一个 Star。</sub></p>
+<p align="center">Star 趋势。如果这个项目对你有帮助，欢迎点一个 Star。</p>
 
 <a id="license" name="license"></a>
 
@@ -445,6 +447,6 @@ python 内网通服.py && python 外网通服.py       # 服务管理
 
   <br/><br/>
 
-  <p><sub>小思分布式人工智能平台 · MIT License</sub></p>
+  <p>小思分布式人工智能平台 · MIT License</p>
   <p><a href="#top">回到顶部</a></p>
 </div>
