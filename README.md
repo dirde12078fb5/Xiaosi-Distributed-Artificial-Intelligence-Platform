@@ -365,12 +365,12 @@ python 内网通服.py && python 外网通服.py       # 服务管理
 <p align="center">
   <img src="image.png" width="860" alt="小思分布式人工智能平台分层架构图" />
 </p>
-<p align="center">第五代 GEN 架构</p>
+<p align="center">第 一/二/三/四 代 GEN 架构</p>
 
 <p align="center">
   <a href="https://raw.gitcode.com/user-images/assets/9293520/2e30d969-231e-49f6-9ff6-d26ba8c37be4/架构图-120帧-功能全开.gif"><img src="https://raw.gitcode.com/user-images/assets/9293520/2e30d969-231e-49f6-9ff6-d26ba8c37be4/架构图-120帧-功能全开.gif" width="860" alt="架构图（120 帧，功能全开）" /></a>
 </p>
-<p align="center">架构全景（120 帧，功能全开）。</p>
+<p align="center">第五代 GEN 架构</p>
 
 <a id="versions" name="versions"></a>
 
